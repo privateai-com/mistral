@@ -10,15 +10,11 @@ tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 llm = HuggingFacePipeline.from_model_id(
     task="text-generation",
     model_id="mistralai/Mistral-7B-Instruct-v0.2",
-    device=0, # device=-1 for CPU, device=0 for GPU
-    model_kwargs={
-        "do_sample": True,
-        "temperature": 0.1,
-        "max_length": 512
-    },
+    device=0,  # device=-1 for CPU, device=0 for GPU
+    model_kwargs={"do_sample": True, "temperature": 0.1, "max_length": 512},
     pipeline_kwargs={
-        "tokenizer": tokenizer #TODO: not sure, mb remove "pipeline_kwargs" at all?
-    }
+        "tokenizer": tokenizer  #TODO: not sure, mb remove "pipeline_kwargs" at all?
+    },
 )
 
 # Create a prompt. Use few-shot for better perfomance.
@@ -30,77 +26,79 @@ prompt = PromptTemplate.from_template(
     You are a helpful assistant. You must analyze the given context and find all triplets in it.
     A triplet is a collection of 3 parts: a subject, a link, an object.
     A subject is connected with an object via a link.
+    In most cases, a subject and an object contain nouns and adjectives and links contain verbs.
+    If no triplets can be found in the context, the output must be a string: "None". Return only this one word if no triplets were found.
+    Output only the triplets and nothing else. Do not make up any new triplets, stick strictly to the context.
     You must output all triplets in a valid JSON format. Use only this format for all triplets and nothing else:
     
-    {
-        {
+    {{ 
+        {{
             "subject1": "<subject1 here>",
             "link1": "<link1 here>",
             "object1": "<object1 here>"
-        },
-        {
+        }},
+        {{
             "subject2": "<subject2 here>",
             "link2": "<link2 here>",
             "object2": "<object2 here>"
-        },
-        {
+        }},
+        {{
             "subject3": "<subject3 here>",
             "link3": "<link3 here>",
             "object3": <object3 here>
-        }
-    }
+        }}
+    }}
 
-    If no triplets can be found in the context, the output must be a string: "None". Return only this one word if no triplets were found.
 
     Let's look at some examples:
 
     ### Example 1 ###
     Context: "Bob went to Walmart to buy cheap clothes."
     Triplets:
-    {
-        {   
+    {{
+        {{   
             "subject": "Bob",
             "link": "Went to",
             "object": "Walmart"
-        },
-        {
+        }},
+        {{
             "subject": "Bob",
             "link": "Buy",
             "object": "Cheap clothes"
-        },
-        {
+        }},
+        {{
             "subject": "Clothes",
             "link": "Are",
             "object": "Cheap"
-        },
-        {
+        }},
+        {{
             "subject": "Cheap clothes",
             "link": "Are sold in",
             "object": "Walmart"
-        }
-    }
+        }}
+    }}
 
 
     ### Example 2 ###
     Context: "The disadvantage of this design is that Nagant revolvers were laborious and time-consuming to reload"
     Triplets:
-    {
-        {   
+    {{
+        {{  
             "subject": "Nagant revolvers",
             "link": "Were",
             "object": "Laborious and time-consuming to reload"
-        },
-        {
+        }},
+        {{
             "subject": "Disadvantage of design",
             "link": "Is",
             "object": "Laborious and time-consuming to reload"
-        },
-        {
+        }},
+        {{
             "subject": "Reload",
             "link": "Is",
             "object": "Laborious and time-consuming"
-        }
-    }
+        }}
+    }}
 
     ### Example 3 ###
     Context: "Soap"
