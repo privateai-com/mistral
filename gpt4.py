@@ -24,17 +24,22 @@ prompt = PromptTemplate.from_template(
 
     Extracted triplets will be used by other people to quickly understand the context without reading it whole. Thus, extract
     only meaningful triplets that might be helpful to understand the context.
+
+    Connecting a subject, a link and an object from one triplet must result in meaningful sentence. 
+    If connecting a subject, a link and an object from the triplet does not result in a sentence, ignore this triplet.
+
     Extracted triplets will be parsed into a JSON object and then used to draw a knowledge graph based on that object.
     That means you may be given the same context multiple times and you must extract exactly the same triplets each time. 
     Because subject and object of the triplet will be used as nodes of the graph. And link of the triplet will be 
     used as an edge between these two nodes.
+
 
     Maximum length of subject string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
     Maximum length of link string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
     Maximum length of object string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
     Each of 3 parts of triplet must be maximum of 25 characters long.
 
-    If no triplets can be found in the context, the output must be a string: "None". Return only this one word if no triplets were found.
+    If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 
     Output only the triplets and nothing else. Do not make up any new triplets, stick strictly to the context.
 
@@ -61,7 +66,7 @@ prompt = PromptTemplate.from_template(
 
     Let's look at some examples:
 
-    ### Example 1 ###
+    ### Good Example 1 ###
     Context: "Bob went to Walmart to buy cheap clothes."
     Triplets:
     [
@@ -76,11 +81,6 @@ prompt = PromptTemplate.from_template(
             "object": "Cheap clothes"
         }},
         {{
-            "subject": "Clothes",
-            "link": "Are",
-            "object": "Cheap"
-        }},
-        {{
             "subject": "Cheap clothes",
             "link": "Are sold in",
             "object": "Walmart"
@@ -88,34 +88,68 @@ prompt = PromptTemplate.from_template(
     ]
 
 
-    ### Example 2 ###
+    ### Good Example 2 ###
     Context: "The disadvantage of this design is that Nagant revolvers were laborious and time-consuming to reload"
     Triplets:
     [
         {{  
             "subject": "Nagant revolvers",
             "link": "Were",
-            "object": "Laborious and time-consuming to reload"
-        }},
-        {{
-            "subject": "Disadvantage of design",
-            "link": "Is",
-            "object": "Laborious and time-consuming to reload"
-        }},
-        {{
-            "subject": "Reload",
-            "link": "Is",
-            "object": "Laborious and time-consuming"
+            "object": "Hard to reload"
         }}
     ]
 
-    ### Example 3 ###
-    Context: "Soap"
-    Triplets: "None"
+    ### Good Example 3 ###
+    Context: "Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop."
+    Triplets:
+    [
+        {{  
+            "subject": "Chicken",
+            "link": "Is",
+            "object": "Cooked"
+        }},
+        {{
+            "subject": "Ferrari",
+            "link": "Is",
+            "object": "Fast"
+        }},
+        {{
+            "subject": "Winter",
+            "link": "Is",
+            "object": "In Norway"
+        }}
+    ]
+    Please note, that there are no triplets in the "Placebo" and "George Dunlop" sentences.
 
-    ### Example 4 ###
+
+    ### Good Example 4 ###
+    Context: "Soap"
+    Triplets: No triplets
+
+    ### Good Example 5 ###
     Context: "Kendrick Lamar"
-    Triplets: "None"
+    Triplets: No triplets
+
+    ### Bad Example 1 ###
+    Context: "Australia has reach wildlife"
+    Wrong triplets:
+    [
+        {{  
+            "subject": "Australia",
+            "link": "Is",
+            "object": "Rich wildlife"
+        }},
+    ]
+    Correct triplets:
+    [
+        {{  
+            "subject": "Australia",
+            "link": "Has",
+            "object": "Rich wildlife"
+        }},
+    ]
+    So pay attention to the verb in the link
+
 
     ### End of examples ###
 
@@ -131,10 +165,12 @@ prompt = PromptTemplate.from_template(
 chain = prompt | llm
 
 context_examples = [
-    # """Bob went to Australia to see rich wildlife""",
-    # """Bananas are yellow""",
-    # """Conputer""",
-    # """After purchasing rights to Steig's book in 1991,
+    """Bob went to Australia to see rich wildlife""",
+    """Bananas are yellow""",
+    """Obama was the President of the USA""",
+    """Conputer""",
+    # """
+    # After purchasing rights to Steig's book in 1991,
     # Steven Spielberg sought to produce a traditionally-animated film adaptation, but John H. Williams
     # convinced him to bring the project to the newly founded DreamWorks in 1994. Jeffrey Katzenberg, along with
     # Williams and Aron Warner, began development on Shrek in 1995, immediately following the studio's purchase of the rights
@@ -142,27 +178,28 @@ context_examples = [
     # but died in 1997 before his work on the film was finished; Myers was hired to replace him, and gave Shrek
     # his Scottish accent. The film was initially intended to be created using motion capture, but after poor test
     # results, the studio hired Pacific Data Images to complete the final computer animation. Shrek parodies
-    # other fairy tale adaptations, primarily animated Disney films.""",
-    """
-    Macromolecule blotting is a process performed after gel electrophoresis. An alkaline solution is prepared in a container. 
-    A sponge is placed into the solution and an agarose gel is placed on top of the sponge. Next, nitrocellulose paper 
-    is placed on top of the agarose gel and a paper towels are added on top of the nitrocellulose paper to apply pressure. 
-    The alkaline solution is drawn upwards towards the paper towel. During this process, the DNA denatures in 
-    the alkaline solution and is carried upwards to the nitrocellulose paper. The paper is then placed into a plastic bag 
-    and filled with a solution full of the DNA fragments, called the probe, found in the desired sample of DNA. The 
-    probes anneal to the complementary DNA of the bands already found on the nitrocellulose sample. Afterwards, 
-    probes are washed off and the only ones present are the ones that have annealed to complementary DNA on the paper. 
-    Next the paper is stuck onto an x ray film. The radioactivity of the probes creates black bands on the film, called 
-    an autoradiograph. As a result, only similar patterns of DNA to that of the probe are present on the film. 
-    This allows us the compare similar DNA sequences of multiple DNA samples. The overall process results in a precise 
-    reading of similarities in both similar and different DNA sample
-    """
+    # other fairy tale adaptations, primarily animated Disney films.
+    # """,
+    # """
+    # Macromolecule blotting is a process performed after gel electrophoresis. An alkaline solution is prepared in a container. 
+    # A sponge is placed into the solution and an agarose gel is placed on top of the sponge. Next, nitrocellulose paper 
+    # is placed on top of the agarose gel and a paper towels are added on top of the nitrocellulose paper to apply pressure. 
+    # The alkaline solution is drawn upwards towards the paper towel. During this process, the DNA denatures in 
+    # the alkaline solution and is carried upwards to the nitrocellulose paper. The paper is then placed into a plastic bag 
+    # and filled with a solution full of the DNA fragments, called the probe, found in the desired sample of DNA. The 
+    # probes anneal to the complementary DNA of the bands already found on the nitrocellulose sample. Afterwards, 
+    # probes are washed off and the only ones present are the ones that have annealed to complementary DNA on the paper. 
+    # Next the paper is stuck onto an x ray film. The radioactivity of the probes creates black bands on the film, called 
+    # an autoradiograph. As a result, only similar patterns of DNA to that of the probe are present on the film. 
+    # This allows us the compare similar DNA sequences of multiple DNA samples. The overall process results in a precise 
+    # reading of similarities in both similar and different DNA sample
+    # """
 ]
 
 
 for ex in context_examples:
     res = chain.invoke({"context": ex})
-    if res != "None":
+    if "No triplets" not in res:
         parsed_json = json.loads(res)
         for triplet in parsed_json:
             formatted_triplet = json.dumps(triplet, indent=4)
