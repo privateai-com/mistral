@@ -2,24 +2,45 @@ from transformers import AutoTokenizer
 from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import find_dotenv, load_dotenv
+import json
 
 # Load OpenAI API token
 load_dotenv(find_dotenv())
 
-llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.1)
+llm = OpenAI(
+    model_name="gpt-3.5-turbo-instruct", 
+    temperature=0.1, 
+    max_tokens=1024 # Needs to be enough for all output triplets
+)
 
 prompt = PromptTemplate.from_template(
     """
     [INST] 
     You are a helpful assistant. You must analyze the given context and find all triplets in it.
+
     A triplet is a collection of 3 parts: a subject, a link, an object.
     A subject is connected with an object via a link.
     In most cases, a subject and an object contain nouns and adjectives and links contain verbs.
+
+    Extracted triplets will be used by other people to quickly understand the context without reading it whole. Thus, extract
+    only meaningful triplets that might be helpful to understand the context.
+    Extracted triplets will be parsed into a JSON object and then used to draw a knowledge graph based on that object.
+    That means you may be given the same context multiple times and you must extract exactly the same triplets each time. 
+    Because subject and object of the triplet will be used as nodes of the graph. And link of the triplet will be 
+    used as an edge between these two nodes.
+
+    Maximum length of subject string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
+    Maximum length of link string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
+    Maximum length of object string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
+    Each of 3 parts of triplet must be maximum of 25 characters long.
+
     If no triplets can be found in the context, the output must be a string: "None". Return only this one word if no triplets were found.
+
     Output only the triplets and nothing else. Do not make up any new triplets, stick strictly to the context.
+
     You must output all triplets in a valid JSON format. Use only this format for all triplets and nothing else:
     
-    {{ 
+    [ 
         {{
             "subject1": "<subject1 here>",
             "link1": "<link1 here>",
@@ -35,7 +56,7 @@ prompt = PromptTemplate.from_template(
             "link3": "<link3 here>",
             "object3": <object3 here>
         }}
-    }}
+    ]
 
 
     Let's look at some examples:
@@ -43,7 +64,7 @@ prompt = PromptTemplate.from_template(
     ### Example 1 ###
     Context: "Bob went to Walmart to buy cheap clothes."
     Triplets:
-    {{
+    [
         {{   
             "subject": "Bob",
             "link": "Went to",
@@ -64,13 +85,13 @@ prompt = PromptTemplate.from_template(
             "link": "Are sold in",
             "object": "Walmart"
         }}
-    }}
+    ]
 
 
     ### Example 2 ###
     Context: "The disadvantage of this design is that Nagant revolvers were laborious and time-consuming to reload"
     Triplets:
-    {{
+    [
         {{  
             "subject": "Nagant revolvers",
             "link": "Were",
@@ -86,7 +107,7 @@ prompt = PromptTemplate.from_template(
             "link": "Is",
             "object": "Laborious and time-consuming"
         }}
-    }}
+    ]
 
     ### Example 3 ###
     Context: "Soap"
@@ -110,18 +131,18 @@ prompt = PromptTemplate.from_template(
 chain = prompt | llm
 
 context_examples = [
-    """Bob went to Australia to see rich wildlife""",
-    """Bananas are yellow""",
-    """Conputer""",
-    """After purchasing rights to Steig's book in 1991,
-    Steven Spielberg sought to produce a traditionally-animated film adaptation, but John H. Williams
-    convinced him to bring the project to the newly founded DreamWorks in 1994. Jeffrey Katzenberg, along with
-    Williams and Aron Warner, began development on Shrek in 1995, immediately following the studio's purchase of the rights
-    from Spielberg. Chris Farley was cast as the voice for the title character, recording most of the required dialogue,
-    but died in 1997 before his work on the film was finished; Myers was hired to replace him, and gave Shrek
-    his Scottish accent. The film was initially intended to be created using motion capture, but after poor test
-    results, the studio hired Pacific Data Images to complete the final computer animation. Shrek parodies
-    other fairy tale adaptations, primarily animated Disney films.""",
+    # """Bob went to Australia to see rich wildlife""",
+    # """Bananas are yellow""",
+    # """Conputer""",
+    # """After purchasing rights to Steig's book in 1991,
+    # Steven Spielberg sought to produce a traditionally-animated film adaptation, but John H. Williams
+    # convinced him to bring the project to the newly founded DreamWorks in 1994. Jeffrey Katzenberg, along with
+    # Williams and Aron Warner, began development on Shrek in 1995, immediately following the studio's purchase of the rights
+    # from Spielberg. Chris Farley was cast as the voice for the title character, recording most of the required dialogue,
+    # but died in 1997 before his work on the film was finished; Myers was hired to replace him, and gave Shrek
+    # his Scottish accent. The film was initially intended to be created using motion capture, but after poor test
+    # results, the studio hired Pacific Data Images to complete the final computer animation. Shrek parodies
+    # other fairy tale adaptations, primarily animated Disney films.""",
     """
     Macromolecule blotting is a process performed after gel electrophoresis. An alkaline solution is prepared in a container. 
     A sponge is placed into the solution and an agarose gel is placed on top of the sponge. Next, nitrocellulose paper 
@@ -141,4 +162,8 @@ context_examples = [
 
 for ex in context_examples:
     res = chain.invoke({"context": ex})
-    print(res)
+    if res != "None":
+        parsed_json = json.loads(res)
+        for triplet in parsed_json:
+            formatted_triplet = json.dumps(triplet, indent=4)
+            print(formatted_triplet)
