@@ -18,6 +18,8 @@ llm = OpenAI(
     max_tokens=1024 # Needs to be enough for all output triplets
 )
 
+# TODO: Make better examples
+
 prompt = PromptTemplate.from_template(
     """
     [INST] 
@@ -47,7 +49,11 @@ prompt = PromptTemplate.from_template(
 
     Output only the triplets and nothing else. Do not make up any new triplets, stick strictly to the context.
 
-    You must output all triplets in a valid JSON format. Use only this format for all triplets and nothing else:
+    You must output all triplets in a valid JSON format. That means the output must contain correct amount of curly braces and square brackets.
+    Each openening curly brace must have a closing curly brace.
+    Each opening square bracket must have a closing square bracket.
+
+    Use only this format for all triplets and nothing else:
     
     [ 
         {{
@@ -153,6 +159,25 @@ prompt = PromptTemplate.from_template(
         }},
     ]
     So pay attention to the verb in the link
+
+    ### Bad Example 2 ###
+    Context: "Alice bought some Ethereum"
+    Wrong format:
+    [
+        {{  
+            "subject": "Australia",
+            "link": "Is",
+            "object": "Rich wildlife"
+        <- No curly brace here
+    ]
+    Correct format:
+    [
+        {{  
+            "subject": "Australia",
+            "link": "Is",
+            "object": "Rich wildlife"
+        }} <- This curly brace must be here
+    ]
 
 
     ### End of examples ###
