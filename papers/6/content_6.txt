@@ -1,0 +1,102 @@
+[
+    {
+        "subject": "Macromolecule blotting",
+        "link": "Is",
+        "object": "Performed after gel electrophoresis"
+    },
+    {
+        "subject": "Alkaline solution",
+        "link": "Is prepared in",
+        "object": "Container"
+    },
+    {
+        "subject": "Sponge",
+        "link": "Is placed into",
+        "object": "Solution"
+    },
+    {
+        "subject": "Agarose gel",
+        "link": "Is placed on top of",
+        "object": "Sponge"
+    },
+    {
+        "subject": "Nitrocellulose paper",
+        "link": "Is placed on top of",
+        "object": "Agarose gel"
+    },
+    {
+        "subject": "Paper towels",
+        "link": "Are added on top of",
+        "object": "Nitrocellulose paper"
+    },
+    {
+        "subject": "Alkaline solution",
+        "link": "Is drawn upwards towards",
+        "object": "Paper towel"
+    },
+    {
+        "subject": "DNA",
+        "link": "Denatures in",
+        "object": "Alkaline solution"
+    },
+    {
+        "subject": "DNA",
+        "link": "Is carried upwards to",
+        "object": "Nitrocellulose paper"
+    },
+    {
+        "subject": "Paper",
+        "link": "Is placed into",
+        "object": "Plastic bag"
+    },
+    {
+        "subject": "Solution",
+        "link": "Is filled with",
+        "object": "DNA fragments"
+    },
+    {
+        "subject": "DNA fragments",
+        "link": "Are found in",
+        "object": "Desired sample of DNA"
+    },
+    {
+        "subject": "Probes",
+        "link": "Anneal to",
+        "object": "Complementary DNA"
+    },
+    {
+        "subject": "Probes",
+        "link": "Are washed off",
+        "object": "Nitrocellulose paper"
+    },
+    {
+        "subject": "Probes",
+        "link": "Are present",
+        "object": "Annealed to complementary DNA on paper"
+    },
+    {
+        "subject": "Paper",
+        "link": "Is stuck onto",
+        "object": "X ray film"
+    },
+    {
+        "subject": "Radioactivity",
+        "link": "Creates",
+        "object": "Black bands on film"
+    },
+    {
+        "subject": "Autoradiograph",
+        "link": "Is called",
+        "object": "Black bands on film"
+    },
+    {
+        "subject": "Similar DNA sequences",
+        "link": "Are compared",
+        "object": "Multiple DNA samples"
+    },
+    {
+        "subject": "Overall process",
+        "link": "Results in",
+        "object": "Precise reading of similarities in both similar and different DNA sample"
+    }
+]

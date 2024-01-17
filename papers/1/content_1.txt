@@ -1,0 +1,12 @@
+[
+    {
+        "subject": "Bob",
+        "link": "Went to",
+        "object": "Australia"
+    },
+    {
+        "subject": "Australia",
+        "link": "Has",
+        "object": "Rich wildlife"
+    }
+]

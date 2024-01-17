@@ -2,7 +2,7 @@ from transformers import AutoTokenizer
 from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import find_dotenv, load_dotenv
-from text_reader import read_files
+from text_reader import read_files, write_triplets
 from pathlib import Path
 import json
 
@@ -168,12 +168,32 @@ prompt = PromptTemplate.from_template(
 
 chain = prompt | llm
 
+# Read all papers
+print("Loading files...")
 context_examples = read_files(PAPERS_PATH)
+print("Files loaded!")
 
+# All triplets from all papers
+# List of JSON objects. One per paper
+all_triplets = []
+
+print("Extracting triplets...")
 for ex in context_examples:
+    file_triplets = []
+    # Result is a JSON *string* with all triplets from the current paper
     res = chain.invoke({"context": ex})
     if "No triplets" not in res:
+        # Load string into a JSON object
         parsed_json = json.loads(res)
         for triplet in parsed_json:
-            formatted_triplet = json.dumps(triplet, indent=4)
-            print(formatted_triplet)
+            file_triplets.append(triplet)
+    # TODO: Maybe append "None" to triplets in this case?
+    # If no triplets were found, an empty list will be returned
+    all_triplets.append(file_triplets)
+print("Triplets extracted!")
+
+
+print("Writing triplets into files...")
+# Write triplets in corresponding files
+write_triplets(PAPERS_PATH, all_triplets)
+print("Triplets written into files!")

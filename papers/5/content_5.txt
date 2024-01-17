@@ -1,0 +1,97 @@
+[
+    {
+        "subject": "Steven Spielberg",
+        "link": "Purchased rights to",
+        "object": "Steig's book"
+    },
+    {
+        "subject": "Steven Spielberg",
+        "link": "Sought to produce",
+        "object": "Traditionally-animated film adaptation"
+    },
+    {
+        "subject": "John H. Williams",
+        "link": "Convinced",
+        "object": "Steven Spielberg"
+    },
+    {
+        "subject": "Jeffrey Katzenberg",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Aron Warner",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Jeffrey Katzenberg",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Aron Warner",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Jeffrey Katzenberg",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Aron Warner",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Jeffrey Katzenberg",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "Aron Warner",
+        "link": "Began development on",
+        "object": "Shrek"
+    },
+    {
+        "subject": "DreamWorks",
+        "link": "Purchased the rights",
+        "object": "From Spielberg"
+    },
+    {
+        "subject": "Chris Farley",
+        "link": "Was cast as the voice for",
+        "object": "The title character"
+    },
+    {
+        "subject": "Chris Farley",
+        "link": "Recorded most of the required dialogue",
+        "object": "For Shrek"
+    },
+    {
+        "subject": "Chris Farley",
+        "link": "Died in",
+        "object": "1997"
+    },
+    {
+        "subject": "Mike Myers",
+        "link": "Was hired to replace",
+        "object": "Chris Farley"
+    },
+    {
+        "subject": "Mike Myers",
+        "link": "Gave Shrek",
+        "object": "His Scottish accent"
+    },
+    {
+        "subject": "Shrek",
+        "link": "Parodies",
+        "object": "Other fairy tale adaptations"
+    },
+    {
+        "subject": "Shrek",
+        "link": "Parodies",
+        "object": "Animated Disney films"
+    }
+]
