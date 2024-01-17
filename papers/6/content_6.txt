@@ -56,11 +56,11 @@
     },
     {
         "subject": "DNA fragments",
-        "link": "Are found in",
-        "object": "Desired sample of DNA"
+        "link": "Are called",
+        "object": "Probe"
     },
     {
-        "subject": "Probes",
+        "subject": "Probe",
         "link": "Anneal to",
         "object": "Complementary DNA"
     },
@@ -72,7 +72,7 @@
     {
         "subject": "Probes",
         "link": "Are present",
-        "object": "Annealed to complementary DNA on paper"
+        "object": "Complementary DNA on paper"
     },
     {
         "subject": "Paper",
@@ -85,18 +85,23 @@
         "object": "Black bands on film"
     },
     {
-        "subject": "Autoradiograph",
-        "link": "Is called",
-        "object": "Black bands on film"
+        "subject": "Black bands",
+        "link": "Are called",
+        "object": "Autoradiograph"
     },
     {
-        "subject": "Similar DNA sequences",
+        "subject": "Similar patterns of DNA",
+        "link": "Are present",
+        "object": "Film"
+    },
+    {
+        "subject": "DNA sequences",
         "link": "Are compared",
         "object": "Multiple DNA samples"
     },
     {
-        "subject": "Overall process",
+        "subject": "Process",
         "link": "Results in",
-        "object": "Precise reading of similarities in both similar and different DNA sample"
+        "object": "Precise reading of similarities"
     }
 ]

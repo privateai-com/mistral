@@ -20,54 +20,19 @@
         "object": "Shrek"
     },
     {
-        "subject": "Aron Warner",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
         "subject": "Jeffrey Katzenberg",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "Aron Warner",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "Jeffrey Katzenberg",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "Aron Warner",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "Jeffrey Katzenberg",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "Aron Warner",
-        "link": "Began development on",
-        "object": "Shrek"
-    },
-    {
-        "subject": "DreamWorks",
-        "link": "Purchased the rights",
-        "object": "From Spielberg"
+        "link": "Purchased rights from",
+        "object": "Steven Spielberg"
     },
     {
         "subject": "Chris Farley",
-        "link": "Was cast as the voice for",
-        "object": "The title character"
+        "link": "Was cast as",
+        "object": "Voice for the title character"
     },
     {
         "subject": "Chris Farley",
         "link": "Recorded most of the required dialogue",
-        "object": "For Shrek"
+        "object": "Shrek"
     },
     {
         "subject": "Chris Farley",
@@ -81,8 +46,8 @@
     },
     {
         "subject": "Mike Myers",
-        "link": "Gave Shrek",
-        "object": "His Scottish accent"
+        "link": "Gave",
+        "object": "Shrek his Scottish accent"
     },
     {
         "subject": "Shrek",
@@ -91,7 +56,22 @@
     },
     {
         "subject": "Shrek",
+        "link": "Was initially intended to be created using",
+        "object": "Motion capture"
+    },
+    {
+        "subject": "Pacific Data Images",
+        "link": "Was hired to complete",
+        "object": "Final computer animation"
+    },
+    {
+        "subject": "Shrek",
         "link": "Parodies",
-        "object": "Animated Disney films"
+        "object": "Other fairy tale adaptations"
+    },
+    {
+        "subject": "Disney",
+        "link": "Was primarily animated",
+        "object": "Other fairy tale adaptations"
     }
 ]
