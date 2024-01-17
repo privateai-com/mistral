@@ -1,0 +1,12 @@
+Macromolecule blotting is a process performed after gel electrophoresis. An alkaline solution is prepared in a container. 
+A sponge is placed into the solution and an agarose gel is placed on top of the sponge. Next, nitrocellulose paper 
+is placed on top of the agarose gel and a paper towels are added on top of the nitrocellulose paper to apply pressure. 
+The alkaline solution is drawn upwards towards the paper towel. During this process, the DNA denatures in 
+the alkaline solution and is carried upwards to the nitrocellulose paper. The paper is then placed into a plastic bag 
+and filled with a solution full of the DNA fragments, called the probe, found in the desired sample of DNA. The 
+probes anneal to the complementary DNA of the bands already found on the nitrocellulose sample. Afterwards, 
+probes are washed off and the only ones present are the ones that have annealed to complementary DNA on the paper. 
+Next the paper is stuck onto an x ray film. The radioactivity of the probes creates black bands on the film, called 
+an autoradiograph. As a result, only similar patterns of DNA to that of the probe are present on the film. 
+This allows us the compare similar DNA sequences of multiple DNA samples. The overall process results in a precise 
+reading of similarities in both similar and different DNA sample

@@ -2,10 +2,15 @@ from transformers import AutoTokenizer
 from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import find_dotenv, load_dotenv
+from text_reader import read_files
+from pathlib import Path
 import json
 
 # Load OpenAI API token
 load_dotenv(find_dotenv())
+
+
+PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
 
 llm = OpenAI(
     model_name="gpt-3.5-turbo-instruct", 
@@ -32,7 +37,6 @@ prompt = PromptTemplate.from_template(
     That means you may be given the same context multiple times and you must extract exactly the same triplets each time. 
     Because subject and object of the triplet will be used as nodes of the graph. And link of the triplet will be 
     used as an edge between these two nodes.
-
 
     Maximum length of subject string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
     Maximum length of link string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
@@ -164,38 +168,7 @@ prompt = PromptTemplate.from_template(
 
 chain = prompt | llm
 
-context_examples = [
-    """Bob went to Australia to see rich wildlife""",
-    """Bananas are yellow""",
-    """Obama was the President of the USA""",
-    """Conputer""",
-    # """
-    # After purchasing rights to Steig's book in 1991,
-    # Steven Spielberg sought to produce a traditionally-animated film adaptation, but John H. Williams
-    # convinced him to bring the project to the newly founded DreamWorks in 1994. Jeffrey Katzenberg, along with
-    # Williams and Aron Warner, began development on Shrek in 1995, immediately following the studio's purchase of the rights
-    # from Spielberg. Chris Farley was cast as the voice for the title character, recording most of the required dialogue,
-    # but died in 1997 before his work on the film was finished; Myers was hired to replace him, and gave Shrek
-    # his Scottish accent. The film was initially intended to be created using motion capture, but after poor test
-    # results, the studio hired Pacific Data Images to complete the final computer animation. Shrek parodies
-    # other fairy tale adaptations, primarily animated Disney films.
-    # """,
-    # """
-    # Macromolecule blotting is a process performed after gel electrophoresis. An alkaline solution is prepared in a container. 
-    # A sponge is placed into the solution and an agarose gel is placed on top of the sponge. Next, nitrocellulose paper 
-    # is placed on top of the agarose gel and a paper towels are added on top of the nitrocellulose paper to apply pressure. 
-    # The alkaline solution is drawn upwards towards the paper towel. During this process, the DNA denatures in 
-    # the alkaline solution and is carried upwards to the nitrocellulose paper. The paper is then placed into a plastic bag 
-    # and filled with a solution full of the DNA fragments, called the probe, found in the desired sample of DNA. The 
-    # probes anneal to the complementary DNA of the bands already found on the nitrocellulose sample. Afterwards, 
-    # probes are washed off and the only ones present are the ones that have annealed to complementary DNA on the paper. 
-    # Next the paper is stuck onto an x ray film. The radioactivity of the probes creates black bands on the film, called 
-    # an autoradiograph. As a result, only similar patterns of DNA to that of the probe are present on the film. 
-    # This allows us the compare similar DNA sequences of multiple DNA samples. The overall process results in a precise 
-    # reading of similarities in both similar and different DNA sample
-    # """
-]
-
+context_examples = read_files(PAPERS_PATH)
 
 for ex in context_examples:
     res = chain.invoke({"context": ex})
