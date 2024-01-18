@@ -165,17 +165,17 @@ prompt = PromptTemplate.from_template(
     Wrong format:
     [
         {{  
-            "subject": "Australia",
-            "link": "Is",
-            "object": "Rich wildlife"
+            "subject": "Alice",
+            "link": "Bought",
+            "object": "Ethereum"
         <- No curly brace here
     ]
     Correct format:
     [
         {{  
-            "subject": "Australia",
-            "link": "Is",
-            "object": "Rich wildlife"
+            "subject": "Alice",
+            "link": "Bought",
+            "object": "Ethereum"
         }} <- This curly brace must be here
     ]
 
