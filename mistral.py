@@ -14,7 +14,10 @@ llm = HuggingFacePipeline.from_model_id(
     device=0,
     model_kwargs={
         "do_sample": True, 
-        "torch_dtype": torch.bfloat16,
+        # Default value is 'torch.float32' (full precision)
+        # Load in half-precision to fit 24GB VRAM 
+        # ('torch.float16' also works)
+        "torch_dtype": torch.bfloat16, 
         "temperature": 0.1,
     },
     pipeline_kwargs={
