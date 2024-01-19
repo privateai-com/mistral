@@ -14,8 +14,10 @@ llm = HuggingFacePipeline.from_model_id(
     model_kwargs={
         "do_sample": True, 
         "temperature": 0.1,
-        "max_new_tokens": 1028,  
     },
+    pipeline_kwargs={
+        "max_new_tokens": 512 # Length of output
+    }
 )
 
 # Create a prompt. Use few-shot for better perfomance.
