@@ -13,8 +13,7 @@ llm = HuggingFacePipeline.from_model_id(
     device_map="auto", # Use 'accelerate' library to load model to VRAM and RAM
     model_kwargs={
         "do_sample": True, 
-        "temperature": 0.1, 
-        "max_length": 512, 
+        "temperature": 0.1
     },
 )
 
