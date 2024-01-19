@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
+import torch
 
 # This will wrap prompt into <s> tokens
 # TODO: not sure it's needed
@@ -10,9 +11,10 @@ tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 llm = HuggingFacePipeline.from_model_id(
     task="text-generation",
     model_id="mistralai/Mistral-7B-Instruct-v0.2",
-    device_map="auto", # Use 'accelerate' library to load model to VRAM and RAM
+    device=0,
     model_kwargs={
         "do_sample": True, 
+        "torch_dtype": torch.bfloat16,
         "temperature": 0.1,
     },
     pipeline_kwargs={
