@@ -443,12 +443,12 @@ for ex in context_examples:
     res = chain.invoke({"context": ex})
     if "No triplets" not in res:
         # Load string into a JSON object
-    try:
-        parsed_json = json.loads(res)
-        for triplet in parsed_json:
-            file_triplets.append(triplet)
-    except:
-        print("LLM output is not a valid JSON!")
+        try:
+            parsed_json = json.loads(res)
+            for triplet in parsed_json:
+                file_triplets.append(triplet)
+        except:
+            print("LLM output is not a valid JSON!")
     # TODO: Maybe append "None" to triplets in this case?
     # If no triplets were found, an empty list will be returned
     all_triplets.append(file_triplets)
