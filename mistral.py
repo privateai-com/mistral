@@ -10,8 +10,12 @@ tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 llm = HuggingFacePipeline.from_model_id(
     task="text-generation",
     model_id="mistralai/Mistral-7B-Instruct-v0.2",
-    device=0,  # device=-1 for CPU, device=0 for GPU
-    model_kwargs={"do_sample": True, "temperature": 0.1, "max_length": 512},
+    device_map="auto", # Use 'accelerate' library to load model to VRAM and RAM
+    model_kwargs={
+        "do_sample": True, 
+        "temperature": 0.1, 
+        "max_length": 512, 
+    },
     pipeline_kwargs={
         "tokenizer": tokenizer  #TODO: not sure, mb remove "pipeline_kwargs" at all?
     },

@@ -1,5 +1,6 @@
 python-dotenv
 transformers
+accelerate
 sentence-transformers
 langchain==0.1.0
 langchain-openai
