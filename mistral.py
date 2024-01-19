@@ -16,9 +16,6 @@ llm = HuggingFacePipeline.from_model_id(
         "temperature": 0.1, 
         "max_length": 512, 
     },
-    pipeline_kwargs={
-        "tokenizer": tokenizer  #TODO: not sure, mb remove "pipeline_kwargs" at all?
-    },
 )
 
 # Create a prompt. Use few-shot for better perfomance.
