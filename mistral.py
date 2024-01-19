@@ -10,6 +10,8 @@ import torch
 # TODO: not sure it's needed
 tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 
+PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
+
 # Create pipeline based on Mistral-7B-Instruct model
 llm = HuggingFacePipeline.from_model_id(
     task="text-generation",
