@@ -1,7 +1,0 @@
-[
-    {
-        "subject": "Bananas",
-        "link": "Are",
-        "object": "Yellow"
-    }
-]
