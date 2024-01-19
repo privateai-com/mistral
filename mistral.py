@@ -26,7 +26,7 @@ llm = HuggingFacePipeline.from_model_id(
         "temperature": 0.1,
     },
     pipeline_kwargs={
-        "max_new_tokens": 512 # Length of output
+        "max_new_tokens": 2056 # Length of output
     }
 )
 
@@ -84,6 +84,11 @@ prompt = PromptTemplate.from_template(
             "object3": <object3 here>
         }}
     ]
+    
+    You should not make any comments about the context.
+    There are only two options of what your output must look like:
+    Option 1: A valid JSON object like in the Examples below
+    Option 2: "No triplets"
 
 
     Let's look at some examples:
@@ -441,6 +446,9 @@ for ex in context_examples:
     file_triplets = []
     # Result is a JSON *string* with all triplets from the current paper
     res = chain.invoke({"context": ex})
+    # TODO: 
+    print("\n\nRAW RES IS")
+    print(res)
     if "No triplets" not in res:
         # Load string into a JSON object
         try:
@@ -448,7 +456,7 @@ for ex in context_examples:
             for triplet in parsed_json:
                 file_triplets.append(triplet)
         except:
-            print("LLM output is not a valid JSON!")
+            raise Exception("LLM output is not a valid JSON!")
     # TODO: Maybe append "None" to triplets in this case?
     # If no triplets were found, an empty list will be returned
     all_triplets.append(file_triplets)
