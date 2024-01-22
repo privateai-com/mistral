@@ -1,0 +1,10 @@
+Accumulation of MDSCs associated with tumor growth could be because of various mechanisms, 
+including the presence of excessive growth factors, cytokines, or inflammatory molecules 
+that provide continuous survival signals; absence of signals that normally induce cell death; 
+or nonresponsiveness of MDSCs to death signals. We have conducted a mass spectrometry screen 
+of MDSCs and observed expression of multiple proteins associated with the Fas-FasL (Fas ligand) 
+apoptosis pathway. Therefore, we have explored the role of this pathway in the survival 
+and accumulation of MDSCs. We now report that MDSCs express the death receptor 
+Fas and are killed when Fas is engaged by FasL. Activated T cells expressing FasL 
+mediate apoptosis of MDSCs in vivo, suggesting that Fas-FasL interactions may regulate MDSC homeostasis 
+and that Fas-FasL interactions could be exploited as a strategy to reduce MDSC levels in vivo.

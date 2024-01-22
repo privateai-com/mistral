@@ -1,0 +1,18 @@
+
+RNA nanotechnology is the bottom-up self-assembly of nanometer-scale architectures, 
+resembling LEGOs, composed mainly of RNA. The ideal building material should be (1) 
+versatile and controllable in shape and stoichiometry, (2) spontaneously self-assemble, 
+and (3) thermodynamically, chemically, and enzymatically stable with a long shelf life. 
+RNA building blocks exhibit each of the above. RNA is a polynucleic acid, making it a polymer, 
+and its negative-charge prevents nonspecific binding to negatively charged cell membranes. The thermostability 
+makes it suitable for logic gates, resistive memory, sensor set-ups, and NEM devices. 
+RNA can be designed and manipulated with a level of simplicity of DNA while displaying versatile 
+structure and enzyme activity of proteins. RNA can fold into single-stranded loops or bulges 
+to serve as mounting dovetails for intermolecular or domain interactions without external linking dowels. 
+RNA nanoparticles display rubber- and amoeba-like properties and are stretchable and shrinkable 
+through multiple repeats, leading to enhanced tumor targeting and fast renal excretion to 
+reduce toxicities. It was predicted in 2014 that RNA would be the third milestone in 
+pharmaceutical drug development. The recent approval of several RNA drugs and COVID-19 mRNA 
+vaccines by FDA suggests that this milestone is being realized. Here, we review the unique 
+properties of RNA nanotechnology, summarize its recent advancements, describe its distinct attributes 
+inside or outside the body and discuss potential applications in nanotechnology, medicine, and material science.

@@ -1,0 +1,17 @@
+
+Cystic fibrosis (CF) is one of the most common life-limiting recessive genetic disorders 
+in Caucasians, caused by mutations in the cystic fibrosis transmembrane conductance 
+regulator (CFTR). CF is a multi-organ disease that involves the lungs, pancreas, sweat glands, 
+digestive and reproductive systems and several other tissues. This debilitating condition is 
+associated with recurrent lower respiratory tract bacterial and viral infections, as well 
+as inflammatory complications that may eventually lead to pulmonary failure. Immune cells 
+play a crucial role in protecting the organs against opportunistic infections and also in 
+the regulation of tissue homeostasis. Innate immune cells are generally affected by CFTR 
+mutations in patients with CF, leading to dysregulation of several cellular signalling pathways 
+that are in continuous use by these cells to elicit a proper immune response. There is 
+substantial evidence to show that airway epithelial cells, neutrophils, monocytes and macrophages 
+all contribute to the pathogenesis of CF, underlying the importance of the CFTR in 
+innate immune responses. The goal of this review is to put into context the important 
+role of the CFTR in different innate immune cells and how CFTR dysfunction contributes 
+to the pathogenesis of CF, highlighting several signalling pathways that may be dysregulated in 
+cells with CFTR mutations.
