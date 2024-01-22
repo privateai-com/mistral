@@ -35,7 +35,7 @@
         "object": "peptides"
     },
     {
-        "subject": "Amino acid residues",
+        "subject": "Individual amino acid residues",
         "link": "are bonded together by",
         "object": "peptide bonds"
     },

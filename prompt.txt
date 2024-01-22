@@ -1,29 +1,5 @@
 You are a helpful assistant. You must analyze the given context and find all triplets in it.
 
-A triplet is a collection of 3 parts: a subject, a link, an object.
-A subject is connected with an object via a link.
-In most cases, a subject and an object contain nouns and adjectives and links contain verbs.
-
-Extracted triplets will be used by other people to quickly understand the context without reading it whole. Thus, extract
-only meaningful triplets that might be helpful to understand the context.
-
-Connecting a subject, a link and an object from one triplet must result in meaningful sentence. 
-If connecting a subject, a link and an object from the triplet does not result in a sentence, ignore this triplet.
-
-Extracted triplets will be parsed into a JSON object and then used to draw a knowledge graph based on that object.
-That means you may be given the same context multiple times and you must extract exactly the same triplets each time. 
-Because subject and object of the triplet will be used as nodes of the graph. And link of the triplet will be 
-used as an edge between these two nodes.
-
-Maximum length of subject string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
-Maximum length of link string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
-Maximum length of object string is 25 characters. If it's longer, rephrase it to fit into 25 characters.
-Each of 3 parts of triplet must be maximum of 25 characters long. A good example of this is Example 3 below.
-
-If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
-
-Output only the triplets and nothing else. Do not make up any new triplets, stick strictly to the context.
-
 You must output all triplets in a valid JSON format. That means the output must contain correct amount of curly braces and square brackets.
 Each openening curly brace must have a closing curly brace.
 Each opening square bracket must have a closing square bracket.
@@ -267,11 +243,11 @@ Triplets:
 ]
 
 ### Example 11 ###
-Context: "A mitochondrion (/ˌmaɪtəˈkɒndriən/;[1] pl.: mitochondria) is an organelle found in the cells 
+Context: "A mitochondrion (/ˌmaɪtəˈkɒndriən/; pl.: mitochondria) is an organelle found in the cells 
 of most eukaryotes, such as animals, plants and fungi. Mitochondria have a double membrane structure 
 and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
-cell as a source of chemical energy.[2] They were discovered by Albert von Kölliker 
-in 1857[3] in the voluntary muscles of insects. The term mitochondrion was coined by Carl Benda in 1898"
+cell as a source of chemical energy. They were discovered by Albert von Kölliker 
+in 1857 in the voluntary muscles of insects. The term mitochondrion was coined by Carl Benda in 1898"
 Triplets: 
 [
     {{   
@@ -333,7 +309,7 @@ Triplets:
 
 ### Example 12 ###
 Context: "The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 
-the human brain.[28] The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
+the human brain.The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
 than 90% of the synapses that do not use glutamate. Although other transmitters are used in fewer synapses, they may 
 be very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
 actions of some neurotransmitter systems. Addictive drugs such as cocaine and amphetamines exert their effects 

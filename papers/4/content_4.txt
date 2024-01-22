@@ -1,32 +1,17 @@
 [
     {
-        "subject": "John Doe",
-        "link": "is a",
-        "object": "software engineer"
+        "subject": "<subject1 here>",
+        "link": "<link1 here>",
+        "object": "<object1 here>"
     },
     {
-        "subject": "Software engineer",
-        "link": "works with",
-        "object": "code"
+        "subject": "<subject2 here>",
+        "link": "<link2 here>",
+        "object": "<object2 here>"
     },
     {
-        "subject": "Code",
-        "link": "is used to",
-        "object": "create software"
-    },
-    {
-        "subject": "John Doe",
-        "link": "uses",
-        "object": "computer"
-    },
-    {
-        "subject": "Computer",
-        "link": "is a",
-        "object": "machine"
-    },
-    {
-        "subject": "Machine",
-        "link": "performs",
-        "object": "calculations"
+        "subject": "<subject3 here>",
+        "link": "<link3 here>",
+        "object": "<object3 here>"
     }
 ]

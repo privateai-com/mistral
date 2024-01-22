@@ -1,47 +1,61 @@
 [
     {
-        "subject1": "Cystic fibrosis (CF)",
-        "link1": "is one of the most common life-limiting recessive genetic disorders",
-        "object1": "in Caucasians"
+        "subject": "Cystic fibrosis (CF)",
+        "link": "is one of the most common life-limiting recessive genetic disorders",
+        "object": "in Caucasians"
     },
     {
-        "subject1": "Cystic fibrosis (CF)",
-        "link1": "is caused by",
-        "object1": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)"
+        "subject": "Cystic fibrosis (CF)",
+        "link": "is caused by",
+        "object": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)"
     },
     {
-        "subject1": "Cystic fibrosis (CF)",
-        "link1": "is a multi-organ disease that involves",
-        "object1": "lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
+        "subject": "Cystic fibrosis (CF)",
+        "link": "is a multi-organ disease that involves",
+        "object": "lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
     },
     {
-        "subject1": "Cystic fibrosis (CF)",
-        "link1": "is associated with",
-        "object1": "recurrent lower respiratory tract bacterial and viral infections, as well as inflammatory complications"
+        "subject": "Cystic fibrosis (CF)",
+        "link": "is associated with",
+        "object": "recurrent lower respiratory tract bacterial and viral infections, as well as inflammatory complications"
     },
     {
-        "subject1": "Cystic fibrosis (CF)",
-        "link1": "is a debilitating condition that may eventually lead to",
-        "object1": "pulmonary failure"
+        "subject": "Immune cells",
+        "link": "play a crucial role in",
+        "object": "protecting the organs against opportunistic infections and also in the regulation of tissue homeostasis"
     },
     {
-        "subject1": "Immune cells",
-        "link1": "play a crucial role in",
-        "object1": "protecting the organs against opportunistic infections and also in the regulation of tissue homeostasis"
+        "subject": "Innate immune cells",
+        "link": "are generally affected by",
+        "object": "CFTR mutations in patients with CF"
     },
     {
-        "subject1": "Innate immune cells",
-        "link1": "are generally affected by CFTR mutations in patients with CF",
-        "object1": "leading to dysregulation of several cellular signalling pathways"
+        "subject": "CFTR mutations",
+        "link": "lead to",
+        "object": "dysregulation of several cellular signalling pathways"
     },
     {
-        "subject1": "Airway epithelial cells, neutrophils, monocytes and macrophages",
-        "link1": "all contribute to the pathogenesis of CF",
-        "object1": "highlighting the importance of the CFTR in innate immune responses"
+        "subject": "Airway epithelial cells, neutrophils, monocytes and macrophages",
+        "link": "all contribute to",
+        "object": "the pathogenesis of CF"
     },
     {
-        "subject1": "CFTR dysfunction",
-        "link1": "contributes to the pathogenesis of CF",
-        "object1": "by dysregulating several signalling pathways in cells with CFTR mutations"
+        "subject": "CFTR",
+        "link": "plays an important role in",
+        "object": "innate immune responses"
+    },
+    {
+        "subject": "Goal of this review",
+        "link": "is to put into context",
+        "object": "the important role of the CFTR in different innate immune cells"
+    },
+    {
+        "subject": "CFTR dysfunction",
+        "link": "contributes to",
+        "object": "the pathogenesis of CF"
+    },
+    {
+        "subject": "Several signalling pathways",
+        "link": "may be dysregulated in cells with CFTR mutations"
     }
 ]
