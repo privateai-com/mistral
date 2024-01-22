@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer
-from langchain_openai import OpenAI
+from langchain.chains import LLMChain
+from langchain_community.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from dotenv import find_dotenv, load_dotenv
 from text_reader import read_files, write_triplets
@@ -13,12 +14,12 @@ load_dotenv(find_dotenv())
 PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
 
 llm = OpenAI(
-    model_name="gpt-3.5-turbo-instruct", 
+    # Use GPT4 if bigger token window is required
+    # model_name="gpt-3.5-turbo-instruct", 
+    model_name="gpt-4",
     temperature=0.1, 
-    max_tokens=1024 # Needs to be enough for all output triplets
+    max_tokens=4096 # Needs to be enough for all output triplets
 )
-
-# TODO: Make better examples
 
 prompt = PromptTemplate.from_template(
     """
@@ -418,7 +419,7 @@ prompt = PromptTemplate.from_template(
     """
 )
 
-chain = prompt | llm
+chain = LLMChain(prompt=prompt, llm=llm)
 
 # Read all papers
 print("Loading files...")
@@ -434,16 +435,20 @@ for ex in context_examples:
     file_triplets = []
     # Result is a JSON *string* with all triplets from the current paper
     res = chain.invoke({"context": ex})
+    res = res['text']
+    print(res)
     if "No triplets" not in res:
         # Load string into a JSON object
-        parsed_json = json.loads(res)
-        for triplet in parsed_json:
-            file_triplets.append(triplet)
+        try:
+            parsed_json = json.loads(res)
+            for triplet in parsed_json:
+                file_triplets.append(triplet)
+        except:
+            raise Exception("LLM output is not a valid JSON!")
     # TODO: Maybe append "None" to triplets in this case?
     # If no triplets were found, an empty list will be returned
     all_triplets.append(file_triplets)
 print("Triplets extracted!")
-
 
 print("Writing triplets into files...")
 # Write triplets in corresponding files
