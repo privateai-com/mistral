@@ -1,0 +1,32 @@
+[
+    {
+        "subject": "John Doe",
+        "link": "is a",
+        "object": "software engineer"
+    },
+    {
+        "subject": "Software engineer",
+        "link": "works with",
+        "object": "code"
+    },
+    {
+        "subject": "Code",
+        "link": "is used to",
+        "object": "create software"
+    },
+    {
+        "subject": "John Doe",
+        "link": "uses",
+        "object": "computer"
+    },
+    {
+        "subject": "Computer",
+        "link": "is a",
+        "object": "machine"
+    },
+    {
+        "subject": "Machine",
+        "link": "performs",
+        "object": "calculations"
+    }
+]

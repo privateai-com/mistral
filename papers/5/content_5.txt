@@ -1,0 +1,52 @@
+[
+    {
+        "subject": "Proteins",
+        "link": "are large biomolecules and macromolecules that comprise",
+        "object": "one or more long chains of amino acid residues"
+    },
+    {
+        "subject": "Proteins",
+        "link": "perform a vast array of functions within organisms",
+        "object": "catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
+    },
+    {
+        "subject": "Proteins",
+        "link": "differ from one another primarily in their sequence of",
+        "object": "amino acids"
+    },
+    {
+        "subject": "Sequence of amino acids",
+        "link": "is dictated by",
+        "object": "nucleotide sequence of their genes"
+    },
+    {
+        "subject": "Proteins",
+        "link": "contain at least one long",
+        "object": "polypeptide"
+    },
+    {
+        "subject": "Polypeptide",
+        "link": "is a linear chain of",
+        "object": "amino acid residues"
+    },
+    {
+        "subject": "Short polypeptides",
+        "link": "are rarely considered to be proteins and are commonly called",
+        "object": "peptides"
+    },
+    {
+        "subject": "Amino acid residues",
+        "link": "are bonded together by",
+        "object": "peptide bonds"
+    },
+    {
+        "subject": "Proteins",
+        "link": "are often chemically modified by",
+        "object": "post-translational modification"
+    },
+    {
+        "subject": "Proteins",
+        "link": "can work together to achieve a particular function",
+        "object": "and they often associate to form stable protein complexes"
+    }
+]
