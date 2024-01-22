@@ -5,12 +5,12 @@ from text_reader import read_files, write_triplets
 from pathlib import Path
 import json
 import torch
+import sys
 
 
 PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
 PROMPT_PATH = (Path(__file__).parent).joinpath("prompt.txt")
 
-# Create pipeline based on Mistral-7B-Instruct model
 model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -21,16 +21,16 @@ model = AutoModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(
     model_name
 )
-pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=2056)
+pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=4096)
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
+# Read prompt from file
 prompt_text = None
 with open(PROMPT_PATH, "r") as file:
     prompt_text = file.read()
 
 if prompt_text is not None:
-    print(prompt_text)
     prompt = PromptTemplate.from_template(
         prompt_text
     )
@@ -64,9 +64,8 @@ for ex in context_examples:
                 file_triplets.append(triplet)
         except:
             raise Exception("LLM output is not a valid JSON!")
-    # TODO: Maybe append "None" to triplets in this case?
-    # If no triplets were found, an empty list will be returned
     all_triplets.append(file_triplets)
+
 print("Triplets extracted!")
 
 
