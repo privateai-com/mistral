@@ -1,4 +1,4 @@
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from text_reader import read_files, write_triplets
@@ -6,31 +6,22 @@ from pathlib import Path
 import json
 import torch
 
-# This will wrap prompt into <s> tokens
-# TODO: not sure it's needed
-tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 
 PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
 
 # Create pipeline based on Mistral-7B-Instruct model
-llm = HuggingFacePipeline.from_model_id(
-    task="text-generation",
-    model_id="mistralai/Mistral-7B-Instruct-v0.2",
-    device=0,
-    model_kwargs={
-        "do_sample": True, 
-        # Default value is 'torch.float32' (full precision)
-        # Load in half-precision to fit 24GB VRAM 
-        # ('torch.float16' also works)
-        "torch_dtype": torch.bfloat16, 
-        "temperature": 0.1,
-    },
-    pipeline_kwargs={
-        "max_new_tokens": 2056 # Length of output
-    }
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto",
 )
 
-# TODO: Make better examples
+tokenizer = AutoTokenizer.from_pretrained(
+    model_name
+)
+pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=256)
+
+llm = HuggingFacePipeline(pipeline=pipe)
 
 prompt = PromptTemplate.from_template(
     """
