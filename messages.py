@@ -2,7 +2,7 @@ messages = [
     {
         "role": "user", 
         "content": """
-            You are a strict, laconic and concise assistant. You must analyze the given context and find all triplets in it.
+            You must analyze the given context and find all triplets in it.
 
             A triplet is a collection of 3 parts: a subject, a link, an object.
 
@@ -18,7 +18,11 @@ messages = [
             Option 1: A valid JSON object
             Option 2: "No triplets"
             Do not make any other comments except the two options above!
+            
+            Your output must end right after the last closing square bracket ']'.
+            Do not write anything after ']'
 
+            Find triplets here:
             Bob went to Walmart to buy cheap clothes.
 
             Triplets:

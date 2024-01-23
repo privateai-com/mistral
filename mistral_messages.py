@@ -3,7 +3,7 @@ from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from text_reader import read_files, write_triplets
 from pathlib import Path
-from prompt import messages
+from messages import messages
 import json
 import torch
 import sys
@@ -27,11 +27,15 @@ pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tok
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
+# Tokenize previous synthetic dialogue with examples
 prompt_tokens = tokenizer.apply_chat_template(messages, return_tensors="pt")
+# Turn tokens into list of strings
 prompt_text_parts = tokenizer.batch_decode(prompt_tokens)
+# Place all strings into one
 prompt_text = ""
 for part in prompt_text_parts: 
     prompt_text += part
+# Form a prompt from that string
 prompt = PromptTemplate.from_template(prompt_text)
 
 chain = prompt | llm
