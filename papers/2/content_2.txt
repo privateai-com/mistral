@@ -16,7 +16,8 @@
     },
     {
         "subject": "RNA building blocks",
-        "link": "exhibit each of the above"
+        "link": "exhibit each of the above",
+        "object": "properties"
     },
     {
         "subject": "RNA",
@@ -25,18 +26,18 @@
     },
     {
         "subject": "RNA",
-        "link": "has negative-charge",
-        "object": "prevents nonspecific binding to negatively charged cell membranes"
+        "link": "has a negative-charge",
+        "object": "which prevents nonspecific binding to negatively charged cell membranes"
     },
     {
         "subject": "RNA",
-        "link": "is thermostable",
-        "object": "suitable for logic gates, resistive memory, sensor set-ups, and NEM devices"
+        "link": "is suitable for",
+        "object": "logic gates, resistive memory, sensor set-ups, and NEM devices"
     },
     {
         "subject": "RNA",
         "link": "can be designed and manipulated",
-        "object": "with a level of simplicity of DNA while displaying versatile structure and enzyme activity of proteins"
+        "object": "with a level of simplicity of DNA"
     },
     {
         "subject": "RNA",
@@ -46,7 +47,7 @@
     {
         "subject": "RNA nanoparticles",
         "link": "display rubber- and amoeba-like properties",
-        "object": "and are stretchable and shrinkable through multiple repeats"
+        "object": "and are stretchable and shrinkable"
     },
     {
         "subject": "RNA nanotechnology",
@@ -56,10 +57,5 @@
     {
         "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
         "link": "suggests that this milestone is being realized"
-    },
-    {
-        "subject": "RNA nanotechnology",
-        "link": "review",
-        "object": "unique properties, summarize recent advancements, describe distinct attributes inside or outside the body, and discuss potential applications in nanotechnology, medicine, and material science"
     }
 ]

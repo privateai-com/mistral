@@ -1,6 +1,6 @@
 [
     {
-        "subject": "Accumulation of MDSCs",
+        "subject": "Accumulation of MDSCs associated with tumor growth",
         "link": "could be because of",
         "object": "various mechanisms"
     },
@@ -17,7 +17,17 @@
     {
         "subject": "Absence of signals",
         "link": "normally induce cell death",
-        "object": "or nonresponsiveness of MDSCs to death signals"
+        "object": "or"
+    },
+    {
+        "subject": "Nonresponsiveness of MDSCs to death signals",
+        "link": "is",
+        "object": "another mechanism"
+    },
+    {
+        "subject": "Mass spectrometry screen of MDSCs",
+        "link": "observed expression of multiple proteins associated with",
+        "object": "Fas-FasL (Fas ligand) apoptosis pathway"
     },
     {
         "subject": "MDSCs",
@@ -30,13 +40,13 @@
         "object": "Fas is engaged by FasL"
     },
     {
-        "subject": "Activated T cells",
-        "link": "expressing FasL",
-        "object": "mediate apoptosis of MDSCs in vivo"
+        "subject": "Activated T cells expressing FasL",
+        "link": "mediate apoptosis of MDSCs in vivo",
+        "object": "suggesting that Fas-FasL interactions may regulate MDSC homeostasis"
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "could regulate MDSC homeostasis",
-        "object": "and could be exploited as a strategy to reduce MDSC levels in vivo"
+        "link": "could be exploited as a strategy to",
+        "object": "reduce MDSC levels in vivo"
     }
 ]

@@ -3,17 +3,19 @@ from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from text_reader import read_files, write_triplets
 from pathlib import Path
+from prompt import messages
 import json
 import torch
 import sys
 
 
 PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
-PROMPT_PATH = (Path(__file__).parent).joinpath("prompt.txt")
 
 model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
+    do_sample=True,
+    temperature=0.1,
     device_map="auto",
     torch_dtype=torch.float16
 )
@@ -25,17 +27,12 @@ pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tok
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
-# Read prompt from file
-prompt_text = None
-with open(PROMPT_PATH, "r") as file:
-    prompt_text = file.read()
-
-if prompt_text is not None:
-    prompt = PromptTemplate.from_template(
-        prompt_text
-    )
-else:
-    raise Exception("Invalid prompt!")
+prompt_tokens = tokenizer.apply_chat_template(messages, return_tensors="pt")
+prompt_text_parts = tokenizer.batch_decode(prompt_tokens)
+prompt_text = ""
+for part in prompt_text_parts: 
+    prompt_text += part
+prompt = PromptTemplate.from_template(prompt_text)
 
 chain = prompt | llm
 

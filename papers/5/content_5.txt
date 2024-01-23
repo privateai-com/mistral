@@ -11,38 +11,63 @@
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their sequence of amino acids",
-        "object": "which is dictated by the nucleotide sequence of their genes"
+        "link": "differ from one another primarily in their sequence of",
+        "object": "amino acids"
     },
     {
         "subject": "Proteins",
-        "link": "usually result in",
-        "object": "protein folding into a specific 3D structure"
-    },
-    {
-        "subject": "Linear chain of amino acid residues",
-        "link": "is called",
-        "object": "polypeptide"
-    },
-    {
-        "subject": "Protein",
-        "link": "contains at least",
-        "object": "one long polypeptide"
-    },
-    {
-        "subject": "Short polypeptides",
-        "link": "are rarely considered to be",
-        "object": "proteins"
-    },
-    {
-        "subject": "Individual amino acid residues",
         "link": "are bonded together by",
         "object": "peptide bonds"
     },
     {
-        "subject": "Sequence of amino acid residues in a protein",
-        "link": "is defined by",
-        "object": "sequence of a gene"
+        "subject": "Proteins",
+        "link": "are defined by the sequence of a gene",
+        "object": "which is encoded in the genetic code"
+    },
+    {
+        "subject": "Proteins",
+        "link": "can work together to achieve a particular function",
+        "object": "and they often associate to form stable protein complexes"
+    },
+    {
+        "subject": "Proteins",
+        "link": "can have non-peptide groups attached",
+        "object": "which can be called prosthetic groups or cofactors"
+    },
+    {
+        "subject": "Proteins",
+        "link": "are synthesized",
+        "object": "shortly after or even during synthesis, the residues are often chemically modified"
+    },
+    {
+        "subject": "Proteins",
+        "link": "can be considered to be",
+        "object": "macromolecules"
+    },
+    {
+        "subject": "Polypeptides",
+        "link": "are long chains of",
+        "object": "amino acid residues"
+    },
+    {
+        "subject": "Polypeptides",
+        "link": "are called",
+        "object": "proteins"
+    },
+    {
+        "subject": "Peptides",
+        "link": "are short polypeptides",
+        "object": "containing less than 20-30 residues"
+    },
+    {
+        "subject": "Amino acid residues",
+        "link": "are bonded together by",
+        "object": "peptide bonds"
+    },
+    {
+        "subject": "Genes",
+        "link": "specify",
+        "object": "sequence of a protein"
     },
     {
         "subject": "Genetic code",
@@ -52,16 +77,11 @@
     {
         "subject": "Certain organisms",
         "link": "can include",
-        "object": "selenocysteine and pyrrolysine in genetic code"
+        "object": "selenocysteine and pyrrolysine in the genetic code"
     },
     {
-        "subject": "Residues in a protein",
-        "link": "are often chemically modified by",
-        "object": "post-translational modification"
-    },
-    {
-        "subject": "Proteins",
-        "link": "can work together to achieve a particular function",
-        "object": "and they often associate to form stable protein complexes"
+        "subject": "Post-translational modification",
+        "link": "alters",
+        "object": "physical and chemical properties, folding, stability, activity, and ultimately, function of proteins"
     }
 ]

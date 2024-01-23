@@ -21,18 +21,18 @@
     },
     {
         "subject": "Neuron",
-        "link": "is main component of",
+        "link": "is the main component of",
         "object": "nervous tissue"
     },
     {
-        "subject": "Nervous tissue",
-        "link": "is present in all animals except",
-        "object": "sponges and placozoa"
+        "subject": "Animals except sponges and placozoa",
+        "link": "have",
+        "object": "nervous tissue"
     },
     {
-        "subject": "Non-animals",
+        "subject": "Non-animals like plants and fungi",
         "link": "do not have",
-        "object": "neurons"
+        "object": "nervous tissue"
     },
     {
         "subject": "Ability to generate electric signals",
@@ -41,11 +41,13 @@
     },
     {
         "subject": "Predecessors of neurons",
-        "link": "were peptidergic secretory cells"
+        "link": "were",
+        "object": "peptidergic secretory cells"
     },
     {
         "subject": "Predecessors of neurons",
-        "link": "eventually gained new gene modules"
+        "link": "eventually gained",
+        "object": "new gene modules"
     },
     {
         "subject": "New gene modules",
@@ -54,6 +56,7 @@
     },
     {
         "subject": "Ability to generate electric signals",
-        "link": "was a key innovation in the evolution of the nervous system"
+        "link": "was a key innovation in the evolution of the",
+        "object": "nervous system"
     }
 ]
