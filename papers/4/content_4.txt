@@ -1,17 +1,59 @@
 [
     {
-        "subject": "<subject1 here>",
-        "link": "<link1 here>",
-        "object": "<object1 here>"
+        "subject": "Neuron",
+        "link": "is",
+        "object": "electrically excitable cell"
     },
     {
-        "subject": "<subject2 here>",
-        "link": "<link2 here>",
-        "object": "<object2 here>"
+        "subject": "Neuron",
+        "link": "fires",
+        "object": "electric signals called action potentials"
     },
     {
-        "subject": "<subject3 here>",
-        "link": "<link3 here>",
-        "object": "<object3 here>"
+        "subject": "Neurons communicate",
+        "link": "with other cells via",
+        "object": "synapses"
+    },
+    {
+        "subject": "Synapses",
+        "link": "commonly use",
+        "object": "minute amounts of chemical neurotransmitters"
+    },
+    {
+        "subject": "Neuron",
+        "link": "is main component of",
+        "object": "nervous tissue"
+    },
+    {
+        "subject": "Nervous tissue",
+        "link": "is present in all animals except",
+        "object": "sponges and placozoa"
+    },
+    {
+        "subject": "Non-animals",
+        "link": "do not have",
+        "object": "neurons"
+    },
+    {
+        "subject": "Ability to generate electric signals",
+        "link": "first appeared in evolution",
+        "object": "700 to 800 million years ago"
+    },
+    {
+        "subject": "Predecessors of neurons",
+        "link": "were peptidergic secretory cells"
+    },
+    {
+        "subject": "Predecessors of neurons",
+        "link": "eventually gained new gene modules"
+    },
+    {
+        "subject": "New gene modules",
+        "link": "enabled cells to create",
+        "object": "post-synaptic scaffolds and ion channels"
+    },
+    {
+        "subject": "Ability to generate electric signals",
+        "link": "was a key innovation in the evolution of the nervous system"
     }
 ]

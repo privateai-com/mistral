@@ -11,28 +11,28 @@
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their sequence of",
-        "object": "amino acids"
-    },
-    {
-        "subject": "Sequence of amino acids",
-        "link": "is dictated by",
-        "object": "nucleotide sequence of their genes"
+        "link": "differ from one another primarily in their sequence of amino acids",
+        "object": "which is dictated by the nucleotide sequence of their genes"
     },
     {
         "subject": "Proteins",
-        "link": "contain at least one long",
+        "link": "usually result in",
+        "object": "protein folding into a specific 3D structure"
+    },
+    {
+        "subject": "Linear chain of amino acid residues",
+        "link": "is called",
         "object": "polypeptide"
     },
     {
-        "subject": "Polypeptide",
-        "link": "is a linear chain of",
-        "object": "amino acid residues"
+        "subject": "Protein",
+        "link": "contains at least",
+        "object": "one long polypeptide"
     },
     {
         "subject": "Short polypeptides",
-        "link": "are rarely considered to be proteins and are commonly called",
-        "object": "peptides"
+        "link": "are rarely considered to be",
+        "object": "proteins"
     },
     {
         "subject": "Individual amino acid residues",
@@ -40,7 +40,22 @@
         "object": "peptide bonds"
     },
     {
-        "subject": "Proteins",
+        "subject": "Sequence of amino acid residues in a protein",
+        "link": "is defined by",
+        "object": "sequence of a gene"
+    },
+    {
+        "subject": "Genetic code",
+        "link": "specifies",
+        "object": "20 standard amino acids"
+    },
+    {
+        "subject": "Certain organisms",
+        "link": "can include",
+        "object": "selenocysteine and pyrrolysine in genetic code"
+    },
+    {
+        "subject": "Residues in a protein",
         "link": "are often chemically modified by",
         "object": "post-translational modification"
     },

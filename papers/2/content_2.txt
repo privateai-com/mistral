@@ -1,0 +1,65 @@
+[
+    {
+        "subject": "RNA nanotechnology",
+        "link": "is",
+        "object": "bottom-up self-assembly of nanometer-scale architectures"
+    },
+    {
+        "subject": "RNA nanotechnology",
+        "link": "is composed mainly of",
+        "object": "RNA"
+    },
+    {
+        "subject": "Ideal building material",
+        "link": "should be",
+        "object": "(1) versatile and controllable in shape and stoichiometry, (2) spontaneously self-assemble, and (3) thermodynamically, chemically, and enzymatically stable with a long shelf life"
+    },
+    {
+        "subject": "RNA building blocks",
+        "link": "exhibit each of the above"
+    },
+    {
+        "subject": "RNA",
+        "link": "is a polynucleic acid",
+        "object": "making it a polymer"
+    },
+    {
+        "subject": "RNA",
+        "link": "has negative-charge",
+        "object": "prevents nonspecific binding to negatively charged cell membranes"
+    },
+    {
+        "subject": "RNA",
+        "link": "is thermostable",
+        "object": "suitable for logic gates, resistive memory, sensor set-ups, and NEM devices"
+    },
+    {
+        "subject": "RNA",
+        "link": "can be designed and manipulated",
+        "object": "with a level of simplicity of DNA while displaying versatile structure and enzyme activity of proteins"
+    },
+    {
+        "subject": "RNA",
+        "link": "can fold into single-stranded loops or bulges",
+        "object": "to serve as mounting dovetails for intermolecular or domain interactions without external linking dowels"
+    },
+    {
+        "subject": "RNA nanoparticles",
+        "link": "display rubber- and amoeba-like properties",
+        "object": "and are stretchable and shrinkable through multiple repeats"
+    },
+    {
+        "subject": "RNA nanotechnology",
+        "link": "was predicted in 2014 to be",
+        "object": "the third milestone in pharmaceutical drug development"
+    },
+    {
+        "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
+        "link": "suggests that this milestone is being realized"
+    },
+    {
+        "subject": "RNA nanotechnology",
+        "link": "review",
+        "object": "unique properties, summarize recent advancements, describe distinct attributes inside or outside the body, and discuss potential applications in nanotechnology, medicine, and material science"
+    }
+]

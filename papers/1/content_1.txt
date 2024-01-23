@@ -31,12 +31,12 @@
     },
     {
         "subject": "Activated T cells",
-        "link": "mediate apoptosis of MDSCs",
-        "object": "in vivo"
+        "link": "expressing FasL",
+        "object": "mediate apoptosis of MDSCs in vivo"
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "may regulate MDSC homeostasis",
+        "link": "could regulate MDSC homeostasis",
         "object": "and could be exploited as a strategy to reduce MDSC levels in vivo"
     }
 ]
