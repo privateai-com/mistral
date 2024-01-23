@@ -16,18 +16,8 @@
     },
     {
         "subject": "Absence of signals",
-        "link": "normally induce cell death",
-        "object": "or"
-    },
-    {
-        "subject": "Nonresponsiveness of MDSCs to death signals",
-        "link": "is",
-        "object": "another mechanism"
-    },
-    {
-        "subject": "Mass spectrometry screen of MDSCs",
-        "link": "observed expression of multiple proteins associated with",
-        "object": "Fas-FasL (Fas ligand) apoptosis pathway"
+        "link": "that normally induce cell death",
+        "object": "is another mechanism"
     },
     {
         "subject": "MDSCs",
@@ -35,18 +25,18 @@
         "object": "death receptor Fas"
     },
     {
-        "subject": "MDSCs",
-        "link": "are killed when",
-        "object": "Fas is engaged by FasL"
+        "subject": "Fas",
+        "link": "is engaged by",
+        "object": "FasL to cause apoptosis"
     },
     {
-        "subject": "Activated T cells expressing FasL",
-        "link": "mediate apoptosis of MDSCs in vivo",
-        "object": "suggesting that Fas-FasL interactions may regulate MDSC homeostasis"
+        "subject": "Activated T cells",
+        "link": "expressing FasL",
+        "object": "mediate apoptosis of MDSCs in vivo"
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "could be exploited as a strategy to",
-        "object": "reduce MDSC levels in vivo"
+        "link": "could be exploited as a strategy",
+        "object": "to reduce MDSC levels in vivo"
     }
 ]

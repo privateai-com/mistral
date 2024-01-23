@@ -6,7 +6,7 @@
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "is composed mainly of",
+        "link": "composed mainly of",
         "object": "RNA"
     },
     {
@@ -16,8 +16,7 @@
     },
     {
         "subject": "RNA building blocks",
-        "link": "exhibit each of the above",
-        "object": "properties"
+        "link": "exhibit each of the above"
     },
     {
         "subject": "RNA",
@@ -26,36 +25,27 @@
     },
     {
         "subject": "RNA",
-        "link": "has a negative-charge",
-        "object": "which prevents nonspecific binding to negatively charged cell membranes"
+        "link": "negative-charge prevents",
+        "object": "nonspecific binding to negatively charged cell membranes"
     },
     {
         "subject": "RNA",
-        "link": "is suitable for",
+        "link": "thermostability makes it suitable for",
         "object": "logic gates, resistive memory, sensor set-ups, and NEM devices"
     },
     {
         "subject": "RNA",
         "link": "can be designed and manipulated",
-        "object": "with a level of simplicity of DNA"
-    },
-    {
-        "subject": "RNA",
-        "link": "can fold into single-stranded loops or bulges",
-        "object": "to serve as mounting dovetails for intermolecular or domain interactions without external linking dowels"
+        "object": "with a level of simplicity of DNA while displaying versatile structure and enzyme activity of proteins"
     },
     {
         "subject": "RNA nanoparticles",
         "link": "display rubber- and amoeba-like properties",
-        "object": "and are stretchable and shrinkable"
+        "object": "and are stretchable and shrinkable through multiple repeats"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "was predicted in 2014 to be",
-        "object": "the third milestone in pharmaceutical drug development"
-    },
-    {
-        "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
-        "link": "suggests that this milestone is being realized"
+        "link": "recent approval of several RNA drugs and COVID-19 mRNA vaccines by FDA",
+        "object": "suggests that the milestone is being realized"
     }
 ]

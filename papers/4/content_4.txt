@@ -1,62 +1,36 @@
 [
     {
-        "subject": "Neuron",
+        "subject": "Within a nervous system, a neuron",
         "link": "is",
         "object": "electrically excitable cell"
     },
     {
-        "subject": "Neuron",
-        "link": "fires",
-        "object": "electric signals called action potentials"
-    },
-    {
-        "subject": "Neurons communicate",
-        "link": "with other cells via",
+        "subject": "Neurons communicate with other cells",
+        "link": "via",
         "object": "synapses"
     },
     {
-        "subject": "Synapses",
-        "link": "commonly use",
-        "object": "minute amounts of chemical neurotransmitters"
+        "subject": "Synapses use",
+        "link": "minute amounts of chemical neurotransmitters",
+        "object": "to pass the electric signal"
     },
     {
-        "subject": "Neuron",
-        "link": "is the main component of",
-        "object": "nervous tissue"
+        "subject": "Neuron is the main component of",
+        "link": "nervous tissue",
+        "object": "in all animals except sponges and placozoa"
     },
     {
-        "subject": "Animals except sponges and placozoa",
-        "link": "have",
-        "object": "nervous tissue"
-    },
-    {
-        "subject": "Non-animals like plants and fungi",
-        "link": "do not have",
-        "object": "nervous tissue"
-    },
-    {
-        "subject": "Ability to generate electric signals",
+        "subject": "Molecular evidence suggests that the ability to generate electric signals",
         "link": "first appeared in evolution",
-        "object": "700 to 800 million years ago"
+        "object": "some 700 to 800 million years ago"
     },
     {
-        "subject": "Predecessors of neurons",
-        "link": "were",
-        "object": "peptidergic secretory cells"
+        "subject": "Predecessors of neurons were the peptidergic secretory cells",
+        "link": "eventually gained new gene modules",
+        "object": "which enabled cells to create post-synaptic scaffolds and ion channels"
     },
     {
-        "subject": "Predecessors of neurons",
-        "link": "eventually gained",
-        "object": "new gene modules"
-    },
-    {
-        "subject": "New gene modules",
-        "link": "enabled cells to create",
-        "object": "post-synaptic scaffolds and ion channels"
-    },
-    {
-        "subject": "Ability to generate electric signals",
-        "link": "was a key innovation in the evolution of the",
-        "object": "nervous system"
+        "subject": "The ability to generate electric signals",
+        "link": "was a key innovation in the evolution of the nervous system"
     }
 ]

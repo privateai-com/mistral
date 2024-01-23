@@ -1,63 +1,48 @@
 [
     {
         "subject": "Proteins",
-        "link": "are large biomolecules and macromolecules that comprise",
+        "link": "are",
+        "object": "large biomolecules and macromolecules"
+    },
+    {
+        "subject": "Proteins",
+        "link": "comprise",
         "object": "one or more long chains of amino acid residues"
     },
     {
         "subject": "Proteins",
-        "link": "perform a vast array of functions within organisms",
-        "object": "catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
+        "link": "perform",
+        "object": "a vast array of functions within organisms"
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their sequence of",
-        "object": "amino acids"
+        "link": "differ from one another primarily in their",
+        "object": "sequence of amino acids"
+    },
+    {
+        "subject": "Sequence of amino acids",
+        "link": "is dictated by",
+        "object": "nucleotide sequence of their genes"
     },
     {
         "subject": "Proteins",
-        "link": "are bonded together by",
-        "object": "peptide bonds"
+        "link": "contain at least",
+        "object": "one long polypeptide"
     },
     {
-        "subject": "Proteins",
-        "link": "are defined by the sequence of a gene",
-        "object": "which is encoded in the genetic code"
+        "subject": "Polypeptide",
+        "link": "is called",
+        "object": "protein"
     },
     {
-        "subject": "Proteins",
-        "link": "can work together to achieve a particular function",
-        "object": "and they often associate to form stable protein complexes"
-    },
-    {
-        "subject": "Proteins",
-        "link": "can have non-peptide groups attached",
-        "object": "which can be called prosthetic groups or cofactors"
-    },
-    {
-        "subject": "Proteins",
-        "link": "are synthesized",
-        "object": "shortly after or even during synthesis, the residues are often chemically modified"
-    },
-    {
-        "subject": "Proteins",
-        "link": "can be considered to be",
-        "object": "macromolecules"
-    },
-    {
-        "subject": "Polypeptides",
-        "link": "are long chains of",
-        "object": "amino acid residues"
-    },
-    {
-        "subject": "Polypeptides",
-        "link": "are called",
+        "subject": "Short polypeptides",
+        "link": "are rarely considered to be",
         "object": "proteins"
     },
     {
-        "subject": "Peptides",
-        "link": "are short polypeptides",
-        "object": "containing less than 20-30 residues"
+        "subject": "Short polypeptides",
+        "link": "are commonly called",
+        "object": "peptides"
     },
     {
         "subject": "Amino acid residues",
@@ -65,23 +50,18 @@
         "object": "peptide bonds"
     },
     {
-        "subject": "Genes",
-        "link": "specify",
-        "object": "sequence of a protein"
+        "subject": "Proteins",
+        "link": "are often chemically modified by",
+        "object": "post-translational modification"
     },
     {
-        "subject": "Genetic code",
-        "link": "specifies",
-        "object": "20 standard amino acids"
+        "subject": "Proteins",
+        "link": "can have non-peptide groups attached",
+        "object": "prosthetic groups or cofactors"
     },
     {
-        "subject": "Certain organisms",
-        "link": "can include",
-        "object": "selenocysteine and pyrrolysine in the genetic code"
-    },
-    {
-        "subject": "Post-translational modification",
-        "link": "alters",
-        "object": "physical and chemical properties, folding, stability, activity, and ultimately, function of proteins"
+        "subject": "Proteins",
+        "link": "work together to achieve a particular function",
+        "object": "protein complexes"
     }
 ]
