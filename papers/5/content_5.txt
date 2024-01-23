@@ -1,67 +1,31 @@
 [
     {
         "subject": "Proteins",
-        "link": "are",
-        "object": "large biomolecules and macromolecules"
-    },
-    {
-        "subject": "Proteins",
-        "link": "comprise",
+        "link": "are large biomolecules and macromolecules that comprise",
         "object": "one or more long chains of amino acid residues"
     },
     {
         "subject": "Proteins",
-        "link": "perform",
-        "object": "a vast array of functions within organisms"
+        "link": "perform a vast array of functions within organisms, including",
+        "object": "catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their",
-        "object": "sequence of amino acids"
+        "link": "differ from one another primarily in their sequence of",
+        "object": "amino acids"
     },
     {
-        "subject": "Sequence of amino acids",
-        "link": "is dictated by",
-        "object": "nucleotide sequence of their genes"
-    },
-    {
-        "subject": "Proteins",
-        "link": "contain at least",
-        "object": "one long polypeptide"
-    },
-    {
-        "subject": "Polypeptide",
-        "link": "is called",
-        "object": "protein"
-    },
-    {
-        "subject": "Short polypeptides",
-        "link": "are rarely considered to be",
-        "object": "proteins"
-    },
-    {
-        "subject": "Short polypeptides",
-        "link": "are commonly called",
-        "object": "peptides"
-    },
-    {
-        "subject": "Amino acid residues",
-        "link": "are bonded together by",
-        "object": "peptide bonds"
+        "subject": "Sequence of amino acids in a protein",
+        "link": "is defined by the sequence of a",
+        "object": "gene"
     },
     {
         "subject": "Proteins",
-        "link": "are often chemically modified by",
+        "link": "often chemically modified by",
         "object": "post-translational modification"
     },
     {
         "subject": "Proteins",
-        "link": "can have non-peptide groups attached",
-        "object": "prosthetic groups or cofactors"
-    },
-    {
-        "subject": "Proteins",
-        "link": "work together to achieve a particular function",
-        "object": "protein complexes"
+        "link": "can also work together to achieve a particular function, and they often associate to form stable protein complexes"
     }
 ]

@@ -1,18 +1,28 @@
 [
     {
         "subject": "RNA nanotechnology",
-        "link": "is",
-        "object": "bottom-up self-assembly of nanometer-scale architectures"
+        "link": "is the bottom-up self-assembly of",
+        "object": "nanometer-scale architectures"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "composed mainly of",
+        "link": "is composed mainly of",
         "object": "RNA"
     },
     {
         "subject": "Ideal building material",
         "link": "should be",
-        "object": "(1) versatile and controllable in shape and stoichiometry, (2) spontaneously self-assemble, and (3) thermodynamically, chemically, and enzymatically stable with a long shelf life"
+        "object": "(1) versatile and controllable in shape and stoichiometry"
+    },
+    {
+        "subject": "Ideal building material",
+        "link": "should be",
+        "object": "(2) spontaneously self-assemble"
+    },
+    {
+        "subject": "Ideal building material",
+        "link": "should be",
+        "object": "(3) thermodynamically, chemically, and enzymatically stable with a long shelf life"
     },
     {
         "subject": "RNA building blocks",
@@ -25,18 +35,23 @@
     },
     {
         "subject": "RNA",
-        "link": "negative-charge prevents",
-        "object": "nonspecific binding to negatively charged cell membranes"
+        "link": "has a negative-charge",
+        "object": "which prevents nonspecific binding to negatively charged cell membranes"
     },
     {
         "subject": "RNA",
-        "link": "thermostability makes it suitable for",
-        "object": "logic gates, resistive memory, sensor set-ups, and NEM devices"
+        "link": "is suitable for logic gates, resistive memory, sensor set-ups, and NEM devices",
+        "object": "due to its thermostability"
     },
     {
         "subject": "RNA",
         "link": "can be designed and manipulated",
-        "object": "with a level of simplicity of DNA while displaying versatile structure and enzyme activity of proteins"
+        "object": "with a level of simplicity of DNA"
+    },
+    {
+        "subject": "RNA",
+        "link": "can fold into single-stranded loops or bulges",
+        "object": "to serve as mounting dovetails for intermolecular or domain interactions without external linking dowels"
     },
     {
         "subject": "RNA nanoparticles",
@@ -45,7 +60,10 @@
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "recent approval of several RNA drugs and COVID-19 mRNA vaccines by FDA",
-        "object": "suggests that the milestone is being realized"
+        "link": "was predicted in 2014 to be the third milestone in pharmaceutical drug development"
+    },
+    {
+        "subject": "Recent approvals of RNA drugs and COVID-19 mRNA vaccines",
+        "link": "suggest that this milestone is being realized"
     }
 ]

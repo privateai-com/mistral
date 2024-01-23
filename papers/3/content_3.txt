@@ -6,18 +6,18 @@
     },
     {
         "subject": "Cystic fibrosis (CF)",
-        "link": "is caused by",
-        "object": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)"
+        "link": "is caused by mutations in the",
+        "object": "cystic fibrosis transmembrane conductance regulator (CFTR)"
     },
     {
         "subject": "Cystic fibrosis (CF)",
         "link": "is a multi-organ disease that involves",
-        "object": "lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
+        "object": "the lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
     },
     {
         "subject": "CFTR mutations",
         "link": "lead to",
-        "object": "dysregulation of several cellular signalling pathways in innate immune cells"
+        "object": "dysregulation of several cellular signalling pathways"
     },
     {
         "subject": "Airway epithelial cells, neutrophils, monocytes and macrophages",
@@ -26,12 +26,17 @@
     },
     {
         "subject": "Immune cells",
-        "link": "play a crucial role in",
-        "object": "protecting the organs against opportunistic infections and also in the regulation of tissue homeostasis"
+        "link": "play a crucial role in protecting the organs against opportunistic infections",
+        "object": "and also in the regulation of tissue homeostasis"
     },
     {
         "subject": "Innate immune cells",
         "link": "are generally affected by CFTR mutations in patients with CF",
         "object": "leading to dysregulation of several cellular signalling pathways"
+    },
+    {
+        "subject": "Innate immune cells",
+        "link": "are in continuous use by these cells to elicit a proper immune response",
+        "object": "dysregulation of these pathways contributes to the pathogenesis of CF"
     }
 ]

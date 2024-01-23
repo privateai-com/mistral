@@ -1,7 +1,7 @@
 [
     {
         "subject": "Within a nervous system, a neuron",
-        "link": "is",
+        "link": "is an",
         "object": "electrically excitable cell"
     },
     {
@@ -10,18 +10,23 @@
         "object": "synapses"
     },
     {
-        "subject": "Synapses use",
+        "subject": "Synapses commonly use",
         "link": "minute amounts of chemical neurotransmitters",
         "object": "to pass the electric signal"
     },
     {
-        "subject": "Neuron is the main component of",
-        "link": "nervous tissue",
-        "object": "in all animals except sponges and placozoa"
+        "subject": "Neuron is the main component of nervous tissue",
+        "link": "in all animals except",
+        "object": "sponges and placozoa"
     },
     {
-        "subject": "Molecular evidence suggests that the ability to generate electric signals",
-        "link": "first appeared in evolution",
+        "subject": "Non-animals like plants and fungi",
+        "link": "do not have",
+        "object": "nerve cells"
+    },
+    {
+        "subject": "Molecular evidence suggests that the ability to generate electric signals first appeared",
+        "link": "during the Tonian period",
         "object": "some 700 to 800 million years ago"
     },
     {
@@ -30,7 +35,6 @@
         "object": "which enabled cells to create post-synaptic scaffolds and ion channels"
     },
     {
-        "subject": "The ability to generate electric signals",
-        "link": "was a key innovation in the evolution of the nervous system"
+        "subject": "The ability to generate electric signals was a key innovation in the evolution of the nervous system"
     }
 ]

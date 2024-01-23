@@ -17,7 +17,7 @@
     {
         "subject": "Absence of signals",
         "link": "that normally induce cell death",
-        "object": "is another mechanism"
+        "object": ""
     },
     {
         "subject": "MDSCs",
@@ -27,7 +27,7 @@
     {
         "subject": "Fas",
         "link": "is engaged by",
-        "object": "FasL to cause apoptosis"
+        "object": "FasL"
     },
     {
         "subject": "Activated T cells",
