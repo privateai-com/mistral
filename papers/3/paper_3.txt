@@ -1,4 +1,3 @@
-
 Cystic fibrosis (CF) is one of the most common life-limiting recessive genetic disorders 
 in Caucasians, caused by mutations in the cystic fibrosis transmembrane conductance 
 regulator (CFTR). CF is a multi-organ disease that involves the lungs, pancreas, sweat glands, 

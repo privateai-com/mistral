@@ -1,4 +1,3 @@
-
 RNA nanotechnology is the bottom-up self-assembly of nanometer-scale architectures, 
 resembling LEGOs, composed mainly of RNA. The ideal building material should be (1) 
 versatile and controllable in shape and stoichiometry, (2) spontaneously self-assemble, 
