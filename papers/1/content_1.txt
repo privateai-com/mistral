@@ -1,28 +1,8 @@
 [
     {
-        "subject": "Accumulation of MDSCs associated with tumor growth",
-        "link": "could be because of",
-        "object": "various mechanisms"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "include",
-        "object": "presence of excessive growth factors, cytokines, or inflammatory molecules"
-    },
-    {
-        "subject": "Presence of excessive growth factors, cytokines, or inflammatory molecules",
-        "link": "provide",
-        "object": "continuous survival signals"
-    },
-    {
-        "subject": "Absence of signals",
-        "link": "that normally induce cell death",
-        "object": ""
-    },
-    {
         "subject": "MDSCs",
         "link": "express",
-        "object": "death receptor Fas"
+        "object": "Fas"
     },
     {
         "subject": "Fas",
@@ -30,9 +10,14 @@
         "object": "FasL"
     },
     {
+        "subject": "Fas-FasL interactions",
+        "link": "mediate",
+        "object": "apoptosis of MDSCs in vivo"
+    },
+    {
         "subject": "Activated T cells",
         "link": "expressing FasL",
-        "object": "mediate apoptosis of MDSCs in vivo"
+        "object": "mediate apoptosis of MDSCs"
     },
     {
         "subject": "Fas-FasL interactions",

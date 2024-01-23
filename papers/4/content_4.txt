@@ -1,40 +1,32 @@
 [
     {
-        "subject": "Within a nervous system, a neuron",
-        "link": "is an",
-        "object": "electrically excitable cell"
+        "subject": "Neurons",
+        "link": "are electrically excitable cells that fire",
+        "object": "action potentials"
     },
     {
-        "subject": "Neurons communicate with other cells",
-        "link": "via",
+        "subject": "Neurons",
+        "link": "communicate with other cells via",
         "object": "synapses"
     },
     {
-        "subject": "Synapses commonly use",
-        "link": "minute amounts of chemical neurotransmitters",
-        "object": "to pass the electric signal"
+        "subject": "Synapses",
+        "link": "use minute amounts of chemical neurotransmitters to pass",
+        "object": "electric signals"
     },
     {
-        "subject": "Neuron is the main component of nervous tissue",
-        "link": "in all animals except",
+        "subject": "Neurons",
+        "link": "are the main component of nervous tissue in all animals except",
         "object": "sponges and placozoa"
     },
     {
-        "subject": "Non-animals like plants and fungi",
-        "link": "do not have",
-        "object": "nerve cells"
+        "subject": "Predecessors of neurons",
+        "link": "eventually gained new gene modules which enabled cells to create",
+        "object": "post-synaptic scaffolds and ion channels"
     },
     {
-        "subject": "Molecular evidence suggests that the ability to generate electric signals first appeared",
-        "link": "during the Tonian period",
-        "object": "some 700 to 800 million years ago"
-    },
-    {
-        "subject": "Predecessors of neurons were the peptidergic secretory cells",
-        "link": "eventually gained new gene modules",
-        "object": "which enabled cells to create post-synaptic scaffolds and ion channels"
-    },
-    {
-        "subject": "The ability to generate electric signals was a key innovation in the evolution of the nervous system"
+        "subject": "Ability to generate electric signals",
+        "link": "was a key innovation in the evolution of the nervous system",
+        "object": "during the Tonian period"
     }
 ]
