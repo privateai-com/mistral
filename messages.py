@@ -8,23 +8,30 @@ messages = [
 
             [Nature of triplet]
             A triplet is a collection of 3 parts: a subject, a link, an object.
-            A subject is connected with an object via a link.
-            In most cases, a subject and an object contain nouns and adjectives and links contain verbs.
+            Each part of triplet is essential. Each triplet must contain all parts: subject, link, object.
+            Triplets with less then 3 parts are unacceptable.
+            Subject and object contain nouns and adjectives and links contain verbs.
 
             [Usage of triplets in real life]
-            Extracted triplets will be used by other people to quickly understand the context without reading it whole. Thus, extract
-            only meaningful triplets that might be helpful to understand the context.
+            Extracted triplets will be used by other people to quickly understand the context without 
+            reading it whole. Thus, extract all possible triplets. Do not pass any triplets even if they
+            are not as important as others. Analyze each sentence. Do not skip any senrences.
 
-            [Length of parts of tripleets]
-            Maximum length of each part of triplet must be 50 characters. Only 50 charactes are allowed for each found part of triplet.
-            Each of 3 parts of triplet must not be empty.
+            [Length of parts of triplets]
+            Each part of triplet must contain maximum of 4 words. For example, if object is:
+            "Strong relationships full of trust and love", rephrase it to "Strong relationships".
+            If any part of triplet can be divided into new triplets - do it. For example if object is
+            "Mike went out to see Bob, Alice and dad", divide it into three triplets each containing
+            "Bob", "Alice" and "dad" respectively.
+            Each part of triplets must contain something. Empty objects, links or subjects are unacceptable. 
 
             [Insufficient context]
-            Do not make up any new triplets, stick strictly to the context.
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
+            If context in not enough to form any triplets, say "No triplets". Exactly that.
+
 
             [Output format]
-            You must output all triplets in a valid JSON format. That means the output must contain correct amount of curly braces and square brackets.
+            You must output all triplets in a valid JSON format. 
             Each openening curly brace must have a closing curly brace.
             Each opening square bracket must have a closing square bracket.
 
@@ -38,103 +45,15 @@ messages = [
 
             ### Example ###
             Context: "Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop."
-            Triplets: No triplets
+            Your answer: "No triplets"
 
             ### Example ###
             Context: "Soap"
-            Triplets: No triplets
+            Your answer: "No triplets"
 
             ### Example ###
             Context: "Kendrick Lamar"
-            Triplets: No triplets
-
-            ### Example ###
-            Context: "Australia has reach wildlife"
-            Wrong triplets:
-            [
-                {{  
-                    "subject": "Australia",
-                    "link": "is",
-                    "object": "rich wildlife"
-                }},
-            ]
-            Correct triplets:
-            [
-                {{  
-                    "subject": "Australia",
-                    "link": "has",
-                    "object": "rich wildlife"
-                }},
-            ]
-            So pay attention to grammatical form of all words in the triplet. Especially verbs.
-
-            ### Example ###
-            Context: "Alice bought some Ethereum"
-            Wrong format:
-            [
-                {{  
-                    "subject": "Alice",
-                    "link": "bought",
-                    "object": "Ethereum"
-                <- No curly brace here
-            ]
-            Correct format:
-            [
-                {{  
-                    "subject": "Alice",
-                    "link": "bought",
-                    "object": "Ethereum"
-                }} <- This curly brace must be here
-            ]
-
-            ### Example ###
-            Context: "Vitamin C is known as ascorbic acid. Vitamin C is known as ascorbate."
-            Wrong triplets:
-            [
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is known as",
-                    "object": "ascorbic acid" 
-                }},
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is known as",
-                    "object": "ascorbate"
-                }}
-            ]
-            Correct triplets:
-            [
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is known as",
-                    "object": "ascorbic acid"
-                }}
-            ]
-
-            ### Example ###
-            Context: "Vitamin C is sold as a topical `serum` ingredient to treat melasma (dark pigment spots) and wrinkles on the face"
-            Wrong triplets:
-            [
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is sold as topical 'serum' ingredient to treat",
-                    "object": "melasma (dark pigment spots)" 
-                }},
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is sold as topical 'serum' ingredient to treat",
-                    "object": "wrinkles on the face" 
-                }}
-            ]
-            Correct triplets:
-            [
-                {{  
-                    "subject": "Vitamin C",
-                    "link": "is sold to treat",
-                    "object": "melasma and face wrinkles" 
-                }}
-            ]
-
+            Your answer: "No triplets"
 
             ### Example ###
             Context: "Bipolar disorder, previously known as manic depression, is a mental disorder characterized by 

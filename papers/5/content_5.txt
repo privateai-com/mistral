@@ -1,36 +1,57 @@
 [
     {
         "subject": "Proteins",
-        "link": "are large biomolecules and macromolecules that comprise",
+        "link": "are",
+        "object": "large biomolecules and macromolecules"
+    },
+    {
+        "subject": "Proteins",
+        "link": "comprise",
         "object": "one or more long chains of amino acid residues"
     },
     {
         "subject": "Proteins",
-        "link": "perform a vast array of functions within organisms, including",
-        "object": "catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
+        "link": "perform",
+        "object": "a vast array of functions within organisms"
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their sequence of amino acids, which is dictated by the nucleotide sequence of their genes, and which usually results in protein folding into a specific 3D structure that determines its activity",
-        "object": "A linear chain of amino acid residues is called a polypeptide"
+        "link": "differ from one another primarily in their",
+        "object": "sequence of amino acids"
+    },
+    {
+        "subject": "Sequence of amino acids",
+        "link": "is dictated by",
+        "object": "nucleotide sequence of their genes"
     },
     {
         "subject": "Proteins",
-        "link": "contain at least one long polypeptide",
-        "object": "Short polypeptides, containing less than 20\u201330 residues, are rarely considered to be proteins and are commonly called peptides"
+        "link": "contain at least",
+        "object": "one long polypeptide"
+    },
+    {
+        "subject": "Polypeptide",
+        "link": "is",
+        "object": "a linear chain of amino acid residues"
+    },
+    {
+        "subject": "Short polypeptides",
+        "link": "are rarely considered to be",
+        "object": "proteins"
     },
     {
         "subject": "Proteins",
-        "link": "are bonded together by peptide bonds and adjacent amino acid residues",
-        "object": "The sequence of amino acid residues in a protein is defined by the sequence of a gene, which is encoded in the genetic code"
+        "link": "are bonded together by",
+        "object": "peptide bonds"
     },
     {
         "subject": "Proteins",
-        "link": "are often chemically modified by post-translational modification",
-        "object": "Some proteins have non-peptide groups attached, which can be called prosthetic groups or cofactors"
+        "link": "are often chemically modified by",
+        "object": "post-translational modification"
     },
     {
         "subject": "Proteins",
-        "link": "can also work together to achieve a particular function, and they often associate to form stable protein complexes"
+        "link": "can work together to achieve a particular function",
+        "object": "and they often associate to form stable protein complexes"
     }
 ]
