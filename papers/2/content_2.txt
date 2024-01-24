@@ -6,27 +6,27 @@
     },
     {
         "subject": "RNA",
-        "link": "is a polynucleic acid and its negative-charge",
-        "object": "prevents nonspecific binding to negatively charged cell membranes"
-    },
-    {
-        "subject": "RNA building blocks",
-        "link": "exhibit versatility and controllability in shape and stoichiometry",
-        "object": "and are thermodynamically, chemically, and enzymatically stable with a long shelf life"
+        "link": "is a polynucleic acid, making it a",
+        "object": "polymer"
     },
     {
         "subject": "RNA",
-        "link": "can be designed and manipulated with a level of simplicity of DNA",
-        "object": "while displaying versatile structure and enzyme activity of proteins"
+        "link": "can be designed and manipulated",
+        "object": "with a level of simplicity of DNA"
     },
     {
         "subject": "RNA nanoparticles",
-        "link": "display rubber- and amoeba-like properties and are stretchable and shrinkable",
-        "object": "leading to enhanced tumor targeting and fast renal excretion to reduce toxicities"
+        "link": "display rubber- and amoeba-like properties",
+        "object": "and are stretchable and shrinkable"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "was predicted in 2014 to be the third milestone in pharmaceutical drug development",
-        "object": "and recent approvals suggest that this milestone is being realized"
+        "link": "was predicted in 2014 to be the third milestone in",
+        "object": "pharmaceutical drug development"
+    },
+    {
+        "subject": "RNA nanotechnology",
+        "link": "recently approved several RNA drugs and COVID-19 mRNA vaccines by FDA",
+        "object": "suggests that this milestone is being realized"
     }
 ]

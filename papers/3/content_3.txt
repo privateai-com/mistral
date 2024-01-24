@@ -1,32 +1,17 @@
 [
     {
         "subject": "Cystic fibrosis (CF)",
-        "link": "is a life-limiting genetic disorder in",
-        "object": "Caucasians, caused by mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)"
-    },
-    {
-        "subject": "CF",
-        "link": "is a multi-organ disease that involves",
-        "object": "the lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
+        "link": "is one of the most common",
+        "object": "life-limiting recessive genetic disorders in Caucasians"
     },
     {
         "subject": "CFTR mutations",
-        "link": "lead to dysregulation of several cellular signalling pathways in",
-        "object": "innate immune cells: airway epithelial cells, neutrophils, monocytes and macrophages"
-    },
-    {
-        "subject": "Immune cells",
-        "link": "play a crucial role in protecting the organs against opportunistic infections and also in",
-        "object": "the regulation of tissue homeostasis"
-    },
-    {
-        "subject": "Innate immune cells",
-        "link": "are generally affected by CFTR mutations in patients with CF, leading to",
-        "object": "dysregulation of several signalling pathways"
+        "link": "lead to",
+        "object": "dysregulation of several cellular signalling pathways in innate immune cells"
     },
     {
         "subject": "Airway epithelial cells, neutrophils, monocytes and macrophages",
-        "link": "all contribute to the pathogenesis of CF, underlying the importance of the CFTR in",
-        "object": "innate immune responses"
+        "link": "all contribute to the pathogenesis of CF",
+        "object": "highlighting several signalling pathways that may be dysregulated in cells with CFTR mutations"
     }
 ]

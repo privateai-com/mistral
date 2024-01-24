@@ -11,17 +11,17 @@
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "mediate",
-        "object": "apoptosis of MDSCs in vivo"
+        "link": "could be exploited as a strategy",
+        "object": "to reduce MDSC levels in vivo"
+    },
+    {
+        "subject": "MDSCs",
+        "link": "are killed",
+        "object": "when Fas is engaged by FasL"
     },
     {
         "subject": "Activated T cells",
         "link": "expressing FasL",
-        "object": "mediate apoptosis of MDSCs"
-    },
-    {
-        "subject": "Fas-FasL interactions",
-        "link": "could be exploited as a strategy",
-        "object": "to reduce MDSC levels in vivo"
+        "object": "mediate apoptosis of MDSCs in vivo"
     }
 ]

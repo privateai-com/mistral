@@ -1,8 +1,8 @@
 [
     {
         "subject": "Neurons",
-        "link": "are electrically excitable cells that fire",
-        "object": "action potentials"
+        "link": "are electrically excitable cells that",
+        "object": "fire electric signals called action potentials"
     },
     {
         "subject": "Neurons",
@@ -10,23 +10,13 @@
         "object": "synapses"
     },
     {
-        "subject": "Synapses",
-        "link": "use minute amounts of chemical neurotransmitters to pass",
-        "object": "electric signals"
-    },
-    {
-        "subject": "Neurons",
-        "link": "are the main component of nervous tissue in all animals except",
-        "object": "sponges and placozoa"
-    },
-    {
         "subject": "Predecessors of neurons",
-        "link": "eventually gained new gene modules which enabled cells to create",
-        "object": "post-synaptic scaffolds and ion channels"
+        "link": "eventually gained new gene modules which",
+        "object": "enabled cells to create post-synaptic scaffolds and ion channels"
     },
     {
-        "subject": "Ability to generate electric signals",
+        "subject": "The ability to generate electric signals",
         "link": "was a key innovation in the evolution of the nervous system",
-        "object": "during the Tonian period"
+        "object": "appeared some 700 to 800 million years ago"
     }
 ]
