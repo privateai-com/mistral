@@ -1,3 +1,6 @@
+import os
+os.environ['TRANSFORMERS_CACHE'] = '/home/ubuntu/big-dir/'
+
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
