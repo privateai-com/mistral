@@ -15,11 +15,6 @@
         "object": "continuous survival signals"
     },
     {
-        "subject": "Absence of signals",
-        "link": "that normally induce cell death",
-        "object": ""
-    },
-    {
         "subject": "MDSCs",
         "link": "express",
         "object": "death receptor Fas"
@@ -30,13 +25,12 @@
         "object": "FasL"
     },
     {
-        "subject": "Activated T cells",
-        "link": "expressing FasL",
-        "object": "mediate apoptosis of MDSCs in vivo"
+        "subject": "Activated T cells expressing FasL",
+        "link": "mediate apoptosis of MDSCs in vivo"
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "could be exploited as a strategy",
-        "object": "to reduce MDSC levels in vivo"
+        "link": "could be exploited as a strategy to",
+        "object": "reduce MDSC levels in vivo"
     }
 ]

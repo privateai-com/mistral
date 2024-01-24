@@ -1,8 +1,8 @@
 [
     {
         "subject": "Cystic fibrosis (CF)",
-        "link": "is one of the most common",
-        "object": "life-limiting recessive genetic disorders in Caucasians"
+        "link": "is one of the most common life-limiting recessive genetic disorders",
+        "object": "in Caucasians"
     },
     {
         "subject": "Cystic fibrosis (CF)",
@@ -12,12 +12,17 @@
     {
         "subject": "Cystic fibrosis (CF)",
         "link": "is a multi-organ disease that involves",
-        "object": "lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
+        "object": "the lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues"
     },
     {
         "subject": "Cystic fibrosis (CF)",
         "link": "is associated with",
         "object": "recurrent lower respiratory tract bacterial and viral infections and inflammatory complications"
+    },
+    {
+        "subject": "Cystic fibrosis (CF)",
+        "link": "is a debilitating condition that may eventually lead to",
+        "object": "pulmonary failure"
     },
     {
         "subject": "Immune cells",
@@ -26,13 +31,8 @@
     },
     {
         "subject": "Innate immune cells",
-        "link": "are generally affected by",
-        "object": "CFTR mutations in patients with CF"
-    },
-    {
-        "subject": "Innate immune cells",
-        "link": "lead to",
-        "object": "dysregulation of several cellular signalling pathways"
+        "link": "are generally affected by CFTR mutations in patients with CF",
+        "object": "leading to dysregulation of several cellular signalling pathways"
     },
     {
         "subject": "Airway epithelial cells, neutrophils, monocytes and macrophages",
@@ -41,12 +41,11 @@
     },
     {
         "subject": "Goal of this review",
-        "link": "is to put into context the important role of the CFTR in",
-        "object": "different innate immune cells"
+        "link": "is to put into context the important role of the CFTR in different innate immune cells",
+        "object": "and how CFTR dysfunction contributes to the pathogenesis of CF"
     },
     {
-        "subject": "CFTR dysfunction",
-        "link": "contributes to the pathogenesis of CF",
-        "object": "highlighting several signalling pathways that may be dysregulated in cells with CFTR mutations"
+        "subject": "Several signalling pathways",
+        "link": "may be dysregulated in cells with CFTR mutations"
     }
 ]

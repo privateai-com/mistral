@@ -1,8 +1,8 @@
 [
     {
         "subject": "RNA nanotechnology",
-        "link": "is",
-        "object": "bottom-up self-assembly of nanometer-scale architectures"
+        "link": "is the bottom-up self-assembly of",
+        "object": "nanometer-scale architectures"
     },
     {
         "subject": "RNA nanotechnology",
@@ -30,51 +30,41 @@
     },
     {
         "subject": "RNA",
-        "link": "is a polynucleic acid",
-        "object": "making it a polymer"
+        "link": "is a polynucleic acid, making it a",
+        "object": "polymer"
     },
     {
         "subject": "RNA",
-        "link": "has a negative-charge",
-        "object": "prevents nonspecific binding to negatively charged cell membranes"
+        "link": "negative-charge prevents",
+        "object": "nonspecific binding to negatively charged cell membranes"
     },
     {
         "subject": "RNA",
-        "link": "is suitable for",
+        "link": "thermostability makes it suitable for",
         "object": "logic gates, resistive memory, sensor set-ups, and NEM devices"
     },
     {
         "subject": "RNA",
-        "link": "can be designed and manipulated",
-        "object": "with a level of simplicity of DNA"
+        "link": "can be designed and manipulated with a level of simplicity of",
+        "object": "DNA"
     },
     {
         "subject": "RNA",
-        "link": "displays versatile structure and enzyme activity of proteins"
+        "link": "can fold into single-stranded loops or bulges",
+        "object": "to serve as mounting dovetails for intermolecular or domain interactions"
     },
     {
         "subject": "RNA nanoparticles",
-        "link": "display rubber- and amoeba-like properties"
-    },
-    {
-        "subject": "RNA nanoparticles",
-        "link": "are stretchable and shrinkable"
-    },
-    {
-        "subject": "RNA nanoparticles",
-        "link": "leading to enhanced tumor targeting"
-    },
-    {
-        "subject": "RNA nanoparticles",
-        "link": "fast renal excretion to reduce toxicities"
+        "link": "display rubber- and amoeba-like properties and are",
+        "object": "stretchable and shrinkable"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "was predicted in 2014 to be",
-        "object": "the third milestone in pharmaceutical drug development"
+        "link": "was predicted in 2014 to be the third milestone in",
+        "object": "pharmaceutical drug development"
     },
     {
-        "subject": "Recent approvals",
-        "link": "suggest that this milestone is being realized"
+        "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
+        "link": "suggests that this milestone is being realized"
     }
 ]

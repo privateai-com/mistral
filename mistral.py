@@ -49,6 +49,7 @@ context_examples = read_files(PAPERS_PATH)
 print("Files loaded!")
 
 # All triplets from all papers
+
 # List of JSON objects. One per paper
 all_triplets = []
 

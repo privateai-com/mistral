@@ -11,47 +11,51 @@
     },
     {
         "subject": "Proteins",
-        "link": "perform",
-        "object": "a vast array of functions within organisms"
+        "link": "perform a vast array of functions within organisms",
+        "object": "including catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their",
-        "object": "sequence of amino acids"
+        "link": "differ from one another primarily in their sequence of",
+        "object": "amino acids"
     },
     {
-        "subject": "Sequence of amino acids",
-        "link": "is dictated by",
+        "subject": "Proteins",
+        "link": "sequence of amino acids is dictated by the",
         "object": "nucleotide sequence of their genes"
     },
     {
         "subject": "Proteins",
-        "link": "contain at least",
-        "object": "one long polypeptide"
+        "link": "usually results in protein folding into a specific",
+        "object": "3D structure"
     },
     {
-        "subject": "Polypeptide",
-        "link": "is",
-        "object": "a linear chain of amino acid residues"
+        "subject": "Protein",
+        "link": "contains at least one long polypeptide",
+        "object": ""
     },
     {
         "subject": "Short polypeptides",
-        "link": "are rarely considered to be",
-        "object": "proteins"
+        "link": "containing less than 20\u201330 residues",
+        "object": "are rarely considered to be proteins"
     },
     {
-        "subject": "Proteins",
+        "subject": "Individual amino acid residues",
         "link": "are bonded together by",
         "object": "peptide bonds"
     },
     {
-        "subject": "Proteins",
-        "link": "are often chemically modified by",
+        "subject": "Shortly after or even during synthesis",
+        "link": "the residues in a protein are often chemically modified by",
         "object": "post-translational modification"
     },
     {
-        "subject": "Proteins",
-        "link": "can work together to achieve a particular function",
-        "object": "and they often associate to form stable protein complexes"
+        "subject": "Some proteins have non-peptide groups attached",
+        "link": "which can be called",
+        "object": "prosthetic groups or cofactors"
+    },
+    {
+        "subject": "Proteins can also work together to achieve a particular function",
+        "link": "and they often associate to form stable protein complexes"
     }
 ]
