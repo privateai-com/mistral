@@ -1,4 +1,4 @@
-messages = [
+triplet_messages = [
     {
         "role": "user", 
         "content": """
@@ -29,7 +29,7 @@ messages = [
             There is usually also a reduced need for sleep during manic phases.
             During periods of depression, the individual may experience crying and have a negative outlook on 
             life and poor eye contact with others
-            Triplets: 
+            Your answer: 
             [
                 {{   
                     "subject": "Bipolar disorder",
@@ -99,7 +99,7 @@ messages = [
             and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
             cell as a source of chemical energy.[2] They were discovered by Albert von Kölliker 
             in 1857[3] in the voluntary muscles of insects. The term mitochondrion was coined by Carl Benda in 1898
-            Triplets: 
+            Your answer: 
             [
                 {{   
                     "subject": "Mitochondrion",
@@ -165,7 +165,7 @@ messages = [
             be very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
             actions of some neurotransmitter systems. Addictive drugs such as cocaine and amphetamines exert their effects 
             primarily on the dopamine system.
-            Triplets:
+            Your answer:
             [
                 {{   
                     "subject": "Most prevalent transmitter",
@@ -215,7 +215,7 @@ messages = [
 
             Context: {context}
 
-            Triplets: 
+            Your answer: 
         """
     }
 ]

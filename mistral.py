@@ -6,7 +6,8 @@ from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from text_reader import read_files, write_triplets
 from pathlib import Path
-from messages import messages
+from triplet_messages import triplet_messages
+from refactor_messages import refactor_messages
 import json
 import torch
 import sys
@@ -14,6 +15,8 @@ import sys
 
 PAPERS_PATH = (Path(__file__).parent).joinpath("papers/")
 
+
+# ==== Base LLM for all chains ====
 model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -22,49 +25,64 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto",
     torch_dtype=torch.float16
 )
-
 tokenizer = AutoTokenizer.from_pretrained(
     model_name
 )
 pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=4096)
-
 llm = HuggingFacePipeline(pipeline=pipe)
 
-# Tokenize previous synthetic dialogue with examples
-prompt_tokens = tokenizer.apply_chat_template(messages, return_tensors="pt")
+# ==== CHAIN 1: Extract triplets ====
+# Tokenize previous messages
+triplet_prompt_tokens = tokenizer.apply_chat_template(triplet_messages, return_tensors="pt")
 # Turn tokens into list of strings
-prompt_text_parts = tokenizer.batch_decode(prompt_tokens)
+triplet_prompt_text_parts = tokenizer.batch_decode(triplet_prompt_tokens)
 # Place all strings into one
-prompt_text = ""
-for part in prompt_text_parts: 
-    prompt_text += part
+triplet_prompt_text = ""
+for part in triplet_prompt_text_parts: 
+    triplet_prompt_text += part
 # Form a prompt from that string
-prompt = PromptTemplate.from_template(prompt_text)
+triplet_prompt = PromptTemplate.from_template(triplet_prompt_text)
+triplet_chain = triplet_prompt | llm
 
-chain = prompt | llm
+# ==== CHAIN 2: Refactor triplets ====
+refactor_prompt_tokens = tokenizer.apply_chat_template(refactor_messages, return_tensors="pt")
+refactor_prompt_text_parts = tokenizer.batch_decode(refactor_prompt_tokens)
+refactor_prompt_text = ""
+for part in refactor_prompt_text_parts: 
+    refactor_prompt_text += part
+refactor_prompt = PromptTemplate.from_template(refactor_prompt_text)
+refactor_chain = refactor_prompt | llm
 
 # Read all papers
 print("Loading files...")
 context_examples = read_files(PAPERS_PATH)
 print("Files loaded!")
 
-# All triplets from all papers
-
 # List of JSON objects. One per paper
 all_triplets = []
 
-print("Extracting triplets...")
 for ex in context_examples:
     file_triplets = []
+
+    # CALL 1: Find triplets
     # Result is a JSON *string* with all triplets from the current paper
-    res = chain.invoke({"context": ex})
+    print("Extracting triplets...")
+    raw_triplets = triplet_chain.invoke({"context": ex})
     # TODO: 
     print("\n\nRAW RES IS")
-    print(res)
-    if "No triplets" not in res:
+    print(raw_triplets)
+
+    # CALL 2: Refactor triplets
+    print("Refactoring triplets...")
+    ref_triplets = refactor_chain.invoke({"triplets": raw_triplets})
+    # TODO: 
+    print("\nREFACTOR IS")
+    print(ref_triplets)
+
+    if "No triplets" not in ref_triplets:
         # Load string into a JSON object
         try:
-            parsed_json = json.loads(res)
+            parsed_json = json.loads(ref_triplets)
             for triplet in parsed_json:
                 file_triplets.append(triplet)
         except:
