@@ -6,8 +6,8 @@
     },
     {
         "subject": "Neuron",
-        "link": "produces",
-        "object": "electric signals called action potentials"
+        "link": "fires",
+        "object": "action potentials"
     },
     {
         "subject": "Neurons",
@@ -17,7 +17,7 @@
     {
         "subject": "Synapses",
         "link": "utilize",
-        "object": "small amounts of chemical neurotransmitters"
+        "object": "minute amounts of chemical neurotransmitters"
     },
     {
         "subject": "Neuron",
@@ -25,26 +25,26 @@
         "object": "nervous tissue"
     },
     {
-        "subject": "Animals, except sponges and placozoa",
+        "subject": "Animals except sponges and placozoa",
         "link": "possess",
         "object": "nervous tissue"
     },
     {
-        "subject": "Evidence from molecules",
-        "link": "indicates that the capacity to generate electric signals emerged",
+        "subject": "Molecular evidence",
+        "link": "indicates that the ability to generate electric signals emerged",
         "object": "during the Tonian period"
     },
     {
-        "subject": "Ancestors of neurons",
+        "subject": "Precursors of neurons",
         "link": "were peptidergic secretory cells"
     },
     {
-        "subject": "Ancestors of neurons",
+        "subject": "Precursors of neurons",
         "link": "acquired new gene modules",
-        "object": "allowing cells to construct post-synaptic structures and ion channels"
+        "object": "enabling cells to create post-synaptic scaffolds and ion channels"
     },
     {
-        "subject": "Generation of electric signals",
-        "link": "was a significant innovation in the development of the nervous system"
+        "subject": "Ability to generate electric signals",
+        "link": "was a crucial innovation in the evolution of the nervous system"
     }
 ]

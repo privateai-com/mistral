@@ -9,16 +9,14 @@ triplet_messages = [
                 "subject": "Bipolar disorder",
                 "link": "is known as",
                 "object": "manic depression"
-            }},
+            }}
 
             For each triplet:
-            - Must contain all 3 parts: subject, link, object
-            - Must be useful to understand the whole context
-            - Must be a valid JSON 
+            - Make sure it contains all 3 parts: subject, link, object
+            - Make sure it is a valid JSON
 
             For each part of triplet:
             - Must not be empty
-            - Maximum length is 4-5 words
 
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 

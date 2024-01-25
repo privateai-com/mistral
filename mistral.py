@@ -22,9 +22,9 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name,
     do_sample=True,
     #TODO: Play with these params
-    top_k=0, # defaults to 50
-    top_p=0.92, # defaults to 1
-    temperature=0.1, # defaults to 1
+    top_k=50, # defaults to 50
+    top_p=0.90, # defaults to 1
+    temperature=0.2, # defaults to 1
     device_map="auto",
     torch_dtype=torch.float16
 )
@@ -69,7 +69,7 @@ for i, ex in enumerate(context_examples):
 
     # #TODO: delete counter
     # if i != 5:
-    #     continue
+    #    continue
 
     # CALL 1: Find triplets
     # Result is a JSON *string* with all triplets from the current paper

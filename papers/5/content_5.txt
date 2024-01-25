@@ -1,27 +1,33 @@
 [
     {
         "subject": "Proteins",
+        "link": "are",
+        "object": "large biomolecules"
+    },
+    {
+        "subject": "Proteins",
         "link": "consist of",
-        "object": "long chains of amino acids"
+        "object": "one or more long chains of amino acids"
     },
     {
         "subject": "Proteins",
         "link": "have various functions",
-        "object": "such as catalysis, DNA replication, response to stimuli, providing structure, and transport"
+        "object": ""
     },
     {
         "subject": "Proteins",
-        "link": "differ in their sequence of",
-        "object": "amino acids"
+        "link": "differ from one another primarily in their",
+        "object": "sequences"
     },
     {
-        "subject": "Amino acid sequence",
-        "link": "is determined by",
-        "object": "gene nucleotide sequence"
+        "subject": "Sequence",
+        "link": "is dictated by",
+        "object": "nucleotide sequence"
     },
     {
         "subject": "Proteins",
-        "link": "consist of at least one long polypeptide"
+        "link": "contain at least",
+        "object": "one long polypeptide"
     },
     {
         "subject": "Polypeptide",
@@ -30,8 +36,8 @@
     },
     {
         "subject": "Short polypeptides",
-        "link": "containing fewer than 20\u201330 residues",
-        "object": "are typically not considered proteins"
+        "link": "containing less than 20-30 residues",
+        "object": "are rarely considered proteins"
     },
     {
         "subject": "Amino acids",
@@ -40,17 +46,17 @@
     },
     {
         "subject": "Proteins",
-        "link": "undergo post-translational modifications",
-        "object": "which change their properties"
-    },
-    {
-        "subject": "Post-translational modifications",
-        "link": "affect",
-        "object": "protein folding, stability, activity, and function"
+        "link": "are chemically modified by",
+        "object": "post-translational modifications"
     },
     {
         "subject": "Proteins",
-        "link": "can form complexes",
-        "object": "to perform specific functions"
+        "link": "can have non-peptide groups attached",
+        "object": "called prosthetic groups or cofactors"
+    },
+    {
+        "subject": "Proteins",
+        "link": "often form",
+        "object": "complexes to achieve functions"
     }
 ]

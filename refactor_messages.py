@@ -2,25 +2,28 @@ refactor_messages = [
     {
         "role": "user", 
         "content": """
-            You are a helpful assistant. You must analyze the given context and refactor it.
-            The context is in JSON format.
+            You are a computer program. Your functionality is the following:
+            1. Get a JSON string as input
+            2. Modify/Enhance it
+            3. Return a new JSON string
+            Your actions must strictly follow the examples provided below.
 
             If you see a "No triplets" string, just say "No triplets".
 
-            Each JSON string a triplet. Each triplet has 3 parts: subject, link, object.
+            Each JSON string contains a triplet. Each triplet has 3 parts: subject, link, object.
             Triplet is surrounded by curly braces like so:
-            {{
-                "subject": "some subject",
-                "link": "some link",
-                "object": "some object",
+            {{   
+                "subject": "Bipolar disorder",
+                "link": "is known as",
+                "object": "manic depression"
             }}
 
             For each triplet:
-            - Make sure it's a valid JSON. It must contain correct number of curly braces, commas, quotes, colons
+            - Make sure it's a valid JSON. 
+            - Make sure it has exactly 3 parts: subject, link, object. 
 
-            For each part of the triplet:
-            - Rephrase it to be as simple to understand as possible
-            - Make it as short as possible
+            For each part of triplet:
+            - Make it as short as possible while keeping the meaning. 
 
             Let's look at some examples:
 
@@ -33,7 +36,7 @@ refactor_messages = [
             Your answer: No triplets.
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Fas-FasL interactions",
                 "link": "can be utilized as a method to",
@@ -47,7 +50,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Accumulation of MDSCs associated with tumor growth",
                 "link": "could be because of",
@@ -96,7 +99,7 @@ refactor_messages = [
             {{
                 "subject": "Various mechanisms",
                 "link": "include",
-                "object": "presence of cytokines, or inflammatory molecules"
+                "object": "presence of cytokines"
             }},
             {{
                 "subject": "Various mechanisms",
@@ -140,7 +143,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Post-translational modifications",
                 "link": "affect",
@@ -169,7 +172,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{                                                                                                                                                                                     
                 "subject": "Short polypeptides", 
                 "link": "containing fewer than 20–30 residues"
@@ -183,7 +186,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{ 
                 "subject": "Proteins", 
                 "link": "consist of at least one long polypeptide"
@@ -197,7 +200,7 @@ refactor_messages = [
 
 
             ### Example ###
-            Old version:
+            Context:
             {{ 
                 "subject": "Proteins", 
                 "link": "have various functions", 
@@ -231,7 +234,7 @@ refactor_messages = [
             }}
              
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Generation of electric signals", 
                 "link": "was a significant innovation in the development of the nervous system"
@@ -244,7 +247,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{ 
                 "subject": "Evidence from molecules", 
                 "link": "indicates that the capacity to generate electric signals emerged", 
@@ -263,7 +266,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Ability to generate electric signals", 
                 "link": "was a key innovation in the evolution of the nervous system"
@@ -276,7 +279,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Activated T cells",
                 "link": "produce",
@@ -295,7 +298,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Activated T cells",
                 "link": "expressing FasL",
@@ -309,7 +312,7 @@ refactor_messages = [
             }}
 
             ### Example ###
-            Old version:
+            Context:
             {{
                 "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
                 "link": "suggests that this milestone is being realized"
@@ -330,7 +333,7 @@ refactor_messages = [
 
             Now refactor the following JSON
 
-            Old version:
+            Context:
             {triplets}
 
             Your answer:
