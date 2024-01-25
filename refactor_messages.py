@@ -17,13 +17,10 @@ refactor_messages = [
 
             For each triplet:
             - Make sure it's a valid JSON. It must contain correct number of curly braces, commas, quotes, colons
-            - Make sure it has all 3 parts: subject, link, object. If no object is present, add it.
 
             For each part of the triplet:
             - Rephrase it to be as simple to understand as possible
             - Make it as short as possible
-            - Get rid of synonyms
-            - Divide it into several triplets if possible
 
             Let's look at some examples:
 
@@ -37,119 +34,298 @@ refactor_messages = [
 
             ### Example ###
             Old version:
-            [
-                {{
-                    "subject": "Fas-FasL interactions",
-                    "link": "can be utilized as a method to",
-                    "object": "decrease MDSC levels in vivo"
-                }}
-            ]
+            {{
+                "subject": "Fas-FasL interactions",
+                "link": "can be utilized as a method to",
+                "object": "decrease MDSC levels in vivo"
+            }}
             Your answer:
-            [
-                {{
-                    "subject": "Fas-FasL interactions",
-                    "link": "can",
-                    "object": "decrease MDSC levels"
-                }}
-            ]
+            {{
+                "subject": "Fas-FasL interactions",
+                "link": "can",
+                "object": "decrease MDSC levels"
+            }}
 
             ### Example ###
             Old version:
-            [
-                {{
-                    "subject": "Accumulation of MDSCs associated with tumor growth",
-                    "link": "could be because of",
-                    "object": "various mechanisms"
-                }},
-                {{
-                    "subject": "Various mechanisms",
-                    "link": "include",
-                    "object": "presence of excessive growth factors, cytokines, or inflammatory molecules"
-                }},
-                {{
-                    "subject": "Presence of excessive growth factors, cytokines, or inflammatory molecules",
-                    "link": "provide",
-                    "object": "continuous survival signals"
-                }},
-                {{
-                    "subject": "MDSCs",
-                    "link": "express",
-                    "object": "death receptor Fas"
-                }},
-                {{
-                    "subject": "Fas",
-                    "link": "is engaged by",
-                    "object": "FasL"
-                }},
-                {{
-                    "subject": "Activated T cells expressing FasL",
-                    "link": "mediate apoptosis of MDSCs in vivo"
-                }},
-                {{
-                    "subject": "Fas-FasL interactions",
-                    "link": "could be exploited as a strategy to",
-                    "object": "reduce MDSC levels in vivo"
-                }}
-            ]
+            {{
+                "subject": "Accumulation of MDSCs associated with tumor growth",
+                "link": "could be because of",
+                "object": "various mechanisms"
+            }},
+            {{
+                "subject": "Various mechanisms",
+                "link": "include",
+                "object": "presence of excessive growth factors, cytokines, or inflammatory molecules"
+            }},
+            {{
+                "subject": "Presence of excessive growth factors, cytokines, or inflammatory molecules",
+                "link": "provide",
+                "object": "continuous survival signals"
+            }},
+            {{
+                "subject": "MDSCs",
+                "link": "express",
+                "object": "death receptor Fas"
+            }},
+            {{
+                "subject": "Fas",
+                "link": "is engaged by",
+                "object": "FasL"
+            }},
+            {{
+                "subject": "Activated T cells expressing FasL",
+                "link": "mediate apoptosis of MDSCs in vivo"
+            }},
+            {{
+                "subject": "Fas-FasL interactions",
+                "link": "could be exploited as a strategy to",
+                "object": "reduce MDSC levels in vivo"
+            }}
             Your answer:
-            [
-                {{
-                    "subject": "Accumulation of MDSCs",
-                    "link": "could be because of",
-                    "object": "various mechanisms"
-                }},
-                {{
-                    "subject": "Various mechanisms",
-                    "link": "include",
-                    "object": "presence of excessive growth factors."
-                }},
-                {{
-                    "subject": "Various mechanisms",
-                    "link": "include",
-                    "object": "presence of cytokines, or inflammatory molecules"
-                }},
-                {{
-                    "subject": "Various mechanisms",
-                    "link": "include",
-                    "object": "presence of inflammatory molecules"
-                }},
-                {{
-                    "subject": "Presence of excessive growth",
-                    "link": "provide",
-                    "object": "continuous survival signals"
-                }},
-                {{
-                    "subject": "Presence of cytokines",
-                    "link": "provide",
-                    "object": "continuous survival signals"
-                }},
-                {{
-                    "subject": "Presence of inflammatory molecules",
-                    "link": "provide",
-                    "object": "continuous survival signals"
-                }},
-                {{
-                    "subject": "MDSCs",
-                    "link": "express",
-                    "object": "death receptor Fas"
-                }},
-                {{
-                    "subject": "Fas",
-                    "link": "is engaged by",
-                    "object": "FasL"
-                }},
-                {{
-                    "subject": "Activated T cells",
-                    "link": "mediate apoptosis of"
-                    "object": "MDSCs in vivo"
-                }},
-                {{
-                    "subject": "Fas-FasL interactions",
-                    "link": "are a strategy to",
-                    "object": "reduce MDSC levels in vivo"
-                }}
-            ]
+            {{
+                "subject": "Accumulation of MDSCs",
+                "link": "could be because of",
+                "object": "various mechanisms"
+            }},
+            {{
+                "subject": "Various mechanisms",
+                "link": "include",
+                "object": "presence of excessive growth factors."
+            }},
+            {{
+                "subject": "Various mechanisms",
+                "link": "include",
+                "object": "presence of cytokines, or inflammatory molecules"
+            }},
+            {{
+                "subject": "Various mechanisms",
+                "link": "include",
+                "object": "presence of inflammatory molecules"
+            }},
+            {{
+                "subject": "Presence of excessive growth",
+                "link": "provide",
+                "object": "continuous survival signals"
+            }},
+            {{
+                "subject": "Presence of cytokines",
+                "link": "provide",
+                "object": "continuous survival signals"
+            }},
+            {{
+                "subject": "Presence of inflammatory molecules",
+                "link": "provide",
+                "object": "continuous survival signals"
+            }},
+            {{
+                "subject": "MDSCs",
+                "link": "express",
+                "object": "death receptor Fas"
+            }},
+            {{
+                "subject": "Fas",
+                "link": "is engaged by",
+                "object": "FasL"
+            }},
+            {{
+                "subject": "Activated T cells",
+                "link": "mediate apoptosis of"
+                "object": "MDSCs in vivo"
+            }},
+            {{
+                "subject": "Fas-FasL interactions",
+                "link": "are a strategy to",
+                "object": "reduce MDSC levels in vivo"
+            }}
+
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Post-translational modifications",
+                "link": "affect",
+                "object": "protein folding, stability, activity, and function"
+            }}
+            Your answer:
+            {{
+                "subject": "Post-translational modifications",
+                "link": "affect",
+                "object": "protein folding"
+            }},
+            {{
+                "subject": "Post-translational modifications",
+                "link": "affect",
+                "object": "protein stability"
+            }},
+            {{
+                "subject": "Post-translational modifications",
+                "link": "affect",
+                "object": "protein activity"
+            }},
+            {{
+                "subject": "Post-translational modifications",
+                "link": "affect",
+                "object": "protein function"
+            }}
+
+            ### Example ###
+            Old version:
+            {{                                                                                                                                                                                     
+                "subject": "Short polypeptides", 
+                "link": "containing fewer than 20–30 residues"
+                "object": "are typically not considered proteins" are not proteins
+            }}
+            Your answer:
+            {{                                                                                                                                                                                     
+                "subject": "Short polypeptides", 
+                "link": "with less than 20-30 residues", 
+                "object": "are not proteins"
+            }}
+
+            ### Example ###
+            Old version:
+            {{ 
+                "subject": "Proteins", 
+                "link": "consist of at least one long polypeptide"
+            }}
+            Your answer:
+            {{ 
+                "subject": "Proteins", 
+                "link": "consist of",
+                "subject": "at least one long polypeptide"
+            }}
+
+
+            ### Example ###
+            Old version:
+            {{ 
+                "subject": "Proteins", 
+                "link": "have various functions", 
+                "object": "such as catalysis, DNA replication, response to stimuli, providing structure, and transport"
+            }}
+            Your answer:
+            {{ 
+                "subject": "Proteins", 
+                "link": "have function of", 
+                "object": "catalysis"
+            }},
+            {{ 
+                "subject": "Proteins", 
+                "link": "have function of", 
+                "object": "DNA replication"
+            }},
+            {{ 
+                "subject": "Proteins", 
+                "link": "have function of", 
+                "object": "response to stimuli"
+            }},
+            {{ 
+                "subject": "Proteins", 
+                "link": "have function of", 
+                "object": "providing structure"
+            }},
+            {{ 
+                "subject": "Proteins", 
+                "link": "have function of", 
+                "object": "transport"
+            }}
              
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Generation of electric signals", 
+                "link": "was a significant innovation in the development of the nervous system"
+            }}
+            Your answer:
+            {{
+                "subject": "Generation of electric signals", 
+                "link": "was a significant innovation in",
+                "object": "development of nervous system"
+            }}
+
+            ### Example ###
+            Old version:
+            {{ 
+                "subject": "Evidence from molecules", 
+                "link": "indicates that the capacity to generate electric signals emerged", 
+                "object": "during the Tonian period" 
+            }}
+            Your answer:
+            {{ 
+                "subject": "Evidence from molecules", 
+                "link": "indicates that", 
+                "object": "capacity to generate electric signals emerged" 
+            }},
+            {{ 
+                "subject": "Capacity to generate electric signals", 
+                "link": "emerged", 
+                "object": "during the Tonian period" 
+            }}
+
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Ability to generate electric signals", 
+                "link": "was a key innovation in the evolution of the nervous system"
+            }}
+            Your answer:
+            {{
+                "subject": "Ability to generate electric signals", 
+                "link": "was a key innovation in"
+                "object": "evolution of the nervous system"
+            }}
+
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Activated T cells",
+                "link": "produce",
+                "object": "FasL, which triggers apoptosis in MDSCs"
+            }}
+            Your answer:
+            {{
+                "subject": "Activated T cells",
+                "link": "produce",
+                "object": "FasL"
+            }},
+            {{
+                "subject": "FasL",
+                "link": "triggers",
+                "object": "apoptosis in MDSC's"
+            }}
+
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Activated T cells",
+                "link": "expressing FasL",
+                "object": "mediate apoptosis of MDSCs in vivo"
+            }}
+            Your answer:
+            {{
+                "subject": "Activated T cells",
+                "link": "mediate",
+                "object": "apoptosis of MDSCs in vivo"
+            }}
+
+            ### Example ###
+            Old version:
+            {{
+                "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
+                "link": "suggests that this milestone is being realized"
+            }}
+            Your answer:
+            {{
+                "subject": "Recent approval of several RNA drugs",
+                "link": "suggests that",
+                "link": "this milestone is being realized"
+            }},
+            {{
+                "subject": "Recent approval of several COVID-19 mRNA vaccines",
+                "link": "suggests that",
+                "link": "this milestone is being realized"
+            }}
+
             ### End of examples ###
 
             Now refactor the following JSON
