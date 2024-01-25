@@ -2,11 +2,10 @@ refactor_messages = [
     {
         "role": "user", 
         "content": """
-            You are a helpful assistant. You will be given a JSON string.
-            Refactor it. Output a new refactored version of that string.
+            You are a helpful assistant. You must analyze the given context and refactor it.
+            The context is in JSON format.
 
-            Some strings might be not JSON but just a "No triplets." strings.
-            If you see a "No triplets" string, return it back. Do not modify it in any way.
+            If you see a "No triplets" string, just say "No triplets".
 
             Each JSON string a triplet. Each triplet has 3 parts: subject, link, object.
             Triplet is surrounded by curly braces like so:
@@ -16,23 +15,25 @@ refactor_messages = [
                 "object": "some object",
             }}
 
+            For each triplet:
+            - Make sure it's a valid JSON. It must contain correct number of curly braces, commas, quotes, colons
+            - Make sure it has all 3 parts: subject, link, object. If no object is present, add it.
+
             For each part of the triplet:
             - Rephrase it to be as simple to understand as possible
-            - Make it as short as possible.
+            - Make it as short as possible
             - Get rid of synonyms
             - Divide it into several triplets if possible
 
             Let's look at some examples:
 
             ### Example ###
-            Old version: No triplets.
-            Your answer:
-            No triplets.
+            Context: No triplets.
+            Your answer: No triplets.
 
             ### Example ###
-            Old version: No triplets.
-            Your answer:
-            No triplets.
+            Context: No triplets.
+            Your answer: No triplets.
 
             ### Example ###
             Old version:
