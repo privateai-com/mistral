@@ -3,6 +3,22 @@ triplet_messages = [
         "role": "user", 
         "content": """
             You are a helpful assistant. You must analyze the given context and find all triplets in it.
+            
+            Example of a triplet that you should find:
+            {{   
+                "subject": "Bipolar disorder",
+                "link": "is known as",
+                "object": "manic depression"
+            }},
+
+            For each triplet:
+            - Must contain all 3 parts: subject, link, object
+            - Must be useful to understand the whole context
+            - Must be a valid JSON 
+
+            For each part of triplet:
+            - Must not be empty
+            - Maximum length is 4-5 words
 
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 
