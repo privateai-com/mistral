@@ -2,39 +2,48 @@ triplet_messages = [
     {
         "role": "user", 
         "content": """
-            You are a helpful assistant. You must analyze the given context and find all triplets in it.
-            
-            Example of a triplet that you should find:
+            You are a computer program. Your functionality is the following:
+            1. Receive text as input
+            2. Analyze it and find all relations (called triplets)
+            3. Output a JSON object with all relations (triplets)
+
+            The triplet is a pair of entities connected with a relation between them. 
+            Entities are called a subject and an object.
+            Relation is called a link.
+
+            For example in context "Bipolar disorder is known as manic depression" subject in "Bipolar disorder", 
+            object is "manic depression" and relation is "is known as".
+            This sentence may be represented as a triplet in JSON format:
             {{   
                 "subject": "Bipolar disorder",
                 "link": "is known as",
                 "object": "manic depression"
             }}
 
-            For each triplet:
-            - Make sure it contains all 3 parts: subject, link, object
-            - Make sure it is a valid JSON
+            ### Example ###
 
-            For each part of triplet:
-            - Must not be empty
-
+            In this example context is too small to find any useful triplets. Each sentence is too short.
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 
-            Let's look at some examples:
-
-            ### Example ###
             Context: Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop.
             Your answer: No triplets.
 
             ### Example ###
+
+            In this example context is also too small to find any useful triplets. Each sentence is too short.
+            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
+
             Context: Soap
             Your answer: No triplets.
 
             ### Example ###
-            Context: Kendrick Lamar
-            Your answer: No triplets.
 
-            ### Example ###
+            In this example you are given a large text. In this case you must analyze it whole. Find triplets in each sentence, 
+            between sentences and different parts of the text.
+            In most cases links contain verbs in different forms. So pay attention to it.
+            Long sentences like "Periods of depression and periods of abnormally elevated mood" are separated into 
+            2 different triplets. All complex sentences must be separated into 2 or more triplets.
+
             Context: Bipolar disorder, previously known as manic depression, is a mental disorder characterized by 
             periods of depression and periods of abnormally elevated mood that each last from days to weeks.
             If the elevated mood is severe or associated with psychosis, it is called mania; if it is less severe, 
@@ -58,36 +67,56 @@ triplet_messages = [
                 {{   
                     "subject": "Bipolar disorder",
                     "link": "is characterized by",
-                    "object": "periods of depression and periods of abnormally elevated mood"
+                    "object": "periods of depression"
                 }},
                 {{   
-                    "subject": "periods of depression and periods of abnormally elevated mood",
+                    "subject": "Bipolar disorder",
+                    "link": "is characterized by",
+                    "object": "periods of abnormally elevated mood"
+                }},
+                {{   
+                    "subject": "Periods of depression",
                     "link": "last",
                     "object": "from days to weeks"
                 }},
                 {{   
-                    "subject": "abnormally elevated mood associated with psychosis",
+                    "subject": "Periods of abnormally elevated mood",
+                    "link": "last",
+                    "object": "from days to weeks"
+                }},
+                {{   
+                    "subject": "Abnormally elevated mood",
                     "link": "is called",
                     "object": "mania"
                 }},
                 {{   
-                    "subject": "less severe abnormally elevated mood",
+                    "subject": "Less severe abnormally elevated mood",
                     "link": "is called",
                     "object": "hypomania"
                 }},
                 {{   
                     "subject": "Individuals during mania period",
-                    "link": "feels",
+                    "link": "feel",
                     "object": "abnormally energetic, happy or irritable"
                 }},
                 {{   
                     "subject": "Individuals during mania period",
-                    "link": "often makes",
+                    "link": "feel",
+                    "object": "happy"
+                }},
+                {{   
+                    "subject": "Individuals during mania period",
+                    "link": "feel",
+                    "object": "irritable"
+                }},
+                {{   
+                    "subject": "Individuals during mania period",
+                    "link": "often make",
                     "object": "impulsive decisions"
                 }},
                 {{   
                     "subject": "Individuals during mania period",
-                    "link": "often needs",
+                    "link": "often need",
                     "object": "less sleep"
                 }},
                 {{   
@@ -108,6 +137,11 @@ triplet_messages = [
             ]
 
             ### Example ###
+
+            In this example context contains special footnotes notations lile [1], [2]. They must be ignored.
+            It also shows a perfect example of triplets. Each part of triplet it neither long, nor short and 
+            all links contain verbs. You should try to find triplets like this in other contexts.
+
             Context: A mitochondrion (/ˌmaɪtəˈkɒndriən/;[1] pl.: mitochondria) is an organelle found in the cells 
             of most eukaryotes, such as animals, plants and fungi. Mitochondria have a double membrane structure 
             and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
@@ -142,7 +176,7 @@ triplet_messages = [
                 }},
                 {{   
                     "subject": "Adenosine triphosphate (ATP)",
-                    "link": " is used by cell as",
+                    "link": "is used as",
                     "object": "source of chemical energy"
                 }},
                 {{   
@@ -173,8 +207,18 @@ triplet_messages = [
             ]
 
             ### Example ###
+
+            In this example your are shown how to rephrase long sentences. For example, in the sentence "The great majority of psychoactive 
+            drugs exert their effects by altering the actions of some neurotransmitter systems" the subject is "Psychoactive drugs",
+            the object is "altering the actions of some neurotransmitter systems" and the link is "exert their effects by". But 
+            object can be replaced with just "actions of neurotransmitter systems", and link can be replaced with "alter".
+            The same goes for "Addictive drugs such as cocaine and amphetamines exert their effects primarily on the dopamine system." The 
+            subject is "Addictive drugs such as cocaine and amphetamines", the object is "dopamine system" and the link is "exert their effects".
+            But subject can be replaced with "Addictive drugs" and link can be replaces wit "affect".
+            You must apply similar patterns of replacing long phrases to all other context parts.
+
             Context: The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 
-            the human brain.[28] The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
+            the human brain. The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
             than 90% of the synapses that do not use glutamate. Although other transmitters are used in fewer synapses, they may 
             be very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
             actions of some neurotransmitter systems. Addictive drugs such as cocaine and amphetamines exert their effects 
@@ -192,13 +236,13 @@ triplet_messages = [
                     "object": "over 90% of the synapses in the human brain"
                 }},
                 {{   
-                    "subject": "Second most prevalent transmitter",
+                    "subject": "The next most prevalent transmitter",
                     "link": "is",
                     "object": "gamma-Aminobutyric Acid (GABA)"
                 }},
                 {{   
                     "subject": "Gamma-Aminobutyric Acid ",
-                    "link": "is excitatory at",
+                    "link": "is inhibitory at",
                     "object": "over 90% of the synapses that do not use glutamate"
                 }},
                 {{   
@@ -208,17 +252,17 @@ triplet_messages = [
                 }},
                 {{   
                     "subject": "Other transmitters",
-                    "link": are still",
+                    "link": are",
                     "object": "very important functionally"
                 }},
                 {{   
                     "subject": "Psychoactive drugs",
-                    "link": "exert their effects by",
-                    "object": "altering the actions of neurotransmitter systems"
+                    "link": "alter",
+                    "object": "the actions of neurotransmitter systems"
                 }},
                 {{   
                     "subject": "Addictive drugs",
-                    "link": " exert their effects on",
+                    "link": "affect",
                     "object": "dopamine system"
                 }}
             ]
