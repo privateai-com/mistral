@@ -2,12 +2,13 @@ refactor_messages = [
     {
         "role": "user", 
         "content": """
-            You are a helpful assistant. You will be given a JSON file. 
-            Refactor it. Output a new refactored version of that file.
+            You are a helpful assistant. You will be given a JSON string.
+            Refactor it. Output a new refactored version of that string.
 
-            If you see a "No triplets." string, ignore it. Do not refactor it. Leave it as it is.
-            
-            Each JSON contains a triplet. Each triplet has 3 parts: subject, link, object.
+            Some strings might be not JSON but just a "No triplets." strings.
+            If you see a "No triplets" string, return it back. Do not modify it in any way.
+
+            Each JSON string a triplet. Each triplet has 3 parts: subject, link, object.
             Triplet is surrounded by curly braces like so:
             {{
                 "subject": "some subject",
@@ -24,6 +25,17 @@ refactor_messages = [
             Let's look at some examples:
 
             ### Example ###
+            Old version: No triplets.
+            Your answer:
+            No triplets.
+
+            ### Example ###
+            Old version: No triplets.
+            Your answer:
+            No triplets.
+
+            ### Example ###
+            Old version:
             [
                 {{
                     "subject": "Fas-FasL interactions",
@@ -41,6 +53,7 @@ refactor_messages = [
             ]
 
             ### Example ###
+            Old version:
             [
                 {{
                     "subject": "Accumulation of MDSCs associated with tumor growth",
@@ -140,6 +153,7 @@ refactor_messages = [
 
             Now refactor the following JSON
 
+            Old version:
             {triplets}
 
             Your answer:

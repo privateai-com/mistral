@@ -61,7 +61,7 @@ print("Files loaded!")
 # List of JSON objects. One per paper
 all_triplets = []
 
-for ex in context_examples:
+for i, ex in enumerate(context_examples):
     file_triplets = []
 
     # CALL 1: Find triplets
