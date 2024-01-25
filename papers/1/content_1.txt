@@ -1,36 +1,47 @@
 [
     {
-        "subject": "Accumulation of MDSCs associated with tumor growth",
-        "link": "could be because of",
-        "object": "various mechanisms"
+        "subject": "MDSC accumulation and tumor growth",
+        "link": "is caused by",
+        "object": "different mechanisms"
     },
     {
-        "subject": "Various mechanisms",
-        "link": "include",
-        "object": "presence of excessive growth factors, cytokines, or inflammatory molecules"
+        "subject": "Different mechanisms",
+        "link": "consist of",
+        "object": "excessive growth factors"
     },
     {
-        "subject": "Presence of excessive growth factors, cytokines, or inflammatory molecules",
-        "link": "provide",
+        "subject": "Different mechanisms",
+        "link": "consist of",
+        "object": "cytokines"
+    },
+    {
+        "subject": "Different mechanisms",
+        "link": "consist of",
+        "object": "inflammatory molecules"
+    },
+    {
+        "subject": "Excessive growth factors, cytokines, or inflammatory molecules",
+        "link": "supply",
         "object": "continuous survival signals"
     },
     {
         "subject": "MDSCs",
-        "link": "express",
+        "link": "have",
         "object": "death receptor Fas"
     },
     {
         "subject": "Fas",
-        "link": "is engaged by",
+        "link": "is bound by",
         "object": "FasL"
     },
     {
-        "subject": "Activated T cells expressing FasL",
-        "link": "mediate apoptosis of MDSCs in vivo"
+        "subject": "Activated T cells",
+        "link": "produce",
+        "object": "apoptosis in MDSCs"
     },
     {
         "subject": "Fas-FasL interactions",
-        "link": "could be exploited as a strategy to",
-        "object": "reduce MDSC levels in vivo"
+        "link": "can be utilized as",
+        "object": "a strategy to decrease MDSC levels in vivo"
     }
 ]

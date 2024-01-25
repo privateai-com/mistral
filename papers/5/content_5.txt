@@ -1,61 +1,56 @@
 [
     {
         "subject": "Proteins",
-        "link": "are",
-        "object": "large biomolecules and macromolecules"
+        "link": "consist of",
+        "object": "long chains of amino acids"
     },
     {
         "subject": "Proteins",
-        "link": "comprise",
-        "object": "one or more long chains of amino acid residues"
+        "link": "have various functions",
+        "object": "such as catalysis, DNA replication, response to stimuli, providing structure, and transport"
     },
     {
         "subject": "Proteins",
-        "link": "perform a vast array of functions within organisms",
-        "object": "including catalysing metabolic reactions, DNA replication, responding to stimuli, providing structure to cells and organisms, and transporting molecules from one location to another"
-    },
-    {
-        "subject": "Proteins",
-        "link": "differ from one another primarily in their sequence of",
+        "link": "differ in their sequence of",
         "object": "amino acids"
     },
     {
-        "subject": "Proteins",
-        "link": "sequence of amino acids is dictated by the",
-        "object": "nucleotide sequence of their genes"
+        "subject": "Amino acid sequence",
+        "link": "is determined by",
+        "object": "gene nucleotide sequence"
     },
     {
         "subject": "Proteins",
-        "link": "usually results in protein folding into a specific",
-        "object": "3D structure"
+        "link": "consist of at least one long polypeptide"
     },
     {
-        "subject": "Protein",
-        "link": "contains at least one long polypeptide",
-        "object": ""
+        "subject": "Polypeptide",
+        "link": "is a",
+        "object": "chain of amino acids"
     },
     {
         "subject": "Short polypeptides",
-        "link": "containing less than 20\u201330 residues",
-        "object": "are rarely considered to be proteins"
+        "link": "containing fewer than 20\u201330 residues",
+        "object": "are typically not considered proteins"
     },
     {
-        "subject": "Individual amino acid residues",
+        "subject": "Amino acids",
         "link": "are bonded together by",
         "object": "peptide bonds"
     },
     {
-        "subject": "Shortly after or even during synthesis",
-        "link": "the residues in a protein are often chemically modified by",
-        "object": "post-translational modification"
+        "subject": "Proteins",
+        "link": "undergo post-translational modifications",
+        "object": "which change their properties"
     },
     {
-        "subject": "Some proteins have non-peptide groups attached",
-        "link": "which can be called",
-        "object": "prosthetic groups or cofactors"
+        "subject": "Post-translational modifications",
+        "link": "affect",
+        "object": "protein folding, stability, activity, and function"
     },
     {
-        "subject": "Proteins can also work together to achieve a particular function",
-        "link": "and they often associate to form stable protein complexes"
+        "subject": "Proteins",
+        "link": "can form complexes",
+        "object": "to perform specific functions"
     }
 ]

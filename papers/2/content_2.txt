@@ -1,70 +1,50 @@
 [
     {
         "subject": "RNA nanotechnology",
-        "link": "is the bottom-up self-assembly of",
-        "object": "nanometer-scale architectures"
+        "link": "consists of",
+        "object": "self-assembly of nanostructures from RNA"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "composed mainly of",
+        "link": "is primarily made up of",
         "object": "RNA"
     },
     {
         "subject": "Ideal building material",
-        "link": "should be",
-        "object": "(1) versatile and controllable in shape and stoichiometry"
-    },
-    {
-        "subject": "Ideal building material",
-        "link": "should be",
-        "object": "(2) spontaneously self-assemble"
-    },
-    {
-        "subject": "Ideal building material",
-        "link": "should be",
-        "object": "(3) thermodynamically, chemically, and enzymatically stable with a long shelf life"
+        "link": "needs to be",
+        "object": [
+            "versatile and controllable in shape and composition",
+            "spontaneously self-assemble",
+            "thermodynamically, chemically, and enzymatically stable with a long shelf life"
+        ]
     },
     {
         "subject": "RNA building blocks",
-        "link": "exhibit each of the above"
+        "link": "possess all of the above properties"
     },
     {
         "subject": "RNA",
-        "link": "is a polynucleic acid, making it a",
-        "object": "polymer"
+        "link": "is a type of polymeric",
+        "object": "nucleic acid"
     },
     {
         "subject": "RNA",
-        "link": "negative-charge prevents",
-        "object": "nonspecific binding to negatively charged cell membranes"
+        "link": "has a negative charge that prevents",
+        "object": "non-specific binding to negatively charged cell membranes"
     },
     {
         "subject": "RNA",
         "link": "thermostability makes it suitable for",
-        "object": "logic gates, resistive memory, sensor set-ups, and NEM devices"
-    },
-    {
-        "subject": "RNA",
-        "link": "can be designed and manipulated with a level of simplicity of",
-        "object": "DNA"
-    },
-    {
-        "subject": "RNA",
-        "link": "can fold into single-stranded loops or bulges",
-        "object": "to serve as mounting dovetails for intermolecular or domain interactions"
+        "object": "logic gates, memory, sensors, and NEMS devices"
     },
     {
         "subject": "RNA nanoparticles",
-        "link": "display rubber- and amoeba-like properties and are",
-        "object": "stretchable and shrinkable"
+        "link": "have elastic properties and can",
+        "object": "be stretched and shrunk"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "was predicted in 2014 to be the third milestone in",
-        "object": "pharmaceutical drug development"
-    },
-    {
-        "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
-        "link": "suggests that this milestone is being realized"
+        "link": "has received FDA approval for several RNA drugs and COVID-19 mRNA vaccines",
+        "object": "indicating progress towards its realization"
     }
 ]
