@@ -6,15 +6,29 @@ refactor_messages = [
 
             ### Example ###
 
-            Context: No triplets.
-            Your answer: No triplets.
-
-            ### Example ###
+            If you see "No triplets" message, just say "No triplets".
 
             Context: No triplets.
             Your answer: No triplets.
 
             ### Example ###
+
+            If you see "No triplets" message, just say "No triplets".
+
+            Context: No triplets.
+            Your answer: No triplets.
+
+
+            ### Example ###
+
+            This example shows the correct way to split very long object and subject into separate triplets.
+            Object "presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
+            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
+            Subject and link in all these new triplets are the same.
+
+            Subject "Presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
+            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
+            Object and link in all these new triplets are the same.
 
             Context:
             {{
@@ -108,7 +122,13 @@ refactor_messages = [
                 "object": "reduce MDSC levels in vivo"
             }}
 
+
             ### Example ###
+
+            This example shows the correct way to form 2 triplets from 1 original.
+            In subject of original triplet you can see 2 objects (RNA drugs, COVID-19 mRNA vaccines) that
+            can act as subjects in new triplets.
+            Link and object in these new triplets stay the same.
 
             Context:
             {{

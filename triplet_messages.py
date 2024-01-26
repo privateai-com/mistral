@@ -6,15 +6,25 @@ triplet_messages = [
 
             ### Example ###
 
+            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
+
             Context: Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop.
             Your answer: No triplets.
 
             ### Example ###
 
+            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
+
             Context: Soap
             Your answer: No triplets.
 
             ### Example ###
+
+            In this example you are given a large text. In this case you must analyze it whole. Find triplets in each sentence, 
+            between sentences and different parts of the text.
+            In most cases links contain verbs in different forms. So pay attention to it.
+            Long sentences like "Periods of depression and periods of abnormally elevated mood" are separated into 
+            2 different triplets. All complex sentences must be separated into 2 or more triplets.
 
             Context: Bipolar disorder, previously known as manic depression, is a mental disorder characterized by 
             periods of depression and periods of abnormally elevated mood that each last from days to weeks.
@@ -118,4 +128,3 @@ triplet_messages = [
         """
     }
 ]
-
