@@ -6,25 +6,15 @@ triplet_messages = [
 
             ### Example ###
 
-            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
-
             Context: Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop.
             Your answer: No triplets.
 
             ### Example ###
 
-            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
-
             Context: Soap
             Your answer: No triplets.
 
             ### Example ###
-
-            In this example you are given a large text. In this case you must analyze it whole. Find triplets in each sentence, 
-            between sentences and different parts of the text.
-            In most cases links contain verbs in different forms. So pay attention to it.
-            Long sentences like "Periods of depression and periods of abnormally elevated mood" are separated into 
-            2 different triplets. All complex sentences must be separated into 2 or more triplets.
 
             Context: Bipolar disorder, previously known as manic depression, is a mental disorder characterized by 
             periods of depression and periods of abnormally elevated mood that each last from days to weeks.
@@ -120,10 +110,6 @@ triplet_messages = [
 
             ### Example ###
 
-            In this example context contains special footnotes notations lile [1], [2]. They must be ignored.
-            It also shows a perfect example of triplets. Each part of triplet it neither long, nor short and 
-            all links contain verbs. You should try to find triplets like this in other contexts.
-
             Context: A mitochondrion (/ˌmaɪtəˈkɒndriən/;[1] pl.: mitochondria) is an organelle found in the cells 
             of most eukaryotes, such as animals, plants and fungi. Mitochondria have a double membrane structure 
             and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
@@ -189,15 +175,6 @@ triplet_messages = [
             ]
 
             ### Example ###
-
-            In this example your are shown how to rephrase long sentences. For example, in the sentence "The great majority of psychoactive 
-            drugs exert their effects by altering the actions of some neurotransmitter systems" the subject is "Psychoactive drugs",
-            the object is "altering the actions of some neurotransmitter systems" and the link is "exert their effects by". But 
-            object can be replaced with just "actions of neurotransmitter systems", and link can be replaced with "alter".
-            The same goes for "Addictive drugs such as cocaine and amphetamines exert their effects primarily on the dopamine system." The 
-            subject is "Addictive drugs such as cocaine and amphetamines", the object is "dopamine system" and the link is "exert their effects".
-            But subject can be replaced with "Addictive drugs" and link can be replaced with "affect".
-            You must apply similar patterns of replacing long phrases to all other context parts.
 
             Context: The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 
             the human brain. The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
