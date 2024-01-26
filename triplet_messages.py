@@ -22,7 +22,6 @@ triplet_messages = [
 
             ### Example ###
 
-            In this example context is too small to find any useful triplets. Each sentence is too short.
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 
             Context: Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop.
@@ -30,7 +29,6 @@ triplet_messages = [
 
             ### Example ###
 
-            In this example context is also too small to find any useful triplets. Each sentence is too short.
             If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
 
             Context: Soap
@@ -214,7 +212,7 @@ triplet_messages = [
             object can be replaced with just "actions of neurotransmitter systems", and link can be replaced with "alter".
             The same goes for "Addictive drugs such as cocaine and amphetamines exert their effects primarily on the dopamine system." The 
             subject is "Addictive drugs such as cocaine and amphetamines", the object is "dopamine system" and the link is "exert their effects".
-            But subject can be replaced with "Addictive drugs" and link can be replaces wit "affect".
+            But subject can be replaced with "Addictive drugs" and link can be replaced with "affect".
             You must apply similar patterns of replacing long phrases to all other context parts.
 
             Context: The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 

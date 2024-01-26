@@ -8,8 +8,6 @@ refactor_messages = [
             3. Return a new JSON string
             Your actions must strictly follow the examples provided below.
 
-            If you see a "No triplets" string, just say "No triplets".
-
             Each JSON string contains a triplet. Each triplet has 3 parts: subject, link, object.
             Triplet is surrounded by curly braces like so:
             {{   
@@ -18,24 +16,52 @@ refactor_messages = [
                 "object": "manic depression"
             }}
 
-            For each triplet:
-            - Make sure it's a valid JSON. 
-            - Make sure it has exactly 3 parts: subject, link, object. 
+            You have to make the following:
+            Make sure each triplet is a valid JSON. If it's not, reformat it to be a valid JSON.
+            Each triplet must contain exactly 3 parts: subject, link, object. This is the most important requirement!
+            So if object is not present, you must create it from the link. For example:
+            {{
+                "subject": "People of Uganda",
+                "link": "demand their freedom"
+                <no object here>
+            }}
+            should be replaced with
+            {{
+                "subject": "People of Uganda",
+                "link": "demand",
+                "object": "their freedom"
+            }}
 
-            For each part of triplet:
-            - Make it as short as possible while keeping the meaning. 
+            Make sure each part of the triplet is as short as possible. The optimal 
+            length of each part is up to 5 words. For example:
+            "link": "could be exploited as a strategy to"
+            should be replaced with
+            "link": "is used to"
+            Both options must have the same meaning, but the second one is much shorter.
 
             Let's look at some examples:
 
             ### Example ###
+
+            If you see "No triplets" message, just say "No triplets".
+
             Context: No triplets.
             Your answer: No triplets.
 
             ### Example ###
+
+            If you see "No triplets" message, just say "No triplets".
+
             Context: No triplets.
             Your answer: No triplets.
 
             ### Example ###
+
+            This example shows the correct way to decrease length of link and object
+            without loosing information. So "can be utilized as a method to" can be replaced with just
+            "can". All other words can be omitted. But in "decrease MDSC levels in vivo" all words are
+            important. So you should not omit any of them because otherwise, information will be lost.
+
             Context:
             {{
                 "subject": "Fas-FasL interactions",
@@ -46,10 +72,20 @@ refactor_messages = [
             {{
                 "subject": "Fas-FasL interactions",
                 "link": "can",
-                "object": "decrease MDSC levels"
+                "object": "decrease MDSC levels in vivo"
             }}
 
             ### Example ###
+
+            This example shows the correct way to split very long object and subject into separate triplets.
+            Object "presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
+            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
+            Subject and link in all these new triplets are the same.
+
+            Subject "Presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
+            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
+            Object and link in all these new triplets are the same.
+
             Context:
             {{
                 "subject": "Accumulation of MDSCs associated with tumor growth",
@@ -143,6 +179,13 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way of splitting a very long object into separate triplets.
+            Object "protein folding, stability, activity, and function" is very long.
+            So you have to split it into different triplets. One for "protein folding", one for "protein stability", 
+            one for "protein activity", one for "protein function".
+            Subject and link in these new triplets stay the same.
+
             Context:
             {{
                 "subject": "Post-translational modifications",
@@ -172,11 +215,16 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way to make parts of triplets shorter.
+            So "containing fewer" can be replaced with "with less". And "are typically not considered" can 
+            be replaced with "are not".
+
             Context:
             {{                                                                                                                                                                                     
                 "subject": "Short polypeptides", 
                 "link": "containing fewer than 20–30 residues"
-                "object": "are typically not considered proteins" are not proteins
+                "object": "are typically not considered proteins"
             }}
             Your answer:
             {{                                                                                                                                                                                     
@@ -186,6 +234,16 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way of forming a subject from a link.
+            You should notice that the link has a verb that can be a link itself. So:
+            "link": "consist of at least one long polypeptide"
+            can be replaced with 
+            "link": "consist of",
+            "subject": "at least one long polypeptide"
+            Also notice that in "at least one long polypeptide" all words are important. You should not
+            omit any important words.
+
             Context:
             {{ 
                 "subject": "Proteins", 
@@ -200,6 +258,13 @@ refactor_messages = [
 
 
             ### Example ###
+
+            This example shows the correct way to split long object into separate triplets.
+            Object "such as catalysis, DNA replication, response to stimuli, providing structure, and transport" is very long 
+            and must be separated into different triplets. One for "catalysis", one for "DNA replication", one for "responce to stimuli",
+            one for "providing structure", one for "transport".
+            Subject and link in these new triplets stay the same.
+
             Context:
             {{ 
                 "subject": "Proteins", 
@@ -234,6 +299,12 @@ refactor_messages = [
             }}
              
             ### Example ###
+
+            This example shows the correct way to form an object if it's not present.
+            You can see that "was a significant innovation in the development of the nervous system" has a verb
+            that can be a link itself. So the new link is "was a significant innovation in" and the new object is
+            "development of nervous system".
+
             Context:
             {{
                 "subject": "Generation of electric signals", 
@@ -247,6 +318,16 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way to form 2 new triplets from original 1 triplet.
+            The pair of link "indicates that the capacity to generate electric signals emerged" and 
+            object "during the Tonian period" can form a new triplet:
+            {{ 
+                "subject": "Capacity to generate electric signals", 
+                "link": "emerged", 
+                "object": "during the Tonian period" 
+            }}
+
             Context:
             {{ 
                 "subject": "Evidence from molecules", 
@@ -266,6 +347,12 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way to form an object from a link if object is not present.
+            A link "was a key innovation in the evolution of the nervous system" can form a new pair of link and object:
+            "link": "was a key innovation in"
+            "object": "evolution of the nervous system"
+
             Context:
             {{
                 "subject": "Ability to generate electric signals", 
@@ -279,6 +366,15 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way to form 2 new triplets from original 1 triplet.
+            An object "FasL, which triggers apoptosis in MDSCs" can form a new triplet:
+            {{
+                "subject": "FasL",
+                "link": "triggers",
+                "object": "apoptosis in MDSC's"
+            }}
+
             Context:
             {{
                 "subject": "Activated T cells",
@@ -298,6 +394,10 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows correction of a link. In most cases the link contains a verb. So 
+            "mediate" should be a link instead of "expressing FasL".
+
             Context:
             {{
                 "subject": "Activated T cells",
@@ -312,6 +412,12 @@ refactor_messages = [
             }}
 
             ### Example ###
+
+            This example shows the correct way to form 2 triplets from 1 original.
+            In subject of original triplet you can see 2 objects (RNA drugs, COVID-19 mRNA vaccines) that
+            can act as subjects in new triplets.
+            Link and object in these new triplets stay the same.
+
             Context:
             {{
                 "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
@@ -321,12 +427,12 @@ refactor_messages = [
             {{
                 "subject": "Recent approval of several RNA drugs",
                 "link": "suggests that",
-                "link": "this milestone is being realized"
+                "object": "this milestone is being realized"
             }},
             {{
                 "subject": "Recent approval of several COVID-19 mRNA vaccines",
                 "link": "suggests that",
-                "link": "this milestone is being realized"
+                "object": "this milestone is being realized"
             }}
 
             ### End of examples ###
