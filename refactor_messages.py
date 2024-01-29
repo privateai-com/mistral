@@ -59,8 +59,9 @@ refactor_messages = [
 
             This example shows the correct way to decrease length of link and object
             without loosing information. So "can be utilized as a method to" can be replaced with just
-            "can". All other words can be omitted. But in "decrease MDSC levels in vivo" all words are
-            important. So you should not omit any of them because otherwise, information will be lost.
+            "can". All other words can be omitted. 
+            Note that in"decrease MDSC levels in vivo" all words are important. You should not omit any of them 
+            because otherwise, information will be lost.
 
             Context:
             {{
@@ -77,14 +78,14 @@ refactor_messages = [
 
             ### Example ###
 
-            This example shows the correct way to split very long object and subject into separate triplets.
+            This example shows the correct way to split very long object and subject into lists.
             Object "presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
-            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
-            Subject and link in all these new triplets are the same.
+            So you have form a list containing 3 objects: ["excessive growth factors", "cytokines", "inflammatory molecules"].
+            Always place lists in square brackets.
 
             Subject "Presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
-            So you have to split it into different triplets. One for "growth factors", one for "cytokines", one for "inflammatory molecules".
-            Object and link in all these new triplets are the same.
+            So you have to form a list containing 3 subjects: ["excessive growth factors", "cytokines", "inflammatory molecules"]
+            Always place lists in square brackets.
 
             Context:
             {{
@@ -130,31 +131,19 @@ refactor_messages = [
             {{
                 "subject": "Various mechanisms",
                 "link": "include",
-                "object": "presence of excessive growth factors."
+                "object": [
+                    "presence of excessive growth factors",
+                    "presence of cytokines",
+                    "presence of inflammatory molecules"
+                ]
             }},
             {{
-                "subject": "Various mechanisms",
-                "link": "include",
-                "object": "presence of cytokines"
-            }},
-            {{
-                "subject": "Various mechanisms",
-                "link": "include",
-                "object": "presence of inflammatory molecules"
-            }},
-            {{
-                "subject": "Presence of excessive growth",
-                "link": "provide",
-                "object": "continuous survival signals"
-            }},
-            {{
-                "subject": "Presence of cytokines",
-                "link": "provide",
-                "object": "continuous survival signals"
-            }},
-            {{
-                "subject": "Presence of inflammatory molecules",
-                "link": "provide",
+                "subject": [
+                    "Presence of excessive growth factors",
+                    "Presence of cytokines",
+                    "Presence of inflammatory molecules"
+                ],
+                "link": "provides",
                 "object": "continuous survival signals"
             }},
             {{
@@ -180,11 +169,11 @@ refactor_messages = [
 
             ### Example ###
 
-            This example shows the correct way of splitting a very long object into separate triplets.
+            This example shows the correct way of converting a long object into a list.
             Object "protein folding, stability, activity, and function" is very long.
-            So you have to split it into different triplets. One for "protein folding", one for "protein stability", 
-            one for "protein activity", one for "protein function".
-            Subject and link in these new triplets stay the same.
+            So you have to form a list containing 4 objects: ["protein folding", "protein stability",
+            "protein activity", "protein function"].
+            A list must be placed into square brackets.
 
             Context:
             {{
@@ -196,23 +185,13 @@ refactor_messages = [
             {{
                 "subject": "Post-translational modifications",
                 "link": "affect",
-                "object": "protein folding"
+                "object": [
+                    "protein folding",
+                    "protein stability",
+                    "protein activity",
+                    "protein function"
+                ]
             }},
-            {{
-                "subject": "Post-translational modifications",
-                "link": "affect",
-                "object": "protein stability"
-            }},
-            {{
-                "subject": "Post-translational modifications",
-                "link": "affect",
-                "object": "protein activity"
-            }},
-            {{
-                "subject": "Post-translational modifications",
-                "link": "affect",
-                "object": "protein function"
-            }}
 
             ### Example ###
 
@@ -236,11 +215,12 @@ refactor_messages = [
             ### Example ###
 
             This example shows the correct way of forming a subject from a link.
-            You should notice that the link has a verb that can be a link itself. So:
-            "link": "consist of at least one long polypeptide"
-            can be replaced with 
-            "link": "consist of",
-            "subject": "at least one long polypeptide"
+            You should notice that the link has a verb that can be a link itself. 
+            Link "consist of at least one long polypeptide" can be replaced with 
+            {{
+                "link": "consist of",
+                "subject": "at least one long polypeptide"
+            }}
             Also notice that in "at least one long polypeptide" all words are important. You should not
             omit any important words.
 
@@ -256,14 +236,13 @@ refactor_messages = [
                 "subject": "at least one long polypeptide"
             }}
 
-
             ### Example ###
 
-            This example shows the correct way to split long object into separate triplets.
+            This example shows the correct way to form a list on objects from one long object.
             Object "such as catalysis, DNA replication, response to stimuli, providing structure, and transport" is very long 
-            and must be separated into different triplets. One for "catalysis", one for "DNA replication", one for "responce to stimuli",
-            one for "providing structure", one for "transport".
-            Subject and link in these new triplets stay the same.
+            and you must form a list containin 5 objects: ["catalysis", "DNA replication", 
+            "response to stimuli", "providing structure", "transport"].
+            A list must be placed into square brackets.
 
             Context:
             {{ 
@@ -275,27 +254,13 @@ refactor_messages = [
             {{ 
                 "subject": "Proteins", 
                 "link": "have function of", 
-                "object": "catalysis"
-            }},
-            {{ 
-                "subject": "Proteins", 
-                "link": "have function of", 
-                "object": "DNA replication"
-            }},
-            {{ 
-                "subject": "Proteins", 
-                "link": "have function of", 
-                "object": "response to stimuli"
-            }},
-            {{ 
-                "subject": "Proteins", 
-                "link": "have function of", 
-                "object": "providing structure"
-            }},
-            {{ 
-                "subject": "Proteins", 
-                "link": "have function of", 
-                "object": "transport"
+                "object": [
+                    "catalysis",
+                    "DNA replication",
+                    "response to stimuli",
+                    "providing structure",
+                    "transport"
+                ]
             }}
              
             ### Example ###
@@ -320,8 +285,12 @@ refactor_messages = [
             ### Example ###
 
             This example shows the correct way to form 2 new triplets from original 1 triplet.
-            The pair of link "indicates that the capacity to generate electric signals emerged" and 
-            object "during the Tonian period" can form a new triplet:
+            The pair:
+            {{
+                "link": "indicates that the capacity to generate electric signals emerged",
+                "object": "during the Tonian period"
+            }}
+            can form a new triplet:
             {{ 
                 "subject": "Capacity to generate electric signals", 
                 "link": "emerged", 
@@ -349,9 +318,11 @@ refactor_messages = [
             ### Example ###
 
             This example shows the correct way to form an object from a link if object is not present.
-            A link "was a key innovation in the evolution of the nervous system" can form a new pair of link and object:
-            "link": "was a key innovation in"
+            Link: "was a key innovation in the evolution of the nervous system" can form a new pair of link and object:
+            {{
+            "link": "was a key innovation in",
             "object": "evolution of the nervous system"
+            }}
 
             Context:
             {{
@@ -413,10 +384,10 @@ refactor_messages = [
 
             ### Example ###
 
-            This example shows the correct way to form 2 triplets from 1 original.
-            In subject of original triplet you can see 2 objects (RNA drugs, COVID-19 mRNA vaccines) that
-            can act as subjects in new triplets.
-            Link and object in these new triplets stay the same.
+            This example shows the correct way to form a list of subjects from one long subject.
+            Subject "Recent approval of several RNA drugs and COVID-19 mRNA vaccines" is too long.
+            You must form a list containing 2 subjects: ["RNA drugs", "COVID-19 mRNA vaccines"].
+            A list must be placed in square brackets.
 
             Context:
             {{
@@ -425,14 +396,11 @@ refactor_messages = [
             }}
             Your answer:
             {{
-                "subject": "Recent approval of several RNA drugs",
-                "link": "suggests that",
-                "object": "this milestone is being realized"
-            }},
-            {{
-                "subject": "Recent approval of several COVID-19 mRNA vaccines",
-                "link": "suggests that",
-                "object": "this milestone is being realized"
+                "subject": [
+                    "Approval of RNA drugs",
+                    "Approval of COVID-19 mRNA vaccines"
+                ],
+                "link": "suggests that this milestone is being realized"
             }}
 
             ### End of examples ###
