@@ -2,7 +2,23 @@ triplet_messages = [
     {
         "role": "user", 
         "content": """
-            You are a computer program. You must analyze the text and find all triplets in it.
+            You are a computer program. Your functionality is the following:
+            1. Receive text as input
+            2. Analyze it and find all relations (called triplets)
+            3. Output a JSON object with all relations (triplets)
+
+            The triplet is a pair of entities connected with a relation between them. 
+            Entities are called a subject and an object.
+            Relation is called a link.
+
+            For example in context "Bipolar disorder is known as manic depression" subject in "Bipolar disorder", 
+            object is "manic depression" and relation is "is known as".
+            This sentence may be represented as a triplet in JSON format:
+            {{   
+                "subject": "Bipolar disorder",
+                "link": "is known as",
+                "object": "manic depression"
+            }}
 
             ### Example ###
 
@@ -115,6 +131,137 @@ triplet_messages = [
                     "subject": "Individuals during depression period",
                     "link": "avoid",
                     "object": "eye contact"
+                }}
+            ]
+
+            ### Example ###
+
+            In this example context contains special footnotes notations lile [1], [2]. They must be ignored.
+            It also shows a perfect example of triplets. Each part of triplet it neither long, nor short and 
+            all links contain verbs. You should try to find triplets like this in other contexts.
+
+            Context: A mitochondrion (/ˌmaɪtəˈkɒndriən/;[1] pl.: mitochondria) is an organelle found in the cells 
+            of most eukaryotes, such as animals, plants and fungi. Mitochondria have a double membrane structure 
+            and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
+            cell as a source of chemical energy.[2] They were discovered by Albert von Kölliker 
+            in 1857[3] in the voluntary muscles of insects. The term mitochondrion was coined by Carl Benda in 1898
+            Your answer: 
+            [
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "is",
+                    "object": "organelle"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "was found in",
+                    "object": "cells of most eukaryotes"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "has",
+                    "object": "double membrane structure"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "uses",
+                    "object": "aerobic respiration"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "generates",
+                    "object": "adenosine triphosphate (ATP)"
+                }},
+                {{   
+                    "subject": "Adenosine triphosphate (ATP)",
+                    "link": "is used as",
+                    "object": "source of chemical energy"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "was discovered by",
+                    "object": "Albert von Kölliker"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "was discovered in",
+                    "object": "1853"
+                }},
+                {{   
+                    "subject": "Mitochondrion",
+                    "link": "was discovered in",
+                    "object": "voluntary muscles of insects"
+                }},
+                {{   
+                    "subject": "Term mitochondrion",
+                    "link": "was coined by",
+                    "object": "Carl Benda"
+                }},
+                {{   
+                    "subject": "Term mitochondrion",
+                    "link": "was coined in",
+                    "object": "1898"
+                }}
+            ]
+
+            ### Example ###
+
+            In this example your are shown how to rephrase long sentences. For example, in the sentence "The great majority of psychoactive 
+            drugs exert their effects by altering the actions of some neurotransmitter systems" the subject is "Psychoactive drugs",
+            the object is "altering the actions of some neurotransmitter systems" and the link is "exert their effects by". But 
+            object can be replaced with just "actions of neurotransmitter systems", and link can be replaced with "alter".
+            The same goes for "Addictive drugs such as cocaine and amphetamines exert their effects primarily on the dopamine system." The 
+            subject is "Addictive drugs such as cocaine and amphetamines", the object is "dopamine system" and the link is "exert their effects".
+            But subject can be replaced with "Addictive drugs" and link can be replaced with "affect".
+            You must apply similar patterns of replacing long phrases to all other context parts.
+
+            Context: The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 
+            the human brain. The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
+            than 90% of the synapses that do not use glutamate. Although other transmitters are used in fewer synapses, they may 
+            be very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
+            actions of some neurotransmitter systems. Addictive drugs such as cocaine and amphetamines exert their effects 
+            primarily on the dopamine system.
+            Your answer:
+            [
+                {{   
+                    "subject": "Most prevalent transmitter",
+                    "link": "is",
+                    "object": "glutamate"
+                }},
+                {{   
+                    "subject": "Glutamate",
+                    "link": "is excitatory at",
+                    "object": "over 90% of the synapses in the human brain"
+                }},
+                {{   
+                    "subject": "The next most prevalent transmitter",
+                    "link": "is",
+                    "object": "gamma-Aminobutyric Acid (GABA)"
+                }},
+                {{   
+                    "subject": "Gamma-Aminobutyric Acid ",
+                    "link": "is inhibitory at",
+                    "object": "over 90% of the synapses that do not use glutamate"
+                }},
+                {{   
+                    "subject": "Other transmitters",
+                    "link": "are used in",
+                    "object": "fewer synapses"
+                }},
+                {{   
+                    "subject": "Other transmitters",
+                    "link": are",
+                    "object": "very important functionally"
+                }},
+                {{   
+                    "subject": "Psychoactive drugs",
+                    "link": "alter",
+                    "object": "the actions of neurotransmitter systems"
+                }},
+                {{   
+                    "subject": "Addictive drugs",
+                    "link": "affect",
+                    "object": "dopamine system"
                 }}
             ]
 
