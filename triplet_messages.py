@@ -36,110 +36,6 @@ triplet_messages = [
 
             ### Example ###
 
-            In this example you are given a large text. In this case you must analyze it whole. Find triplets in each sentence, 
-            between sentences and different parts of the text.
-            In most cases links contain verbs in different forms. So pay attention to it.
-            Long sentences like "Periods of depression and periods of abnormally elevated mood" are separated into 
-            2 different triplets. All complex sentences must be separated into 2 or more triplets.
-
-            Context: Bipolar disorder, previously known as manic depression, is a mental disorder characterized by 
-            periods of depression and periods of abnormally elevated mood that each last from days to weeks.
-            If the elevated mood is severe or associated with psychosis, it is called mania; if it is less severe, 
-            it is called hypomania. During mania, an individual behaves or feels abnormally energetic, happy or irritable,
-            and they often make impulsive decisions with little regard for the consequences.
-            There is usually also a reduced need for sleep during manic phases.
-            During periods of depression, the individual may experience crying and have a negative outlook on 
-            life and poor eye contact with others
-            Your answer: 
-            [
-                {{   
-                    "subject": "Bipolar disorder",
-                    "link": "is known as",
-                    "object": "manic depression"
-                }},
-                {{   
-                    "subject": "Bipolar disorder",
-                    "link": "is",
-                    "object": "mental disorder"
-                }},
-                {{   
-                    "subject": "Bipolar disorder",
-                    "link": "is characterized by",
-                    "object": "periods of depression"
-                }},
-                {{   
-                    "subject": "Bipolar disorder",
-                    "link": "is characterized by",
-                    "object": "periods of abnormally elevated mood"
-                }},
-                {{   
-                    "subject": "Periods of depression",
-                    "link": "last",
-                    "object": "from days to weeks"
-                }},
-                {{   
-                    "subject": "Periods of abnormally elevated mood",
-                    "link": "last",
-                    "object": "from days to weeks"
-                }},
-                {{   
-                    "subject": "Abnormally elevated mood",
-                    "link": "is called",
-                    "object": "mania"
-                }},
-                {{   
-                    "subject": "Less severe abnormally elevated mood",
-                    "link": "is called",
-                    "object": "hypomania"
-                }},
-                {{   
-                    "subject": "Individuals during mania period",
-                    "link": "feel",
-                    "object": "abnormally energetic, happy or irritable"
-                }},
-                {{   
-                    "subject": "Individuals during mania period",
-                    "link": "feel",
-                    "object": "happy"
-                }},
-                {{   
-                    "subject": "Individuals during mania period",
-                    "link": "feel",
-                    "object": "irritable"
-                }},
-                {{   
-                    "subject": "Individuals during mania period",
-                    "link": "often make",
-                    "object": "impulsive decisions"
-                }},
-                {{   
-                    "subject": "Individuals during mania period",
-                    "link": "often need",
-                    "object": "less sleep"
-                }},
-                {{   
-                    "subject": "Individuals during depression period",
-                    "link": "may experience",
-                    "object": "crying"
-                }},
-                {{   
-                    "subject": "Individuals during depression period",
-                    "link": "have",
-                    "object": "negative outlook on life"
-                }},
-                {{   
-                    "subject": "Individuals during depression period",
-                    "link": "avoid",
-                    "object": "eye contact"
-                }}
-            ]
-
-            ### Example ###
-
-            In this example context contains special footnotes notations lile [1], [2]. They must be ignored.
-            It also shows a perfect example of triplets. Each part of triplet it neither long, nor short and 
-            all links contain verbs. You should try to find triplets like this in other contexts.
-
             Context: A mitochondrion (/ˌmaɪtəˈkɒndriən/;[1] pl.: mitochondria) is an organelle found in the cells 
             of most eukaryotes, such as animals, plants and fungi. Mitochondria have a double membrane structure 
             and use aerobic respiration to generate adenosine triphosphate (ATP), which is used throughout the 
@@ -148,27 +44,32 @@ triplet_messages = [
             Your answer: 
             [
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "is",
                     "object": "organelle"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "was found in",
                     "object": "cells of most eukaryotes"
                 }},
+                {{
+                    "subject": "Eukaryotes",
+                    "link": "are",
+                    "object": "animals, plants and fungi"
+                }}
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "has",
                     "object": "double membrane structure"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "uses",
                     "object": "aerobic respiration"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "generates",
                     "object": "adenosine triphosphate (ATP)"
                 }},
@@ -178,17 +79,17 @@ triplet_messages = [
                     "object": "source of chemical energy"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "was discovered by",
                     "object": "Albert von Kölliker"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "was discovered in",
                     "object": "1853"
                 }},
                 {{   
-                    "subject": "Mitochondrion",
+                    "subject": "Mitochondria",
                     "link": "was discovered in",
                     "object": "voluntary muscles of insects"
                 }},
@@ -206,19 +107,10 @@ triplet_messages = [
 
             ### Example ###
 
-            In this example your are shown how to rephrase long sentences. For example, in the sentence "The great majority of psychoactive 
-            drugs exert their effects by altering the actions of some neurotransmitter systems" the subject is "Psychoactive drugs",
-            the object is "altering the actions of some neurotransmitter systems" and the link is "exert their effects by". But 
-            object can be replaced with just "actions of neurotransmitter systems", and link can be replaced with "alter".
-            The same goes for "Addictive drugs such as cocaine and amphetamines exert their effects primarily on the dopamine system." The 
-            subject is "Addictive drugs such as cocaine and amphetamines", the object is "dopamine system" and the link is "exert their effects".
-            But subject can be replaced with "Addictive drugs" and link can be replaced with "affect".
-            You must apply similar patterns of replacing long phrases to all other context parts.
-
             Context: The most prevalent transmitter is glutamate, which is excitatory at well over 90% of the synapses in 
             the human brain. The next most prevalent is gamma-Aminobutyric Acid, or GABA, which is inhibitory at more 
             than 90% of the synapses that do not use glutamate. Although other transmitters are used in fewer synapses, they may 
-            be very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
+            have very important functionally. The great majority of psychoactive drugs exert their effects by altering the 
             actions of some neurotransmitter systems. Addictive drugs such as cocaine and amphetamines exert their effects 
             primarily on the dopamine system.
             Your answer:
@@ -250,30 +142,22 @@ triplet_messages = [
                 }},
                 {{   
                     "subject": "Other transmitters",
-                    "link": are",
+                    "link": "have",
                     "object": "very important functionally"
                 }},
                 {{   
                     "subject": "Psychoactive drugs",
-                    "link": "alter",
-                    "object": "the actions of neurotransmitter systems"
+                    "link": "exert their effect by",
+                    "object": "altering the actions of neurotransmitter systems"
                 }},
                 {{   
                     "subject": "Addictive drugs",
-                    "link": "affect",
+                    "link": "exert their effects on",
                     "object": "dopamine system"
                 }}
             ]
 
             ### Example ### 
-
-            In this example you are shown a correct way to form multiple triplets from a single sentence with 
-            homogeneous members. For example "Obesity is a complex multifactorial condition with numerous possible biological, 
-            behavioural and environmental determinants" has homogeneous members: "biological determinants", "behavioural determinants"
-            and "environmental determinants". So a total of 3 triplets should be formed from this sentence.
-            The same goes for sentece "promotes energy imbalance through the marketing, affordability and availability 
-            of energy dense foods". It has 3 homogeneous members: "marketing", "affordability of dense foods",
-            and "availability of dense foods". So a total of 3 triplets should be formed from this sentence.
 
             Context: Obesity is a complex multifactorial condition with numerous possible biological, 
             behavioural and environmental determinants. Many children now grow up in an obesogenic 
@@ -295,19 +179,8 @@ triplet_messages = [
                 {{   
                     "subject": "Obesity",
                     "link": "implies",
-                    "object": "biological determinants"
+                    "object": "biological, behavioural and environmental determinants"
                 }},
-                {{   
-                    "subject": "Obesity",
-                    "link": "implies",
-                    "object": "behavioural determinants"
-                }},
-                {{   
-                    "subject": "Obesity",
-                    "link": "implies",
-                    "object": "environmental determinants"
-                }},
-
                 {{   
                     "subject": "Many children",
                     "link": "grow up in",
@@ -321,27 +194,12 @@ triplet_messages = [
                 {{   
                     "subject": "Energy imbalance",
                     "link": "is promoted by",
-                    "object": "marketing"
-                }},
-                {{   
-                    "subject": "Energy imbalance",
-                    "link": "is promoted by",
-                    "object": "affordability of energy dense foods"
-                }},
-                {{   
-                    "subject": "Energy imbalance",
-                    "link": "is promoted by",
-                    "object": "availability of energy dense foods"
+                    "object": "marketing, affordability and availability of energy dense foods"
                 }},
                 {{   
                     "subject": "Obesogenic environment",
                     "link": “promotes",
-                    "object": "decreases in physical activity"
-                }},
-                {{   
-                    "subject": "Obesogenic environment",
-                    "link": “promotes",
-                    "object": "increases in screen‐based sedentary pursuits"
+                    "object": "decreases in physical activity and increases in screen-based sedentary pursuits"
                 }},
                 {{   
                     "subject": "Behaviour‐changing interventions",
@@ -357,11 +215,6 @@ triplet_messages = [
                     "subject": "Behaviour‐changing interventions",
                     "link": "aim to reduce",
                     "object": "sedentary behaviours"
-                }},
-                {{   
-                    "subject": "Behaviour‐changing interventions",
-                    "link": "are",
-                    "object": "prescribed"
                 }},
                 {{   
                     "subject": "Behaviour‐changing interventions",
@@ -381,17 +234,7 @@ triplet_messages = [
                 {{   
                     "subject": "Behavioural components",
                     "link": "are",
-                    "object": "diet"
-                }},
-                {{   
-                    "subject": "Behavioural components",
-                    "link": "are",
-                    "object": "physical activity"
-                }},
-                {{   
-                    "subject": "Behavioural components",
-                    "link": "are",
-                    "object": "sedentary behaviour"
+                    "object": "diet, physical activity, sedentary behaviour"
                 }},
                 {{   
                     "subject": "Behaviour‐changing interventions",
@@ -400,16 +243,10 @@ triplet_messages = [
                 }},
                 {{   
                     "subject": "Behaviour‐changing interventions",
-                    "link": "are supported to help sustain",
-                    "object": "positive changes"
+                    "link": "are supported to",
+                    "object": "sustain positive changes and prevent relapse"
                 }},
-                {{   
-                    "subject": "Behaviour‐changing interventions",
-                    "link": "are supported to prevent",
-                    "object": "relapse"
-                }}
             ]
-
 
             ### End of examples ###
 
