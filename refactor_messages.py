@@ -50,22 +50,6 @@ refactor_messages = [
 
             ### Example ###
 
-            If you see "No triplets" message, just say "No triplets".
-
-            Context: No triplets.
-            Your answer: No triplets.
-
-            ### Example ###
-
-            This example shows the correct way to split very long object and subject into lists.
-            Object "presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
-            So you have form a list containing 3 objects: ["excessive growth factors", "cytokines", "inflammatory molecules"].
-            Always place lists in square brackets.
-
-            Subject "Presence of excessive growth factors, cytokines, or inflammatory molecules" is very long.
-            So you have to form a list containing 3 subjects: ["excessive growth factors", "cytokines", "inflammatory molecules"]
-            Always place lists in square brackets.
-
             Context:
             {{
                 "subject": "Accumulation of MDSCs associated with tumor growth",
@@ -148,12 +132,6 @@ refactor_messages = [
 
             ### Example ###
 
-            This example shows the correct way of converting a long object into a list.
-            Object "protein folding, stability, activity, and function" is very long.
-            So you have to form a list containing 4 objects: ["protein folding", "protein stability",
-            "protein activity", "protein function"].
-            A list must be placed into square brackets.
-
             Context:
             {{
                 "subject": "Post-translational modifications",
@@ -170,94 +148,7 @@ refactor_messages = [
                     "protein activity",
                     "protein function"
                 ]
-            }},
-
-
-            ### Example ###
-
-            This example shows the correct way to form a list of subjects from one long subject.
-            Subject "Recent approval of several RNA drugs and COVID-19 mRNA vaccines" is too long.
-            You must form a list containing 2 subjects: ["RNA drugs", "COVID-19 mRNA vaccines"].
-            A list must be placed in square brackets.
-
-            Context:
-            {{
-                "subject": "Recent approval of several RNA drugs and COVID-19 mRNA vaccines",
-                "link": "suggests that this milestone is being realized"
             }}
-            Your answer:
-            {{
-                "subject": [
-                    "Approval of RNA drugs",
-                    "Approval of COVID-19 mRNA vaccines"
-                ],
-                "link": "suggests that this milestone is being realized"
-            }}
-
-            ### Example ###
-
-            This example shows the correct way of forming a subject from a link.
-            You should notice that the link has a verb that can be a link itself. 
-            Link "consist of at least one long polypeptide" can be replaced with 
-            {{
-                "link": "consist of",
-                "subject": "at least one long polypeptide"
-            }}
-            Also notice that in "at least one long polypeptide" all words are important. You should not
-            omit any important words.
-
-            Context:
-            {{ 
-                "subject": "Proteins", 
-                "link": "consist of at least one long polypeptide"
-            }}
-            Your answer:
-            {{ 
-                "subject": "Proteins", 
-                "link": "consist of",
-                "subject": "at least one long polypeptide"
-            }}
-             
-
-            ### Example ###
-
-            This example shows the correct way to form an object from a link if object is not present.
-            Link: "was a key innovation in the evolution of the nervous system" can form a new pair of link and object:
-            {{
-            "link": "was a key innovation in",
-            "object": "evolution of the nervous system"
-            }}
-
-            Context:
-            {{
-                "subject": "Ability to generate electric signals", 
-                "link": "was a key innovation in the evolution of the nervous system"
-            }}
-            Your answer:
-            {{
-                "subject": "Ability to generate electric signals", 
-                "link": "was a key innovation in"
-                "object": "evolution of the nervous system"
-            }}
-
-            ### Example ###
-
-            This example shows correction of a link. In most cases the link contains a verb. So 
-            "mediate" should be a link instead of "expressing FasL".
-
-            Context:
-            {{
-                "subject": "Activated T cells",
-                "link": "expressing FasL",
-                "object": "mediate apoptosis of MDSCs in vivo"
-            }}
-            Your answer:
-            {{
-                "subject": "Activated T cells",
-                "link": "mediate",
-                "object": "apoptosis of MDSCs in vivo"
-            }}
-
 
             ### End of examples ###
 
