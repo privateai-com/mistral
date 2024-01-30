@@ -11,6 +11,10 @@ triplet_messages = [
             Entities are called a subject and an object.
             Relation is called a link.
 
+            If no triplets can be found in the context, say "No triplets". Say only this two words and nothing else.
+            For example, context "Guitar music" does not have enough information to form a triplet. Say "No triplets" in this case.
+            Do not try to give any other comments like "The context does not provide enough information".
+
             For example in context "Bipolar disorder is known as manic depression" subject in "Bipolar disorder", 
             object is "manic depression" and relation is "is known as".
             This sentence may be represented as a triplet in JSON format:
@@ -22,7 +26,10 @@ triplet_messages = [
 
             ### Example ###
 
-            If no triplets can be found in the context, say "No triplets". Say only this and nothing else.
+            Context: CoolerMaster
+            Your answer: No triplets.
+
+            ### Example ###
 
             Context: Placebo. To cook chicken. Fast Ferrari. Winter in Norway. George Dunlop.
             Your answer: No triplets.

@@ -32,6 +32,9 @@ refactor_messages = [
                 "object": "their freedom"
             }}
 
+            If no triplets can be found in the context, say "No triplets". Say only this two words and nothing else.
+            Do not try to give any other comments like "The context does not provide enough information".
+
             Make sure each part of the triplet is as short as possible. The optimal 
             length of each part is up to 5 words. For example:
             "link": "could be exploited as a strategy to"
@@ -43,7 +46,6 @@ refactor_messages = [
 
             ### Example ###
 
-            If you see "No triplets" message, just say "No triplets".
 
             Context: No triplets.
             Your answer: No triplets.
