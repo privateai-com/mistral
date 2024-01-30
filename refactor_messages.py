@@ -18,8 +18,9 @@ refactor_messages = [
 
             You have to make the following:
             Make sure each triplet is a valid JSON. If it's not, reformat it to be a valid JSON.
+
             Each triplet must contain exactly 3 parts: subject, link, object. This is the most important requirement!
-            So if object is not present, you must create it from the link. For example:
+            So if object is not present, you must create only using data from the link. For example:
             {{
                 "subject": "People of Uganda",
                 "link": "demand their freedom"
@@ -45,7 +46,6 @@ refactor_messages = [
             Let's look at some examples:
 
             ### Example ###
-
 
             Context: No triplets.
             Your answer: No triplets.
@@ -96,7 +96,7 @@ refactor_messages = [
             {{
                 "subject": "Various mechanisms",
                 "link": "include",
-                "object": [
+                "object": [ 
                     "presence of excessive growth factors",
                     "presence of cytokines",
                     "presence of inflammatory molecules"
@@ -135,21 +135,152 @@ refactor_messages = [
             ### Example ###
 
             Context:
-            {{
-                "subject": "Post-translational modifications",
-                "link": "affect",
-                "object": "protein folding, stability, activity, and function"
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "is", 
+                "object": "one of the most common life-limiting recessive genetic disorders in Caucasians"
+            }},
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "is caused by", 
+                "object": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)" 
+            }},
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "is a multi-organ disease that involves", 
+                "object": "lungs, pancreas, sweat glands, digestive and reproductive systems and several other tissues" 
+            }},
+            {{ 
+                "subject": "CFTR", 
+                "link": "is", 
+                "object": "cystic fibrosis transmembrane conductance regulator" 
+            }},
+            {{ 
+                "subject": "CFTR", 
+                "link": "is affected by", 
+                "object": "mutations in patients with CF" 
+            }},
+            {{ 
+                "subject": "CFTR mutations", 
+                "link": "lead to", 
+                "object": "dysregulation of several cellular signalling pathways" 
+            }},
+            {{ 
+                "subject": "Airway epithelial cells", 
+                "link": "contribute to", 
+                "object": "pathogenesis of CF" 
+            }},
+            {{ 
+                "subject": "Neutrophils", 
+                "link": "contribute to", 
+                "object": "pathogenesis of CF" 
+            }},
+            {{ 
+                "subject": "Monocytes", 
+                "link": "contribute to", 
+                "object": "pathogenesis of CF" 
+            }},
+            {{ 
+                "subject": "Macrophages", 
+                "link": "contribute to", 
+                "object": "pathogenesis of CF"
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "are affected by", 
+                "object": "CFTR mutations in patients with CF" 
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "play a crucial role in", 
+                "object": "protecting the organs against opportunistic infections and also in the regulation of tissue homeostasis" 
+            }},
+            {{ 
+                "subject": "Immune cells", 
+                "link": "are involved in", 
+                "object": "regulation of tissue homeostasis" 
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "are in continuous use by these cells to elicit a proper immune response", 
+                "object": "several signalling pathways" 
+            }},
+            {{ 
+                "subject": "Several signalling pathways", 
+                "link": "may be dysregulated in", 
+                "object": "cells with CFTR mutations" 
             }}
             Your answer:
-            {{
-                "subject": "Post-translational modifications",
-                "link": "affect",
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "is", 
+                "object": "life-limiting recessive genetic disorder in Caucasians"
+            }},
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "is caused by", 
+                "object": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)" 
+            }},
+            {{ 
+                "subject": "Cystic fibrosis (CF)", 
+                "link": "involves", 
                 "object": [
-                    "protein folding",
-                    "protein stability",
-                    "protein activity",
-                    "protein function"
+                    "lungs", 
+                    "pancreas", 
+                    "sweat glands", 
+                    "digestive system",
+                    "reproductive system",
+                    "other tissues" 
                 ]
+            }},
+            {{ 
+                "subject": "CFTR", 
+                "link": "is", 
+                "object": "cystic fibrosis transmembrane conductance regulator" 
+            }},
+            {{ 
+                "subject": "CFTR", 
+                "link": "is affected by", 
+                "object": "mutations in patients with CF" 
+            }},
+            {{ 
+                "subject": "CFTR mutations", 
+                "link": "lead to", 
+                "object": "dysregulation of cellular signalling pathways" 
+            }},
+            {{
+                "subject": [
+                    "Airway epithelial cells",
+                    "Neutrophils",
+                    "Monocytes", 
+                    "Macrophages"
+                ],
+                "link": "contribute to", 
+                "object": "pathogenesis of CF" 
+
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "are affected by", 
+                "object": "CFTR mutations in patients with CF" 
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "play a crucial role in", 
+                "object": [
+                    "protecting the organs against opportunistic infections",
+                    "regulation of tissue homeostasis"
+                ]
+            }},
+            {{ 
+                "subject": "Innate immune cells", 
+                "link": "are used by cells",
+                "object": "to elicit a proper immune response"
+            }},
+            {{ 
+                "subject": "Several signalling pathways", 
+                "link": "may be dysregulated in", 
+                "object": "cells with CFTR mutations" 
             }}
 
             ### End of examples ###
