@@ -248,6 +248,205 @@ triplet_messages = [
                 }},
             ]
 
+
+            ### Example ###
+
+            This example shows the usage of scientific notations (abbreviations) from text in triplets.
+            The abbreviations here are: "FDP", "HERC2-OCA2 locus", "SNP", "rs12913832". You should
+            use them in triplets without changing.
+
+            Context: In recent decades, the use of genetic polymorphisms related to specific phenotypes, such as eye color, 
+            has greatly contributed to the development of the research field called forensic DNA phenotyping (FDP), 
+            enabling the investigators of crime cases to reduce the number of suspects, making their work 
+            faster and more precise. Eye color is a polygenic phenotype, and many genetic variants have been highlighted, 
+            with the major contributor being the HERC2-OCA2 locus, where many single nucleotide variations (SNPs) were identified. 
+            Interestingly, the HERC2-OCA2 locus, containing the intronic SNP rs12913832, the major eye color determinant, 
+            shows a high level of evolutionary conservation across many species of vertebrates. Currently, there are some genetic 
+            panels to predict eye color by genomic DNA analysis, even if the exact role of the SNP variants in 
+            the formation of eye color is still poorly understood, with a low level of predictivity in the so-called intermediate eye color.
+            Your answer:
+            [
+                {{   
+                    "subject": "Genetic polymorphisms",
+                    "link": "is related to",
+                    "object": "specific phenotypes"
+                }},
+                {{   
+                    "subject": "Example of specific phenotypes”,
+                    "link": "is",
+                    "object": "eye color"
+                }},
+                {{   
+                    "subject": "Use of genetic polymorphisms",
+                    "link": "has greatly contributed to",
+                    "object": "development of forensic DNA phenotyping (FDP)"
+                }},
+                {{   
+                    "subject": "Forensic DNA phenotyping development”,
+                    "link": "enables",
+                    "object": "investigators of crime cases to reduce the number of suspects"
+                }},
+                {{   
+                    "subject": "Eye color",
+                    "link": “is",
+                    "object": "polygenic phenotype"
+                }},
+                {{   
+                    "subject": "Many genetic variants of eye color",
+                    "link": “have been",
+                    "object": "highlighted"
+                }},
+                {{   
+                    "subject": "Major contributor in genetic variants",
+                    "link": "is",
+                    "object": "HERC2-OCA2 locus"
+                }},
+                {{   
+                    "subject": "Many single nucleotide variations (SNPs)",
+                    "link": "were identified in",
+                    "object": "HERC2-OCA2 locus"
+                }},
+                {{   
+                    "subject": "HERC2-OCA2 locus",
+                    "link": "contains",
+                    "object": "intronic SNP rs12913832"
+                }},
+                {{   
+                    "subject": "Intronic SNP rs12913832",
+                    "link": "is",
+                    "object": "major eye color determinant"
+                }},
+                {{   
+                    "subject": "HERC2-OCA2 locus",
+                    "link": "shows",
+                    "object": "high level of evolutionary conservation"
+                }},
+                {{   
+                    "subject": "Genetic panels",
+                    "link": "predict",
+                    "object": "eye color"
+                }},
+                {{   
+                    "subject": "Eye color",
+                    "link": "is predicted by",
+                    "object": "genomic DNA analysis"
+                }},
+                {{   
+                    "subject": "SNP variants",
+                    "link": "are not understood in terms of",
+                    "object": "formation of eye color"
+                }},
+                {{   
+                    "subject": "Intermediate eye color",
+                    "link": "have",
+                    "object": "low level of predictivity"
+                }}
+            ]
+
+            ### Example ###
+
+            This example shows how to form triplets from long sentences. Last two sentences of the context
+            are quite long. You should analyze each part of these sentences.
+
+            Context: Anemia and iron deficiency (ID) are frequently encountered in patients with chronic heart failure (CHF). 
+            They affect the quality of life and reduce the exercise capacity of patients by limiting their physical efficiency. 
+            The presence of anemia and/or ID is associated with a poor outcome in patients with CHF and linked 
+            to an increased mortality. ID can be caused by insufficient iron absorption or chronic blood losses resulting 
+            in low iron storage, termed as absolute or true ID being reflected by low circulating concentrations of iron 
+            and of the iron storage protein ferritin. ID can also originate from inflammation‐driven alterations of iron 
+            homeostasis leading to defective iron utilization and transport, termed as functional ID being reflected by low 
+            circulating iron but normal or increased ferritin concentrations.
+            Your answer:
+            [
+                {{   
+                    "subject": "Anemia and iron deficiency (ID)",
+                    "link": "are frequently encountered in",
+                    "object": "patients with chronic heart failure (CHF)"
+                }},
+                {{   
+                    "subject": "Anemia and iron deficiency (ID)”,
+                    "link": "affect",
+                    "object": "quality of life"
+                }},
+                {{   
+                    "subject": "Anemia and iron deficiency (ID)”,
+                    "link": "reduce",
+                    "object": "exercise capacity of patients"
+                }},
+                {{   
+                    "subject": "Exercise capacity of patients”,
+                    "link": "is being reduced by",
+                    "object": "limiting physical efficiency"
+                }},
+                {{   
+                    "subject": "Presence of anemia and/or ID",
+                    "link": "is associated with",
+                    "object": "poor outcome in patients with CHF"
+                }},
+                {{   
+                    "subject": "Presence of anemia and/or ID",
+                    "link": "is linked to",
+                    "object": "increased mortality"
+                }},
+                {{   
+                    "subject": "ID",
+                    "link": “can be caused by",
+                    "object": "insufficient iron absorption"
+                }},
+                {{   
+                    "subject": "ID",
+                    "link": “can be caused by",
+                    "object": "chronic blood losses"
+                }},
+                {{   
+                    "subject": "Insufficient iron absorption",
+                    "link": “results in",
+                    "object": "low iron storage"
+                }},
+                {{   
+                    "subject": "Chronic blood losses",
+                    "link": “results in",
+                    "object": "low iron storage"
+                }},
+                {{   
+                    "subject": "ID",
+                    "link": "is reflected by",
+                    "object": "low circulating concentrations of iron"
+                }},
+                {{   
+                    "subject": "ID",
+                    "link": "is reflected by",
+                    "object": "low circulating concentrations of iron storage protein ferritin"
+                }},
+                {{   
+                    "subject": "ID",
+                    "link": "can originate from",
+                    "object": "inflammation‐driven alterations of iron homeostasis"
+                }},
+                {{   
+                    "subject": "Inflammation‐driven alterations of iron homeostasis",
+                    "link": "leads to",
+                    "object": "defective iron utilization and transport"
+                }},
+                {{   
+                    "subject": "Defective iron utilization and transport",
+                    "link": "is termed as",
+                    "object": "functional ID"
+                }},
+                {{   
+                    "subject": "Functional ID",
+                    "link": "is reflected by",
+                    "object": "low circulating iron"
+                }},
+                {{   
+                    "subject": "Functional ID",
+                    "link": "is reflected by",
+                    "object": "normal or increased ferritin concentrations"
+                }}
+            ]
+
+
+
             ### End of examples ###
 
             Now analyze the following context and find all triplets.
