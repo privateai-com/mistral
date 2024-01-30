@@ -1,42 +1,92 @@
 [
     {
         "subject": "Cystic fibrosis (CF)",
-        "link": "is one of the most common life-limiting genetic disorders",
-        "object": "in Caucasians"
-    },
-    {
-        "subject": "Cystic fibrosis (CF)",
-        "link": "is caused by",
-        "object": "mutations in the CFTR gene"
-    },
-    {
-        "subject": "Cystic fibrosis (CF)",
-        "link": "affects",
-        "object": "lungs, pancreas, sweat glands, digestive and reproductive systems, and several other tissues"
-    },
-    {
-        "subject": "CFTR mutations",
-        "link": "result in",
-        "object": "dysregulation of several signalling pathways"
-    },
-    {
-        "subject": "Airway epithelial cells, neutrophils, monocytes, and macrophages",
-        "link": "contribute to",
-        "object": "CF pathogenesis"
+        "link": "is a common",
+        "object": "life-limiting recessive genetic disorder in Caucasians",
+        "triplet": [
+            {
+                "subject": "Cystic fibrosis (CF)",
+                "link": "is caused by",
+                "object": "mutations in the cystic fibrosis transmembrane conductance regulator (CFTR)"
+            },
+            {
+                "subject": "Cystic fibrosis (CF)",
+                "link": "is a multi-organ disease that involves",
+                "object": [
+                    "lungs",
+                    "pancreas",
+                    "sweat glands",
+                    "digestive system",
+                    "reproductive system",
+                    "other tissues"
+                ]
+            },
+            {
+                "subject": "Cystic fibrosis (CF)",
+                "link": "is associated with",
+                "object": [
+                    "recurrent lower respiratory tract infections",
+                    "inflammatory complications"
+                ]
+            },
+            {
+                "subject": "Immune cells",
+                "link": "play a crucial role in",
+                "object": [
+                    "protecting the organs against opportunistic infections",
+                    "regulation of tissue homeostasis"
+                ]
+            },
+            {
+                "subject": "Innate immune cells",
+                "link": "are generally affected by",
+                "object": "CFTR mutations"
+            },
+            {
+                "subject": "CFTR mutations",
+                "link": "lead to",
+                "object": "dysregulation of several cellular signalling pathways"
+            },
+            {
+                "subject": [
+                    "Airway epithelial cells",
+                    "neutrophils",
+                    "monocytes",
+                    "macrophages"
+                ],
+                "link": "contribute to",
+                "object": "pathogenesis of CF"
+            },
+            {
+                "subject": "CFTR",
+                "link": "is important in",
+                "object": "innate immune responses"
+            },
+            {
+                "subject": "CFTR dysfunction",
+                "link": "contributes to",
+                "object": "pathogenesis of CF"
+            },
+            {
+                "subject": "Several signalling pathways",
+                "link": "may be dysregulated in",
+                "object": "cells with CFTR mutations"
+            }
+        ]
     },
     {
         "subject": "Immune cells",
-        "link": "protect organs against",
-        "object": "opportunistic infections and regulate tissue homeostasis"
+        "link": "are involved in",
+        "object": "regulation of tissue homeostasis"
     },
     {
         "subject": "Innate immune cells",
-        "link": "are affected by",
-        "object": "CFTR mutations in CF patients"
+        "link": "are used by cells",
+        "object": "to elicit a proper immune response"
     },
     {
-        "subject": "CFTR mutations",
-        "link": "lead to",
-        "object": "dysregulation of several cellular signalling pathways in innate immune cells"
+        "subject": "Several signalling pathways",
+        "link": "are dysregulated in",
+        "object": "cells with CFTR mutations"
     }
 ]

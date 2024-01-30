@@ -31,7 +31,13 @@ def write_triplets(path, triplets):
     for file_path in sorted(directory.rglob('paper_*.txt')):
         file_number = file_path.stem.split('_')[1]
         content_path = path / f"{file_number}" / f"content_{file_number}.txt"
+
+        # TODO:
+        # content_path = path / f"3" / f"content_3.txt"
+
         # Each triplet corresponds to the current file
         with open(content_path, 'w') as file:
             file.write(json.dumps(triplets[count], indent=4))
         count += 1
+        # TODO:
+        # return

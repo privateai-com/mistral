@@ -67,9 +67,10 @@ all_triplets = []
 for i, ex in enumerate(context_examples):
     file_triplets = []
 
-    # #TODO: delete counter
-    # if i != 5:
-    #    continue
+
+    # TODO: delete
+    # if i != 2:
+    #     continue
 
     # CALL 1: Find triplets
     # Result is a JSON *string* with all triplets from the current paper

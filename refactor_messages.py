@@ -20,17 +20,16 @@ refactor_messages = [
             Make sure each triplet is a valid JSON. If it's not, reformat it to be a valid JSON.
 
             Each triplet must contain exactly 3 parts: subject, link, object. This is the most important requirement!
-            So if object is not present, you must create only using data from the link. For example:
+            So if object is not present, you must create it only using information from the link. For example:
             {{
-                "subject": "People of Uganda",
-                "link": "demand their freedom"
-                <no object here>
+                "subject": "Ability to generate electric signals",
+                "link": "represented a significant innovation in the development of the nervous system"
             }}
             should be replaced with
             {{
-                "subject": "People of Uganda",
-                "link": "demand",
-                "object": "their freedom"
+                "subject": "Ability to generate electric signals",
+                "link": "represented",
+                "object": "a significant innovation in the development of the nervous system"
             }}
 
             If no triplets can be found in the context, say "No triplets". Say only this two words and nothing else.

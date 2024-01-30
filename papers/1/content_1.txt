@@ -2,32 +2,11 @@
     {
         "subject": "Accumulation of MDSCs",
         "link": "could be due to",
-        "object": "various mechanisms"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "include",
-        "object": "excessive growth factors"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "include",
-        "object": "cytokines"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "include",
-        "object": "inflammatory molecules"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "or",
-        "object": "absence of cell death signals"
-    },
-    {
-        "subject": "Various mechanisms",
-        "link": "or",
-        "object": "MDSC non-responsiveness to death signals"
+        "object": [
+            "excessive growth factors",
+            "cytokines",
+            "inflammatory molecules"
+        ]
     },
     {
         "subject": "MDSCs",
@@ -35,27 +14,23 @@
         "object": "death receptor Fas"
     },
     {
-        "subject": "MDSCs",
-        "link": "are killed when",
-        "object": "Fas is engaged"
-    },
-    {
         "subject": "Fas",
         "link": "is engaged by",
         "object": "FasL"
     },
     {
-        "subject": "Activated T cells",
-        "link": "mediate apoptosis of",
+        "subject": "Fas-FasL interactions",
+        "link": "regulate",
+        "object": "MDSC homeostasis"
+    },
+    {
+        "subject": "Fas-FasL interactions",
+        "link": "can be used as",
+        "object": "strategy to reduce MDSC levels"
+    },
+    {
+        "subject": "Activated T cells expressing FasL",
+        "link": "induce apoptosis of",
         "object": "MDSCs in vivo"
-    },
-    {
-        "subject": "Fas-FasL interactions",
-        "link": "regulate MDSC homeostasis"
-    },
-    {
-        "subject": "Fas-FasL interactions",
-        "link": "can be used as a strategy",
-        "object": "to reduce MDSC levels in vivo"
     }
 ]

@@ -6,45 +6,67 @@
     },
     {
         "subject": "Neuron",
-        "link": "fires",
-        "object": "action potentials"
+        "link": "generates",
+        "object": "electric signals called action potentials"
     },
     {
         "subject": "Neurons",
-        "link": "communicate with other cells through",
-        "object": "synapses"
+        "link": "communicate with other cells",
+        "object": "through synapses"
+    },
+    {
+        "subject": "Synapses",
+        "link": "are specialized",
+        "object": "connections"
     },
     {
         "subject": "Synapses",
         "link": "utilize",
-        "object": "minute amounts of chemical neurotransmitters"
+        "object": "small quantities of chemical neurotransmitters"
+    },
+    {
+        "subject": "Presynaptic neuron",
+        "link": "transmits the electric signal",
+        "object": "to target cell"
     },
     {
         "subject": "Neuron",
-        "link": "is the primary component of",
+        "link": "forms the primary component of",
         "object": "nervous tissue"
     },
     {
-        "subject": "Animals except sponges and placozoa",
-        "link": "possess",
-        "object": "nervous tissue"
+        "subject": "Nervous tissue",
+        "link": "is present in",
+        "object": [
+            "animals except sponges, placozoa"
+        ]
+    },
+    {
+        "subject": "Non-animals",
+        "link": "lack",
+        "object": "nerve cells"
     },
     {
         "subject": "Molecular evidence",
-        "link": "indicates that the ability to generate electric signals emerged",
-        "object": "during the Tonian period"
+        "link": "indicates that the capacity to produce electric signals emerged",
+        "object": [
+            "during the Tonian period"
+        ]
     },
     {
         "subject": "Precursors of neurons",
-        "link": "were peptidergic secretory cells"
+        "link": "were peptidergic secretory cells",
+        "object": []
     },
     {
         "subject": "Precursors of neurons",
         "link": "acquired new gene modules",
-        "object": "enabling cells to create post-synaptic scaffolds and ion channels"
+        "object": [
+            "enabled cells to create post-synaptic scaffolds, ion channels"
+        ]
     },
     {
         "subject": "Ability to generate electric signals",
-        "link": "was a crucial innovation in the evolution of the nervous system"
+        "link": "represented a significant innovation in the development of the nervous system"
     }
 ]

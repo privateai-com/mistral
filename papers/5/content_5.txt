@@ -1,62 +1,67 @@
 [
     {
         "subject": "Proteins",
-        "link": "are",
-        "object": "large biomolecules"
+        "link": "are large biomolecules",
+        "object": "consisting of one or more long chains of amino acids"
     },
     {
         "subject": "Proteins",
-        "link": "consist of",
-        "object": "one or more long chains of amino acids"
-    },
-    {
-        "subject": "Proteins",
-        "link": "have various functions",
+        "link": "perform various functions",
         "object": ""
     },
     {
         "subject": "Proteins",
-        "link": "differ from one another primarily in their",
-        "object": "sequences"
+        "link": "differ from one another",
+        "object": "in sequence of amino acids"
     },
     {
-        "subject": "Sequence",
-        "link": "is dictated by",
-        "object": "nucleotide sequence"
+        "subject": "Amino acid sequence",
+        "link": "is determined by",
+        "object": "nucleotide sequence of genes"
     },
     {
         "subject": "Proteins",
-        "link": "contain at least",
-        "object": "one long polypeptide"
+        "link": "result in specific 3D structures",
+        "object": ""
     },
     {
-        "subject": "Polypeptide",
-        "link": "is a",
-        "object": "chain of amino acids"
+        "subject": "Polypeptide chain",
+        "link": "is called",
+        "object": "protein"
     },
     {
-        "subject": "Short polypeptides",
-        "link": "containing less than 20-30 residues",
-        "object": "are rarely considered proteins"
+        "subject": "Protein",
+        "link": "consists of",
+        "object": "long polypeptide"
+    },
+    {
+        "subject": "Small polypeptides",
+        "link": "are not considered to be",
+        "object": "proteins"
+    },
+    {
+        "subject": "Small polypeptides",
+        "link": "are called",
+        "object": "peptides"
     },
     {
         "subject": "Amino acids",
-        "link": "are bonded together by",
+        "link": "are linked by",
         "object": "peptide bonds"
     },
     {
         "subject": "Proteins",
-        "link": "are chemically modified by",
-        "object": "post-translational modifications"
+        "link": "undergo post-translational modifications",
+        "object": ""
     },
     {
         "subject": "Proteins",
         "link": "can have non-peptide groups attached",
-        "object": "called prosthetic groups or cofactors"
+        "object": "as prosthetic groups or cofactors"
     },
     {
         "subject": "Proteins",
-        "link": "often form",
-        "object": "complexes to achieve functions"
+        "link": "form",
+        "object": "protein complexes"
     }
 ]
