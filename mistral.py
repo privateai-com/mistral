@@ -22,16 +22,16 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name,
     do_sample=True,
     #TODO: Play with these params
-    top_k=50, # defaults to 50
+    top_k=0, # defaults to 50
     top_p=0.90, # defaults to 1
-    temperature=0.2, # defaults to 1
+    temperature=0.1, # defaults to 1
     device_map="auto",
     torch_dtype=torch.float16
 )
 tokenizer = AutoTokenizer.from_pretrained(
     model_name
 )
-pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=4096)
+pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=1024)
 llm = HuggingFacePipeline(pipeline=pipe)
 
 # ==== CHAIN 1: Extract triplets ====
@@ -69,7 +69,7 @@ for i, ex in enumerate(context_examples):
 
 
     # TODO: delete
-    # if i != 2:
+    # if i != 5:
     #     continue
 
     # CALL 1: Find triplets
