@@ -2,52 +2,24 @@
     {
         "subject": "RNA nanotechnology",
         "link": "is",
-        "object": "bottom-up self-assembly of nanometer-scale architectures from RNA"
-    },
-    {
-        "subject": "RNA nanotechnology",
-        "link": "consists of",
-        "object": "RNA building blocks"
-    },
-    {
-        "subject": "Ideal building material",
-        "link": "requires",
-        "object": [
-            "versatility",
-            "control in shape",
-            "control in stoichiometry"
-        ]
-    },
-    {
-        "subject": "RNA building blocks",
-        "link": "possess",
-        "object": [
-            "versatility",
-            "controllability in shape",
-            "controllability in stoichiometry"
-        ]
+        "object": "bottom-up self-assembly of nanometer-scale architectures using RNA"
     },
     {
         "subject": "RNA",
         "link": "is",
-        "object": "polynucleic acid and polymer"
+        "object": "polynucleic acid and a versatile polymer with negative charge"
     },
     {
-        "subject": "RNA",
-        "link": "has",
+        "subject": "RNA building blocks",
+        "link": "exhibit",
         "object": [
-            "negative charge",
-            "thermostability"
+            "versatility",
+            "controllability in shape and stoichiometry"
         ]
     },
     {
         "subject": "RNA",
-        "link": "prevents",
-        "object": "nonspecific binding to negatively charged cell membranes"
-    },
-    {
-        "subject": "RNA",
-        "link": "is used for",
+        "link": "is suitable for",
         "object": [
             "logic gates",
             "resistive memory",
@@ -57,41 +29,35 @@
     },
     {
         "subject": "RNA",
-        "link": "can be designed and manipulated",
-        "object": "simply as DNA"
+        "link": "can be designed and manipulated with a level of simplicity of",
+        "object": "DNA"
     },
     {
         "subject": "RNA",
-        "link": "has",
-        "object": [
-            "versatile structure",
-            "enzyme activity of proteins"
-        ]
+        "link": "displays versatile structure and enzyme activity of",
+        "object": "proteins"
     },
     {
         "subject": "RNA nanoparticles",
         "link": "display",
         "object": [
-            "rubber-like properties",
+            "rubber-like",
             "amoeba-like properties"
         ]
     },
     {
         "subject": "RNA nanoparticles",
-        "link": "are",
-        "object": [
-            "stretchable",
-            "shrinkable"
-        ]
+        "link": "are stretchable and shrinkable",
+        "object": "through multiple repeats"
     },
     {
         "subject": "RNA nanotechnology",
-        "link": "forecasted to be",
-        "object": "third milestone in pharmaceutical drug development"
+        "link": "was predicted in",
+        "object": "2014"
     },
     {
-        "subject": "RNA drugs and COVID-19 mRNA vaccines",
-        "link": "have been",
-        "object": "FDA-approved"
+        "subject": "FDA",
+        "link": "has approved several RNA drugs and COVID-19 mRNA vaccines",
+        "object": ""
     }
 ]

@@ -1,42 +1,48 @@
 [
     {
         "subject": "Proteins",
-        "link": "are large biomolecules",
-        "object": "consisting of one or more long chains of amino acids"
+        "link": "are",
+        "object": "large biomolecules"
     },
     {
         "subject": "Proteins",
-        "link": "perform various functions",
+        "link": "consist of",
+        "object": [
+            "long chains of amino acid residues"
+        ]
+    },
+    {
+        "subject": "Proteins",
+        "link": "have various functions",
         "object": ""
     },
     {
-        "subject": "Proteins",
-        "link": "differ from one another",
-        "object": "in sequence of amino acids"
-    },
-    {
-        "subject": "Amino acid sequence",
+        "subject": "Sequence of amino acids",
         "link": "is determined by",
         "object": "nucleotide sequence of genes"
     },
     {
         "subject": "Proteins",
-        "link": "result in specific 3D structures",
-        "object": ""
+        "link": "form",
+        "object": [
+            "specific structures"
+        ]
     },
     {
-        "subject": "Polypeptide chain",
-        "link": "is called",
-        "object": "protein"
+        "subject": "Polypeptide",
+        "link": "is a",
+        "object": "long chain of amino acid residues"
     },
     {
         "subject": "Protein",
         "link": "consists of",
-        "object": "long polypeptide"
+        "object": [
+            "at least one polypeptide"
+        ]
     },
     {
         "subject": "Small polypeptides",
-        "link": "are not considered to be",
+        "link": "are not typically called",
         "object": "proteins"
     },
     {
@@ -45,23 +51,27 @@
         "object": "peptides"
     },
     {
-        "subject": "Amino acids",
+        "subject": "Amino acid residues",
         "link": "are linked by",
         "object": "peptide bonds"
     },
     {
         "subject": "Proteins",
-        "link": "undergo post-translational modifications",
-        "object": ""
+        "link": "undergo",
+        "object": [
+            "post-translational modifications"
+        ]
     },
     {
         "subject": "Proteins",
-        "link": "can have non-peptide groups attached",
-        "object": "as prosthetic groups or cofactors"
+        "link": "may contain",
+        "object": [
+            "prosthetic groups or cofactors"
+        ]
     },
     {
         "subject": "Proteins",
         "link": "form",
-        "object": "protein complexes"
+        "object": "complexes"
     }
 ]

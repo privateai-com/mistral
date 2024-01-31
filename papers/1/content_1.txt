@@ -2,10 +2,15 @@
     {
         "subject": "Accumulation of MDSCs",
         "link": "could be due to",
+        "object": "various mechanisms"
+    },
+    {
+        "subject": "Various mechanisms",
+        "link": "consist of",
         "object": [
-            "excessive growth factors",
-            "cytokines",
-            "inflammatory molecules"
+            "presence of excessive growth factors",
+            "presence of cytokines",
+            "presence of inflammatory molecules"
         ]
     },
     {
@@ -15,7 +20,17 @@
     },
     {
         "subject": "Fas",
-        "link": "is engaged by",
+        "link": "binds to",
+        "object": "FasL"
+    },
+    {
+        "subject": "MDSCs",
+        "link": "undergo apoptosis when",
+        "object": "Fas binds to FasL"
+    },
+    {
+        "subject": "Activated T cells",
+        "link": "produce",
         "object": "FasL"
     },
     {
@@ -26,11 +41,6 @@
     {
         "subject": "Fas-FasL interactions",
         "link": "can be used as",
-        "object": "strategy to reduce MDSC levels"
-    },
-    {
-        "subject": "Activated T cells expressing FasL",
-        "link": "induce apoptosis of",
-        "object": "MDSCs in vivo"
+        "object": "therapeutic strategy to reduce MDSC levels in vivo"
     }
 ]
