@@ -2,15 +2,17 @@
     {
         "subject": "Accumulation of MDSCs",
         "link": "could be due to",
-        "object": "various mechanisms"
+        "object": [
+            "various mechanisms"
+        ]
     },
     {
         "subject": "Various mechanisms",
         "link": "consist of",
         "object": [
             "presence of excessive growth factors",
-            "presence of cytokines",
-            "presence of inflammatory molecules"
+            "cytokines",
+            "inflammatory molecules"
         ]
     },
     {
@@ -41,6 +43,6 @@
     {
         "subject": "Fas-FasL interactions",
         "link": "can be used as",
-        "object": "therapeutic strategy to reduce MDSC levels in vivo"
+        "object": "strategy to decrease MDSC levels in vivo"
     }
 ]

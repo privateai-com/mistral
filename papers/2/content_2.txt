@@ -7,7 +7,12 @@
     {
         "subject": "RNA",
         "link": "is",
-        "object": "polynucleic acid and a versatile polymer with negative charge"
+        "object": "polynucleic acid and a versatile polymer"
+    },
+    {
+        "subject": "Ideal building material",
+        "link": "should be",
+        "object": "versatile and controllable in shape and stoichiometry"
     },
     {
         "subject": "RNA building blocks",
@@ -39,25 +44,21 @@
     },
     {
         "subject": "RNA nanoparticles",
-        "link": "display",
+        "link": "display rubber- and amoeba-like properties and are",
         "object": [
-            "rubber-like",
-            "amoeba-like properties"
+            "stretchable",
+            "shrinkable",
+            "through multiple repeats"
         ]
-    },
-    {
-        "subject": "RNA nanoparticles",
-        "link": "are stretchable and shrinkable",
-        "object": "through multiple repeats"
     },
     {
         "subject": "RNA nanotechnology",
         "link": "was predicted in",
-        "object": "2014"
+        "object": "2014 to be the third milestone in pharmaceutical drug development"
     },
     {
-        "subject": "FDA",
-        "link": "has approved several RNA drugs and COVID-19 mRNA vaccines",
-        "object": ""
+        "subject": "RNA drugs and COVID-19 mRNA vaccines",
+        "link": "were approved by FDA",
+        "object": "demonstrating this milestone's realization"
     }
 ]

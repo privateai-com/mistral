@@ -25,13 +25,18 @@
         "object": "chemical neurotransmitters"
     },
     {
+        "subject": "Presynaptic neuron",
+        "link": "transmits",
+        "object": "electric signal to target cell"
+    },
+    {
         "subject": "Neuron",
-        "link": "is the main component of",
+        "link": "forms",
         "object": "nervous tissue"
     },
     {
         "subject": "Nervous tissue",
-        "link": "is found in",
+        "link": "is present in",
         "object": [
             "animals",
             "except sponges and placozoa"
@@ -39,26 +44,36 @@
     },
     {
         "subject": "Non-animals",
-        "link": "do not have",
+        "link": "lack",
         "object": "nerve cells"
     },
     {
         "subject": "Molecular evidence",
-        "link": "suggests that the ability to generate electric signals first appeared",
-        "object": "during the Tonian period"
+        "link": "indicates",
+        "object": "first appearance of electric signals"
     },
     {
-        "subject": "Precursors of neurons",
-        "link": "were peptidergic secretory cells",
-        "object": ""
+        "subject": "First appearance of electric signals",
+        "link": "occurred during",
+        "object": "Tonian period"
     },
     {
-        "subject": "Precursors of neurons",
-        "link": "gained new gene modules",
-        "object": "which enabled cells to create post-synaptic scaffolds and ion channels"
+        "subject": "Predecessors of neurons",
+        "link": "were",
+        "object": "peptidergic secretory cells"
+    },
+    {
+        "subject": "Predecessors of neurons",
+        "link": "acquired",
+        "object": [
+            "new gene modules",
+            "post-synaptic scaffolds",
+            "ion channels"
+        ]
     },
     {
         "subject": "Ability to generate electric signals",
-        "link": "was a key innovation in the evolution of the nervous system"
+        "link": "marked a significant innovation in",
+        "object": "evolution of the nervous system"
     }
 ]

@@ -1,6 +1,6 @@
 triplet_messages = [
     {
-        "role": "user", 
+        "role": "user",
         "content": """
             You are a computer program. Your functionality is the following:
             1. Receive text as input

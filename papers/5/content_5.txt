@@ -13,20 +13,25 @@
     },
     {
         "subject": "Proteins",
-        "link": "have various functions",
-        "object": ""
+        "link": "carry out",
+        "object": [
+            "vast array of functions"
+        ]
     },
     {
-        "subject": "Sequence of amino acids",
+        "subject": "Proteins",
+        "link": "vary from one another",
+        "object": "amino acid sequence"
+    },
+    {
+        "subject": "Amino acid sequence",
         "link": "is determined by",
         "object": "nucleotide sequence of genes"
     },
     {
         "subject": "Proteins",
-        "link": "form",
-        "object": [
-            "specific structures"
-        ]
+        "link": "typically form",
+        "object": "specific 3D structure"
     },
     {
         "subject": "Polypeptide",
@@ -42,12 +47,12 @@
     },
     {
         "subject": "Small polypeptides",
-        "link": "are not typically called",
+        "link": "are not typically considered to be",
         "object": "proteins"
     },
     {
         "subject": "Small polypeptides",
-        "link": "are called",
+        "link": "are commonly referred to as",
         "object": "peptides"
     },
     {
@@ -66,12 +71,18 @@
         "subject": "Proteins",
         "link": "may contain",
         "object": [
-            "prosthetic groups or cofactors"
+            "prosthetic groups",
+            "cofactors"
         ]
     },
     {
         "subject": "Proteins",
-        "link": "form",
-        "object": "complexes"
+        "link": "can collaborate to accomplish",
+        "object": "specific functions"
+    },
+    {
+        "subject": "Proteins",
+        "link": "often combine to create",
+        "object": "stable protein complexes"
     }
 ]

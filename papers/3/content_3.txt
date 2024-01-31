@@ -11,7 +11,7 @@
     },
     {
         "subject": "Cystic fibrosis (CF)",
-        "link": "is a multi-organ disease that involves",
+        "link": "affects",
         "object": [
             "lungs",
             "pancreas",
@@ -31,21 +31,21 @@
     },
     {
         "subject": "Immune cells",
-        "link": "play a crucial role in",
+        "link": "protect the organs against",
         "object": [
-            "protecting the organs against opportunistic infections",
-            "regulation of tissue homeostasis"
+            "opportunistic infections",
+            "regulate tissue homeostasis"
         ]
     },
     {
         "subject": "Innate immune cells",
-        "link": "are generally affected by",
+        "link": "are affected by",
         "object": "CFTR mutations"
     },
     {
         "subject": "CFTR mutations",
-        "link": "lead to",
-        "object": "dysregulation of signalling pathways"
+        "link": "result in",
+        "object": "dysregulation of cellular signalling pathways"
     },
     {
         "subject": [
@@ -59,7 +59,7 @@
     },
     {
         "subject": "CFTR",
-        "link": "is important in",
+        "link": "plays a role in",
         "object": "innate immune responses"
     },
     {
